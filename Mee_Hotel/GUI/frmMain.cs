@@ -16,5 +16,15 @@ namespace Mee_Hotel.GUI
         {
             InitializeComponent();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

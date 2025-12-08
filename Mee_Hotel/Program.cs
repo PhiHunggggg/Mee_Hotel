@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Mee_Hotel.GUI;
 namespace Mee_Hotel
 {
     static class Program
@@ -25,7 +25,7 @@ namespace Mee_Hotel
 
                     if (result == DialogResult.OK)
                     {
-                        using (frmLogin mf = new frmLogin())
+                        using (frmMain mf = new frmMain())
                         {
                             if (mf.ShowDialog() == DialogResult.Cancel)
                             {
