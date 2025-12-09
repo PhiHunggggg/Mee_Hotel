@@ -83,6 +83,16 @@ namespace Mee_Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_equipment_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-equipment-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_eye_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye-48", resourceCulture);
