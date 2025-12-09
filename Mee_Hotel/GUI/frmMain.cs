@@ -48,15 +48,7 @@ namespace Mee_Hotel.GUI
             OpenChildForm(new frmChiTietDichVu());
         }
 
-        private void accordionControlElement4_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmChiTietDichVu());
-        }
 
-        private void accordionControKiemTraHuHong_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void accordionControlKiemTraHuHong_Click(object sender, EventArgs e)
         {
@@ -64,6 +56,16 @@ namespace Mee_Hotel.GUI
         }
 
         private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement3_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmChiTietDichVu());
+        }
+
+        private void accordionControlElement4_Click(object sender, EventArgs e)
         {
 
         }
