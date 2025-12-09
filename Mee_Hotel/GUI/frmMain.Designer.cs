@@ -65,7 +65,6 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement1,
             this.accordionControlElement9,
             this.accordionControlElement10,
-            this.accordionControlElement4,
             this.accordionControlElement5,
             this.accordionControlElement6,
             this.accordionControlElement7,
@@ -170,7 +169,8 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement10.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement10.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnThemDV});
+            this.btnThemDV,
+            this.accordionControlElement4});
             this.accordionControlElement10.Expanded = true;
             this.accordionControlElement10.Height = 70;
             this.accordionControlElement10.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
@@ -212,16 +212,19 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement4.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.accordionControlElement4.Appearance.Hovered.BackColor2 = System.Drawing.Color.White;
             this.accordionControlElement4.Appearance.Hovered.BorderColor = System.Drawing.Color.Black;
-            this.accordionControlElement4.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Hovered.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.accordionControlElement4.Appearance.Hovered.Options.UseBackColor = true;
             this.accordionControlElement4.Appearance.Hovered.Options.UseBorderColor = true;
             this.accordionControlElement4.Appearance.Hovered.Options.UseFont = true;
             this.accordionControlElement4.Appearance.Normal.BackColor = System.Drawing.Color.RoyalBlue;
-            this.accordionControlElement4.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.accordionControlElement4.Appearance.Normal.Options.UseBackColor = true;
             this.accordionControlElement4.Appearance.Normal.Options.UseFont = true;
             this.accordionControlElement4.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
-            this.accordionControlElement4.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Pressed.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.accordionControlElement4.Appearance.Pressed.ForeColor = System.Drawing.Color.DimGray;
             this.accordionControlElement4.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement4.Appearance.Pressed.Options.UseFont = true;
@@ -230,7 +233,8 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement4.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "Element4";
+            this.accordionControlElement4.Text = "Chi tiết dịch vụ";
+            this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
             // 
             // accordionControlElement5
             // 

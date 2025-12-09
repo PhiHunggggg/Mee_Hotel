@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\DichVuDAL.cs" />
     <Compile Include="DAL\SQL_Connection.cs" />
     <Compile Include="DAL\StaticThing.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
@@ -71,11 +72,11 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmThemDV.cs">
+    <Compile Include="GUI\frmChiTietDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmThemDV.Designer.cs">
-      <DependentUpon>frmThemDV.cs</DependentUpon>
+    <Compile Include="GUI\frmChiTietDichVu.Designer.cs">
+      <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,8 +86,8 @@
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmThemDV.resx">
-      <DependentUpon>frmThemDV.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmChiTietDichVu.resx">
+      <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
