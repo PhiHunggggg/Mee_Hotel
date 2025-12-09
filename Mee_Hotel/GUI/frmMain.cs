@@ -16,7 +16,23 @@ namespace Mee_Hotel.GUI
         {
             InitializeComponent();
         }
+        private Form currentFormChild;
 
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
 
@@ -25,6 +41,11 @@ namespace Mee_Hotel.GUI
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmThemDV());
         }
     }
 }
