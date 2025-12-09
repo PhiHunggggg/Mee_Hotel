@@ -41,19 +41,23 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.Appearance.BorderColor = System.Drawing.Color.Black;
             this.panelMain.Appearance.Options.UseBorderColor = true;
+            this.panelMain.Controls.Add(this.dataGridView1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(508, 39);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelMain.Location = new System.Drawing.Point(653, 46);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1214, 938);
+            this.panelMain.Size = new System.Drawing.Size(1561, 1114);
             this.panelMain.TabIndex = 0;
             // 
             // accordionControl1
@@ -69,11 +73,11 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement6,
             this.accordionControlElement7,
             this.accordionControlElement8});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 46);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(508, 938);
+            this.accordionControl1.Size = new System.Drawing.Size(653, 1114);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -314,17 +318,27 @@ namespace Mee_Hotel.GUI
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1722, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(2214, 46);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(165, 264);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(160, 100);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1722, 977);
+            this.ClientSize = new System.Drawing.Size(2214, 1160);
             this.ControlContainer = this.panelMain;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.accordionControl1);
@@ -332,15 +346,17 @@ namespace Mee_Hotel.GUI
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.IconOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_hotel_64;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mee Hotel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +374,6 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
