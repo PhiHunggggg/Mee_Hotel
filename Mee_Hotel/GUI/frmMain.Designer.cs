@@ -176,6 +176,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_t_shirt_50;
             this.accordionControlElement10.Name = "accordionControlElement10";
             this.accordionControlElement10.Text = "Dịch vụ";
+            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
             // 
             // btnThemDV
             // 
