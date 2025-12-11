@@ -17,49 +17,53 @@ namespace Mee_Hotel.GUI
         {
             InitializeComponent();
         }
-        private void LoadChiTietDichVu()
+        private void LoadDanhSachDichVu()
         {
-                DataTable dt = DichVuDAL.Instance.getChiTietDichVu(); 
+            DateTime? tuNgay =null, denNgay=null;
+            if (ckbLocTheoNgay.Checked == true)
+            {
+                tuNgay = dtpTu.Value;
+                denNgay = dtpDen.Value;
+            }
+                DataTable dt = DichVuDAL.Instance.getDanhSachDichVu(tuNgay,denNgay); 
                 if (dt != null)
                 {
                     dataGridView1.DataSource = dt;
-                    dataGridView1.Columns["TenPhong"].HeaderText = "Tên phòng";
-                    dataGridView1.Columns["TenDV"].HeaderText = "Tên dịch vụ";
-                    dataGridView1.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
-                    dataGridView1.Columns["NgaySuDung"].HeaderText = "Ngày sử dụng";
-                    dataGridView1.Columns["SoLuong"].HeaderText = "Số lượng";
-                    dataGridView1.Columns["DonGiaLucDung"].HeaderText = "Đơn giá lúc dùng";
-                    dataGridView1.Columns["TenNhanVien"].HeaderText = "Tên nhân viên phục vụ";
-                    dataGridView1.Columns["GhiChu"].Visible = false;
                     dataGridView1.Columns["NgayDen"].Visible = false;
                     dataGridView1.Columns["NgayTra"].Visible = false;
-                    dataGridView1.Columns["TenPhong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dataGridView1.Columns["NgaySuDung"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dataGridView1.Columns["SoLuong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns["GhiChu"].Visible = false;
+                    dataGridView1.Columns["MaPhong"].Visible = false;
+                    dataGridView1.Columns["MaDV"].Visible = false;
+
+                    dataGridView1.Columns["Tên phòng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns["Ngày sử dụng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns["Số lượng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
         }
-        private void LoadDanhSachDichVu()
+        private void LoadDanhSachDichVuKhachHang()
         {
+            DateTime? tuNgay = null, denNgay = null;
+            if (ckbLocTheoNgay.Checked == true)
+            {
+                tuNgay = dtpTu.Value;
+                denNgay = dtpDen.Value;
+            }
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
-            DataTable bangDichVu = DichVuDAL.Instance.getDanhSachDichVu(txtTimKiem.Text,dtpTu.Value,dtpDen.Value);
+            DataTable bangDichVu = DichVuDAL.Instance.getDanhSachDichVu(txtTimKiem.Text,tuNgay,denNgay);
             dataGridView1.DataSource = bangDichVu;
             if (bangDichVu != null)
             {
-                dataGridView1.Columns["TenPhong"].HeaderText = "Tên phòng";
-                dataGridView1.Columns["TenDV"].HeaderText = "Tên dịch vụ";
-                dataGridView1.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
-                dataGridView1.Columns["NgaySuDung"].HeaderText = "Ngày sử dụng";
-                dataGridView1.Columns["SoLuong"].HeaderText = "Số lượng";
-                dataGridView1.Columns["DonGiaLucDung"].HeaderText = "Đơn giá lúc dùng";
-                dataGridView1.Columns["TenNhanVien"].HeaderText = "Tên nhân viên phục vụ";
-                dataGridView1.Columns["GhiChu"].Visible = false;
                 dataGridView1.Columns["NgayDen"].Visible = false;
                 dataGridView1.Columns["NgayTra"].Visible = false;
-                dataGridView1.Columns["TenPhong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["NgaySuDung"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["SoLuong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.Columns["GhiChu"].Visible = false;
+                dataGridView1.Columns["MaPhong"].Visible = false;
+                dataGridView1.Columns["MaDV"].Visible = false;
+
+                dataGridView1.Columns["Tên phòng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.Columns["Ngày sử dụng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.Columns["Số lượng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
        
@@ -70,7 +74,7 @@ namespace Mee_Hotel.GUI
 
         private void frmChiTietDichVu_Load(object sender, EventArgs e)
         {
-            LoadChiTietDichVu();
+            LoadDanhSachDichVu();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
@@ -107,7 +111,7 @@ namespace Mee_Hotel.GUI
             }
             dataGridView1.RowTemplate.Height = 50;
 
-            LoadChiTietDichVu();
+            LoadDanhSachDichVu();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -119,16 +123,19 @@ namespace Mee_Hotel.GUI
         {
 
         }
+        private string maPhong;
+        private string maDichVu;
+        private DateTime NgaySuDung;
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             if (txtTimKiem.Text == "")
             {
-                LoadChiTietDichVu();
+                LoadDanhSachDichVu();
             }
             else
             {
-                LoadDanhSachDichVu();
+                LoadDanhSachDichVuKhachHang();
             }
         }
 
@@ -136,11 +143,11 @@ namespace Mee_Hotel.GUI
         {
             if (txtTimKiem.Text == "")
             {
-                LoadChiTietDichVu();
+                LoadDanhSachDichVu();
             }
             else
             {
-                LoadDanhSachDichVu();
+                LoadDanhSachDichVuKhachHang();
             }
         }
 
@@ -154,12 +161,71 @@ namespace Mee_Hotel.GUI
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                lblTenKH.Text= row.Cells["TenKhachHang"].Value.ToString();
-                lblPhong.Text = row.Cells["TenPhong"].Value.ToString();
-                lblNgayDen.Text= Convert.ToDateTime(dataGridView1.CurrentRow.Cells["NgayDen"].Value)
-                                       .ToString("dd/MM/yyyy");
-                lblNgayTra.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["NgayTra"].Value)
-                                       .ToString("dd/MM/yyyy");
+                if (row.Cells["Tên khách hàng"].Value != null && row.Cells["Tên phòng"].Value != null && dataGridView1.CurrentRow.Cells["NgayDen"].Value != null && dataGridView1.CurrentRow.Cells["NgayTra"].Value != null)
+                {
+                    lblTenKH.Text = row.Cells["Tên khách hàng"].Value.ToString();
+                    lblPhong.Text = row.Cells["Tên phòng"].Value.ToString();
+                    lblNgayDen.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["NgayDen"].Value)
+                                           .ToString("dd/MM/yyyy");
+                    lblNgayTra.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["NgayTra"].Value)
+                                           .ToString("dd/MM/yyyy");
+                    txtGhiChu.Text = row.Cells["GhiChu"].Value.ToString();
+                    maPhong = row.Cells["MaPhong"].Value.ToString();
+                    maDichVu = row.Cells["MaDV"].Value.ToString();
+                    NgaySuDung = Convert.ToDateTime( row.Cells["Ngày sử dụng"].Value);
+                }
+                else
+                {
+                    lblTenKH.Text = lblPhong.Text = lblNgayDen.Text = lblNgayTra.Text = "Không có dữ liêu";
+                }
+                }
+        }
+        private void ckbLocTheoNgay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "")
+            {
+                LoadDanhSachDichVu();
+            }
+            else
+            {
+                LoadDanhSachDichVuKhachHang();
+            }
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            frmThemDichVu frmThemDV = new frmThemDichVu(maPhong);
+            frmThemDV.ShowDialog();
+            LoadDanhSachDichVu();
+        }
+
+        private void siticoneButton3_Click(object sender, EventArgs e)
+        {
+            frmSuaDichVu frmSuaDV = new frmSuaDichVu(maPhong, maDichVu, NgaySuDung);
+            frmSuaDV.ShowDialog();
+            LoadDanhSachDichVu();
+        }
+
+        private void siticoneButton2_Click(object sender, EventArgs e)
+        {
+            if (maPhong == null || maDichVu == null || NgaySuDung == null)
+            {
+                MessageBox.Show("Vui lòng chọn dịch vụ muốn xóa !!!");
+                return;
+            }
+            else
+            {
+                var kq = DichVuDAL.Instance.XoaDichVuPhong(maPhong, maDichVu, NgaySuDung, StaticThing.MaNV);
+
+                if (kq.Success)
+                {
+                    MessageBox.Show(kq.Message, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDanhSachDichVu(); 
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa: " + kq.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

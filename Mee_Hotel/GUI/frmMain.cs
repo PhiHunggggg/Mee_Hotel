@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using Mee_Hotel.GUI.Phong;
 namespace Mee_Hotel.GUI
 {
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -51,6 +51,11 @@ namespace Mee_Hotel.GUI
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmChiTietDichVu());
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmDatPhong());
         }
     }
 }
