@@ -79,7 +79,7 @@ namespace Mee_Hotel.DAL
                     cmd.CommandType = CommandType.StoredProcedure;
                     if (parameters != null)
                         cmd.Parameters.AddRange(parameters);
-                    conn.Open();
+                    
                     affectedRows = cmd.ExecuteNonQuery();
                 }
                 return affectedRows;

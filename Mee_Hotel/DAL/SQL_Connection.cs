@@ -10,7 +10,7 @@ namespace Mee_Hotel.DAL
     class SQL_Connection
     {
         #region Properties
-        string StrCon = @"Data Source=.\SQLEXPRESS01;Initial Catalog=Quan_Ly_Khach_San;Integrated Security=True;TrustServerCertificate=True;";
+        string StrCon = @"Data Source=MEICHAN;Initial Catalog=Quan_Ly_Khach_San;Integrated Security=True;TrustServerCertificate=True;";
         public SqlConnection conn;
         protected SqlCommand cmd = new SqlCommand();
         #endregion

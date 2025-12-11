@@ -54,12 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CheckOutDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
+    <Compile Include="DAL\PhieuKiemTraHuHongDAL.cs" />
+    <Compile Include="DAL\Phong1DAL.cs" />
     <Compile Include="DAL\SQL_Connection.cs" />
     <Compile Include="DAL\StaticThing.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DAL\TrangThietBiDAL.cs" />
     <Compile Include="Entity\TaiKhoan.cs" />
+    <Compile Include="GUI\frmCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCheckOut.Designer.cs">
+      <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +88,29 @@
     <Compile Include="GUI\frmChiTietDichVu.Designer.cs">
       <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPhieuKiemTraHuHong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPhieuKiemTraHuHong.Designer.cs">
+      <DependentUpon>frmPhieuKiemTraHuHong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemPhieuKTHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemPhieuKTHH.Designer.cs">
+      <DependentUpon>frmThemPhieuKTHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTrangThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTrangThietBi.Designer.cs">
+      <DependentUpon>frmTrangThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmCheckOut.resx">
+      <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmChiTietDichVu.resx">
       <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPhieuKiemTraHuHong.resx">
+      <DependentUpon>frmPhieuKiemTraHuHong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemPhieuKTHH.resx">
+      <DependentUpon>frmThemPhieuKTHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTrangThietBi.resx">
+      <DependentUpon>frmTrangThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
