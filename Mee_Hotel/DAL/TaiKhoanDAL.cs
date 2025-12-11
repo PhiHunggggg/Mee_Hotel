@@ -29,8 +29,8 @@ namespace Mee_Hotel.DAL
         {
             SqlParameter[] pr =
             {
-                new SqlParameter("@Account", user),
-                new SqlParameter("@Password", pass)
+                new SqlParameter("@Tendangnhap", user),
+                new SqlParameter("@Matkhau", pass)
              };
 
             DataTable dt = DataProvider.Instance.CallProcQuery("sp_Login", pr);
