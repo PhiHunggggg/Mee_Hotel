@@ -27,7 +27,7 @@ namespace Mee_Hotel.DAL
 
         public DataTable GetDanhSachPhong()
         {
-            DataTable dt = DataProvider.Instance.CallProcQuery("GetDanhSachPhong");  // Giả định có stored proc GetDanhSachPhong trả về MaPhong, TenPhong, etc.
+            DataTable dt = DataProvider.Instance.CallProcQuery("GetDanhSachPhong"); 
 
             if (dt.Rows.Count == 0)
                 return null;

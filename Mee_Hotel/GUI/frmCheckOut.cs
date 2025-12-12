@@ -20,7 +20,7 @@ namespace Mee_Hotel.GUI
 
         private void LoadPhongDangO()
         {
-            DataTable dt = CheckOutDAL.Instance.GetPhongDangO();
+            DataTable dt = CheckOutDAL.Instance.GetDanhSachPhongDangO();
             if (dt != null)
             {
                 cmbPhong.DataSource = dt;
@@ -38,7 +38,7 @@ namespace Mee_Hotel.GUI
                 lblMaPhong.Text = maPhong;
                 lblTenPhong.Text = cmbPhong.Text;
                 lblMaDP.Text = row["MaDP"].ToString();
-                lblTenKH.Text = row["TenKH"].ToString();
+                lblTenKH.Text = row["TenKhachHang"].ToString();
                 lblNgayDen.Text = Convert.ToDateTime(row["NgayDen"]).ToString("dd/MM/yyyy");
                 lblNgayTraDuKien.Text = Convert.ToDateTime(row["NgayTraDuKien"]).ToString("dd/MM/yyyy");
                 lblSoNgayO.Text = CheckOutDAL.Instance.GetSoNgayOThucTe(maPhong).ToString() + " ngày";
@@ -51,7 +51,7 @@ namespace Mee_Hotel.GUI
 
         private void LoadDichVu(string maPhong)
         {
-            DataTable dt = CheckOutDAL.Instance.GetDichVuSuDung(maPhong);
+            DataTable dt = CheckOutDAL.Instance.GetDichVuTheoPhong(maPhong);
             if (dt != null)
             {
                 dataGridDichVu.DataSource = dt;
@@ -75,7 +75,7 @@ namespace Mee_Hotel.GUI
             if (dt != null)
             {
                 dataGridHuHong.DataSource = dt;
-                dataGridHuHong.Columns["TenThietBi"].HeaderText = "Tên thiết bị";
+                dataGridHuHong.Columns["TenTB"].HeaderText = "Tên thiết bị";
                 dataGridHuHong.Columns["SoLuongHong"].HeaderText = "Số lượng hỏng";
                 dataGridHuHong.Columns["PhanTramHong"].HeaderText = "% hỏng";
                 dataGridHuHong.Columns["ThanhTien"].HeaderText = "Thành tiền";
@@ -183,7 +183,7 @@ namespace Mee_Hotel.GUI
                 decimal tongTienDV = TinhTongTienDV();
                 decimal tongTienHuHong = TinhTongTienHuHong();
 
-                if (CheckOutDAL.Instance.ThucHienCheckOut(maPhong, maDP, tongTienDV, tongTienHuHong))
+                if (CheckOutDAL.Instance.CheckOut(maPhong, maDP, tongTienDV, tongTienHuHong))
                 {
                     MessageBox.Show("Check out thành công!");
                     LoadPhongDangO(); // Refresh combo
@@ -194,6 +194,11 @@ namespace Mee_Hotel.GUI
                     MessageBox.Show("Check out thất bại!");
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

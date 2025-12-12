@@ -15,7 +15,7 @@ namespace Mee_Hotel.DAL
         }
         private PhieuKiemTraHuHongDAL() { }
 
-        // 1. Lấy danh sách thiết bị trong phòng (dùng khi chọn phòng trong form con)
+        // 1. Lấy danh sách thiết bị trong phòng 
         public DataTable GetThietBiTheoPhong(string maPhong)
         {
             SqlParameter[] parameters =
@@ -25,24 +25,20 @@ namespace Mee_Hotel.DAL
             return DataProvider.Instance.CallProcQuery("proc_GetThietBiTheoPhong", parameters);
         }
 
-        // 2. Lấy danh sách phòng (cho combobox)
-        public DataTable GetDanhSachPhong()
-        {
-            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhong");
-        }
+        // 2. Lấy danh sách phòng đang ở 
         public DataTable GetDanhSachPhongDangO()
         {
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");
         }
 
-        // 3. Tạo mã phiếu mới tự động (KTHH001, KTHH002...)
+        // 3. Tạo mã phiếu mới tự động
         public string TaoMaPhieuMoi()
         {
             object result = DataProvider.Instance.CallProcScalar("proc_TaoMaPhieuKiemTraHuHong");
             return result?.ToString() ?? "KTHH001";
         }
 
-        // 4. Lấy danh sách tất cả phiếu kiểm tra (dùng cho form cha - danh sách)
+        // 4. Lấy danh sách tất cả phiếu kiểm tra 
         public DataTable GetDanhSachPhieu(string maPhieu = "", string maPhong = "", string maNV = "", DateTime? ngayTim = null)
         {
             SqlParameter[] parameters =
@@ -57,7 +53,7 @@ namespace Mee_Hotel.DAL
         }
 
 
-        // 5. Lấy thông tin 1 phiếu kiểm tra theo mã (dùng khi sửa)
+        // 5. Lấy thông tin 1 phiếu kiểm tra theo mã 
         public DataRow GetPhieuByMa(string maPhieu)
         {
             SqlParameter[] parameters =
@@ -68,7 +64,7 @@ namespace Mee_Hotel.DAL
             return dt.Rows.Count > 0 ? dt.Rows[0] : null;
         }
 
-        // 6. Lấy chi tiết hư hỏng của 1 phiếu (dùng khi sửa - load vào DataGridView)
+        // 6. Lấy chi tiết hư hỏng của 1 phiếu
         public DataTable GetChiTietPhieu(string maPhieu)
         {
             SqlParameter[] parameters =
@@ -77,19 +73,19 @@ namespace Mee_Hotel.DAL
             };
             return DataProvider.Instance.CallProcQuery("proc_GetChiTietPhieuKiemTra", parameters);
         }
-        // 7. Thêm phiếu mới (KHÔNG CÓ GhiChu)
+        // 7. Thêm phiếu mới 
         public bool ThemPhieu(string maPhieu, string maPhong, string maNV, DateTime ngayKiemTra, DataTable chiTietHuHong)
         {
             return LuuPhieu(maPhieu, maPhong, maNV, ngayKiemTra, chiTietHuHong, isUpdate: false);
         }
 
-        // 8. Sửa phiếu (KHÔNG CÓ GhiChu)
+        // 8. Sửa phiếu
         public bool SuaPhieu(string maPhieu, string maPhong, string maNV, DateTime ngayKiemTra, DataTable chiTietHuHong)
         {
             return LuuPhieu(maPhieu, maPhong, maNV, ngayKiemTra, chiTietHuHong, isUpdate: true);
         }
 
-        // 9. Hàm chung LuuPhieu – XÓA @GhiChu đi
+        // 9. Hàm chung LuuPhieu
         private bool LuuPhieu(string maPhieu, string maPhong, string maNV, DateTime ngayKiemTra, DataTable chiTietHuHong, bool isUpdate)
         {
             try
@@ -101,7 +97,7 @@ namespace Mee_Hotel.DAL
                     DataProvider.Instance.CallProcNonQuery("proc_XoaChiTietPhieu", delParam);
                 }
 
-                // Bước 2: Thêm/Sửa phiếu chính (chỉ 4 tham số – không có GhiChu)
+                // Bước 2: Thêm/Sửa phiếu chính 
                 SqlParameter[] paramPhieu =
                 {
             new SqlParameter("@MaPhieu_KTHH", maPhieu),
@@ -135,11 +131,11 @@ namespace Mee_Hotel.DAL
                     if (result <= 0) return false;
                 }
 
-                // Bước 4: Cập nhật tổng tiền (đã sửa đúng tên bảng + cột)
+                // Bước 4: Cập nhật tổng tiền 
                 SqlParameter[] updateParam = { new SqlParameter("@MaPhieu_KTHH", maPhieu) };
                 int updateResult = DataProvider.Instance.CallProcNonQuery("proc_UpdateTongTienPhieu", updateParam);
 
-                // Nếu update tổng tiền thất bại thì cũng báo lỗi (để debug dễ hơn)
+                // Nếu update tổng tiền thất bại thì cũng báo lỗi 
                 if (updateResult <= 0)
                 {
                     System.Diagnostics.Debug.WriteLine("Cảnh báo: Không cập nhật được tổng tiền cho phiếu " + maPhieu);
@@ -148,7 +144,7 @@ namespace Mee_Hotel.DAL
             }
             catch (Exception ex)
             {
-                // HIỆN LỖI THẬT ĐỂ BIẾT CHUYỆN GÌ ĐANG XẢY RA!!!
+               
                 MessageBox.Show("LỖI KHI LƯU PHIẾU:\n" + ex.Message + "\n\nStackTrace:\n" + ex.StackTrace,
                                 "LỖI HỆ THỐNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 System.Diagnostics.Debug.WriteLine("Lỗi lưu phiếu KTHH: " + ex.Message);
@@ -162,7 +158,7 @@ namespace Mee_Hotel.DAL
                 new SqlParameter("@MaPhieu_KTHH", maPhieu)
             };
 
-            // Gọi proc xóa (nên dùng transaction trong proc để an toàn)
+           
             int result = DataProvider.Instance.CallProcNonQuery("proc_XoaPhieuKiemTraHuHong", parameters);
             return result > 0;
         }

@@ -14,11 +14,10 @@ namespace Mee_Hotel.DAL
         }
         private CheckOutDAL() { }
 
-        // Lấy danh sách phòng đang ở (TinhTrang = 2)
-        public DataTable GetPhongDangO()
+        // Lấy danh sách phòng đang ở (TinhTrang = 3) 
+        public DataTable GetDanhSachPhongDangO()
         {
-            return DataProvider.Instance.CallProcQuery("proc_GetPhongDangO"); // SELECT MaPhong, TenPhong FROM Phong WHERE TinhTrang = 2
-        }
+            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");         }
 
         // Lấy thông tin checkout theo phòng (PhieuDP + KhachHang)
         public DataTable GetThongTinCheckOut(string maPhong)
@@ -27,8 +26,7 @@ namespace Mee_Hotel.DAL
             {
                 new SqlParameter("@MaPhong", maPhong)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetThongTinCheckOut", parameters); // Join PhieuDP, KhachHang WHERE MaPhong = @MaPhong AND TrangThai = 2
-        }
+            return DataProvider.Instance.CallProcQuery("proc_GetThongTinCheckOut", parameters);         }
 
         // Lấy số ngày ở thực tế (DATEDIFF)
         public int GetSoNgayOThucTe(string maPhong)
@@ -37,18 +35,18 @@ namespace Mee_Hotel.DAL
             {
                 new SqlParameter("@MaPhong", maPhong)
             };
-            object result = DataProvider.Instance.CallProcScalar("proc_GetSoNgayOThucTe", parameters); // SELECT DATEDIFF(DAY, NgayDen, GETDATE()) FROM PhieuDP WHERE MaPhong = @MaPhong
+            object result = DataProvider.Instance.CallProcScalar("proc_GetSoNgayOThucTe", parameters);
             return result != null ? Convert.ToInt32(result) : 0;
         }
 
         // Lấy dịch vụ sử dụng theo phòng
-        public DataTable GetDichVuSuDung(string maPhong)
+        public DataTable GetDichVuTheoPhong (string maPhong)
         {
             SqlParameter[] parameters =
             {
                 new SqlParameter("@MaPhong", maPhong)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetDichVuSuDungTheoPhong", parameters); // SELECT dv.TenDV, sudv.NgaySuDung, sudv.SoLuong, sudv.DonGiaLucDung FROM SuDungDichVu sudv JOIN DichVu dv ON sudv.MaDV = dv.MaDV WHERE sudv.MaPhong = @MaPhong
+            return DataProvider.Instance.CallProcQuery("proc_GetDichVuTheoPhong", parameters); 
         }
 
         // Lấy phiếu hư hỏng theo phòng (nếu có)
@@ -58,11 +56,11 @@ namespace Mee_Hotel.DAL
             {
                 new SqlParameter("@MaPhong", maPhong)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhong", parameters); // SELECT tb.TenThietBi, cthh.SoLuongHong, cthh.PhanTramHong, cthh.ThanhTien, cthh.GhiChu FROM ChiTiet_HuHong cthh JOIN TrangThietBi tb ON cthh.MaThietBi = tb.MaTB JOIN Phieu_KiemTraHuHong pk ON cthh.MaPhieu_KTHH = pk.MaPhieu_KTHH WHERE pk.MaPhong = @MaPhong
+            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhong", parameters); 
         }
 
         // Thực hiện checkout: Update phòng, PhieuDP, tạo hóa đơn nếu cần
-        public bool ThucHienCheckOut(string maPhong, string maDP, decimal tongTienDV, decimal tongTienHuHong)
+        public bool CheckOut(string maPhong, string maDP, decimal tongTienDV, decimal tongTienHuHong)
         {
             SqlParameter[] parameters =
             {
@@ -72,7 +70,7 @@ namespace Mee_Hotel.DAL
                 new SqlParameter("@TongTienHuHong", tongTienHuHong),
                 new SqlParameter("@NgayCheckOut", DateTime.Now)
             };
-            int result = DataProvider.Instance.CallProcNonQuery("proc_ThucHienCheckOut", parameters); // UPDATE Phong SET TinhTrang = 1; UPDATE PhieuDP SET TrangThai = 4, NgayTraThucTe = @NgayCheckOut; INSERT INTO HoaDon (...) VALUES (...)
+            int result = DataProvider.Instance.CallProcNonQuery("proc_CheckOut", parameters); 
             return result > 0;
         }
     }

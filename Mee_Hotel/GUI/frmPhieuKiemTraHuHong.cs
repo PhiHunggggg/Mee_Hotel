@@ -24,14 +24,14 @@ namespace Mee_Hotel.GUI
             if (dt != null && dt.Rows.Count > 0)
             {
                 dataGridView1.DataSource = dt;
-                FormatDataGridViewColumns(); // Gọi hàm an toàn ở đây
+                FormatDataGridViewColumns(); 
             }
             else
             {
-                dataGridView1.DataSource = null; // Tránh lỗi khi không có dữ liệu
+                dataGridView1.DataSource = null;
             }
         }
-        // Đổi tên cột an toàn – chỉ đổi nếu cột tồn tại
+       
         void FormatDataGridViewColumns()
         {
             if (dataGridView1.Columns.Contains("MaPhieu")) dataGridView1.Columns["MaPhieu"].HeaderText = "Mã Phiếu";
@@ -46,7 +46,7 @@ namespace Mee_Hotel.GUI
             if (dataGridView1.Columns.Contains("TongTien"))
             {
                 dataGridView1.Columns["TongTien"].HeaderText = "Tổng Tiền";
-                dataGridView1.Columns["TongTien"].DefaultCellStyle.Format = "N0 VND";
+                dataGridView1.Columns["TongTien"].DefaultCellStyle.Format = "0 VND";
             }
 
             // Căn giữa header
@@ -85,11 +85,16 @@ namespace Mee_Hotel.GUI
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridView1.ColumnHeadersHeight = 75;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            LoadDanhSachPhieu(); // Load mặc định
+
+
+
+
+            LoadDanhSachPhieu();
         }
 
-        private void siticoneButton1_Click(object sender, EventArgs e) // Thêm mới
+        private void siticoneButton1_Click(object sender, EventArgs e)
         {
             frmThemPhieuKTHH f = new frmThemPhieuKTHH();
             if (f.ShowDialog() == DialogResult.OK)
@@ -163,5 +168,7 @@ namespace Mee_Hotel.GUI
         {
             this.Close();
         }
+
+        
     }
 }
