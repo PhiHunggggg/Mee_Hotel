@@ -39,8 +39,10 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +68,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10,
             this.accordionControlElement3,
             this.accordionControlElement5,
+            this.accordionControlElement8,
             this.accordionControlElement6});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
@@ -123,6 +126,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement9.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_door_50;
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Text = "Phòng";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
             // 
             // accordionControlElement2
             // 
@@ -272,12 +276,19 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement5.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement5.Appearance.Pressed.Options.UseForeColor = true;
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Height = 70;
             this.accordionControlElement5.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement5.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_bill_50;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Hóa đơn";
+            // 
+            // accordionControlElement6
+            // 
+            this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement7});
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Text = "Kiểm tra phiếu đặt";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_1);
             // 
             // fluentDesignFormControl1
             // 
@@ -288,11 +299,15 @@ namespace Mee_Hotel.GUI
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
-            // accordionControlElement6
+            // accordionControlElement7
             // 
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Text = "Tạo hóa đơn";
-            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_1);
+            this.accordionControlElement7.Name = "accordionControlElement7";
+            this.accordionControlElement7.Text = "Element7";
+            // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Text = "CheckOut";
             // 
             // frmMain
             // 
@@ -331,5 +346,7 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
     }
 }

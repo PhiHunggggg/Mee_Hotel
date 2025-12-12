@@ -1,4 +1,5 @@
-﻿namespace Mee_Hotel.GUI
+﻿
+namespace Mee_Hotel.GUI
 {
     partial class frmCheckOut
     {
@@ -28,6 +29,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblNgayDen = new System.Windows.Forms.Label();
+            this.lblNgayTra = new System.Windows.Forms.Label();
+            this.lblPhong = new System.Windows.Forms.Label();
+            this.lblTenKH = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtpDen = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.dtpTu = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblChonPhong = new System.Windows.Forms.Label();
@@ -355,6 +377,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check Out Phòng - Mee Hotel";
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).EndInit();

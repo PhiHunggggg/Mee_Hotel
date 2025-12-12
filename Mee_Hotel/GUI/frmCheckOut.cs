@@ -137,7 +137,7 @@ namespace Mee_Hotel.GUI
             foreach (DataGridViewRow row in dataGridDichVu.Rows)
             {
                 tong += Convert.ToDecimal(row.Cells["SoLuong"].Value) * Convert.ToDecimal(row.Cells["DonGiaLucDung"].Value);
-            }
+        }
             return tong;
         }
 

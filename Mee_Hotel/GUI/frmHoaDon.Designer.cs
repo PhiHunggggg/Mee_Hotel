@@ -43,16 +43,24 @@ namespace Mee_Hotel.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.Findcheckoutbt = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtHoten = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
-            this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtSDT = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.GiaLucDattb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.NgayDattb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.SDTtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.SoPDtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.Phongtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.TenKHtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.Changebt = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.Confirmbt = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtPhong = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtSDT = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_DP_HD)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,7 +73,7 @@ namespace Mee_Hotel.GUI
             this.lblNgayDen.BackColor = System.Drawing.Color.White;
             this.lblNgayDen.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayDen.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNgayDen.Location = new System.Drawing.Point(169, 597);
+            this.lblNgayDen.Location = new System.Drawing.Point(143, 598);
             this.lblNgayDen.Name = "lblNgayDen";
             this.lblNgayDen.Size = new System.Drawing.Size(0, 23);
             this.lblNgayDen.TabIndex = 39;
@@ -77,7 +85,7 @@ namespace Mee_Hotel.GUI
             this.lblNgayTra.BackColor = System.Drawing.Color.White;
             this.lblNgayTra.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayTra.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNgayTra.Location = new System.Drawing.Point(169, 660);
+            this.lblNgayTra.Location = new System.Drawing.Point(143, 661);
             this.lblNgayTra.Name = "lblNgayTra";
             this.lblNgayTra.Size = new System.Drawing.Size(0, 23);
             this.lblNgayTra.TabIndex = 38;
@@ -89,7 +97,7 @@ namespace Mee_Hotel.GUI
             this.lblPhong.BackColor = System.Drawing.Color.White;
             this.lblPhong.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhong.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPhong.Location = new System.Drawing.Point(144, 533);
+            this.lblPhong.Location = new System.Drawing.Point(118, 534);
             this.lblPhong.Name = "lblPhong";
             this.lblPhong.Size = new System.Drawing.Size(0, 23);
             this.lblPhong.TabIndex = 37;
@@ -125,9 +133,11 @@ namespace Mee_Hotel.GUI
             this.Data_DP_HD.MultiSelect = false;
             this.Data_DP_HD.Name = "Data_DP_HD";
             this.Data_DP_HD.RowHeadersVisible = false;
+            this.Data_DP_HD.RowHeadersWidth = 62;
             this.Data_DP_HD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Data_DP_HD.Size = new System.Drawing.Size(1157, 757);
             this.Data_DP_HD.TabIndex = 3;
+            this.Data_DP_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_DP_HD_CellClick);
             this.Data_DP_HD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_DP_HD_CellContentClick);
             // 
             // label12
@@ -196,7 +206,7 @@ namespace Mee_Hotel.GUI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(72, 663);
+            this.label5.Location = new System.Drawing.Point(47, 642);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 19);
             this.label5.TabIndex = 11;
@@ -208,11 +218,11 @@ namespace Mee_Hotel.GUI
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 600);
+            this.label4.Location = new System.Drawing.Point(47, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 19);
+            this.label4.Size = new System.Drawing.Size(122, 19);
             this.label4.TabIndex = 10;
-            this.label4.Text = "CCCD:";
+            this.label4.Text = "Số phòng dặt:";
             // 
             // label3
             // 
@@ -220,11 +230,11 @@ namespace Mee_Hotel.GUI
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 537);
+            this.label3.Location = new System.Drawing.Point(47, 534);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.Size = new System.Drawing.Size(109, 19);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Phòng :";
+            this.label3.Text = "Loại phòng :";
             // 
             // label2
             // 
@@ -232,28 +242,28 @@ namespace Mee_Hotel.GUI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 474);
+            this.label2.Location = new System.Drawing.Point(47, 475);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Tên khách hàng :";
             // 
-            // siticoneButton1
+            // Findcheckoutbt
             // 
-            this.siticoneButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.siticoneButton1.BorderRadius = 20;
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(1224, 67);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(147, 45);
-            this.siticoneButton1.TabIndex = 5;
-            this.siticoneButton1.Text = "Tìm kiếm";
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            this.Findcheckoutbt.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Findcheckoutbt.BorderRadius = 20;
+            this.Findcheckoutbt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Findcheckoutbt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Findcheckoutbt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Findcheckoutbt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Findcheckoutbt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Findcheckoutbt.ForeColor = System.Drawing.Color.White;
+            this.Findcheckoutbt.Location = new System.Drawing.Point(1224, 67);
+            this.Findcheckoutbt.Name = "Findcheckoutbt";
+            this.Findcheckoutbt.Size = new System.Drawing.Size(147, 45);
+            this.Findcheckoutbt.TabIndex = 5;
+            this.Findcheckoutbt.Text = "Tìm kiếm";
+            this.Findcheckoutbt.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // txtHoten
             // 
@@ -291,43 +301,17 @@ namespace Mee_Hotel.GUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Tìm kiếm                      ";
             // 
-            // siticoneShapes1
-            // 
-            this.siticoneShapes1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.siticoneShapes1.BackColor = System.Drawing.Color.White;
-            this.siticoneShapes1.BorderColor = System.Drawing.Color.White;
-            this.siticoneShapes1.FillColor = System.Drawing.Color.White;
-            this.siticoneShapes1.Location = new System.Drawing.Point(0, 17);
-            this.siticoneShapes1.Name = "siticoneShapes1";
-            this.siticoneShapes1.PolygonSkip = 1;
-            this.siticoneShapes1.Rotate = 0F;
-            this.siticoneShapes1.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
-            this.siticoneShapes1.Size = new System.Drawing.Size(503, 365);
-            this.siticoneShapes1.TabIndex = 0;
-            this.siticoneShapes1.Text = "siticoneShapes1";
-            this.siticoneShapes1.Zoom = 80;
-            this.siticoneShapes1.Click += new System.EventHandler(this.siticoneShapes1_Click);
-            // 
-            // siticoneShapes2
-            // 
-            this.siticoneShapes2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.siticoneShapes2.BackColor = System.Drawing.Color.White;
-            this.siticoneShapes2.BorderColor = System.Drawing.Color.White;
-            this.siticoneShapes2.FillColor = System.Drawing.Color.White;
-            this.siticoneShapes2.Location = new System.Drawing.Point(0, 376);
-            this.siticoneShapes2.Name = "siticoneShapes2";
-            this.siticoneShapes2.PolygonSkip = 1;
-            this.siticoneShapes2.Rotate = 0F;
-            this.siticoneShapes2.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
-            this.siticoneShapes2.Size = new System.Drawing.Size(503, 541);
-            this.siticoneShapes2.TabIndex = 4;
-            this.siticoneShapes2.Text = "siticoneShapes2";
-            this.siticoneShapes2.Zoom = 80;
-            this.siticoneShapes2.Click += new System.EventHandler(this.siticoneShapes2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.GiaLucDattb);
+            this.panel1.Controls.Add(this.NgayDattb);
+            this.panel1.Controls.Add(this.SDTtb);
+            this.panel1.Controls.Add(this.SoPDtb);
+            this.panel1.Controls.Add(this.Phongtb);
+            this.panel1.Controls.Add(this.TenKHtb);
+            this.panel1.Controls.Add(this.Changebt);
+            this.panel1.Controls.Add(this.Confirmbt);
             this.panel1.Controls.Add(this.txtPhong);
             this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.label8);
@@ -345,7 +329,7 @@ namespace Mee_Hotel.GUI
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.siticoneButton1);
+            this.panel1.Controls.Add(this.Findcheckoutbt);
             this.panel1.Controls.Add(this.txtHoten);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.siticoneShapes1);
@@ -357,29 +341,211 @@ namespace Mee_Hotel.GUI
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label7
+            // GiaLucDattb
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(72, 789);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 19);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "Ngày đến:";
+            this.GiaLucDattb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.GiaLucDattb.BackColor = System.Drawing.Color.White;
+            this.GiaLucDattb.BorderRadius = 19;
+            this.GiaLucDattb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GiaLucDattb.DefaultText = "";
+            this.GiaLucDattb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GiaLucDattb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GiaLucDattb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaLucDattb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GiaLucDattb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaLucDattb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiaLucDattb.ForeColor = System.Drawing.Color.Aqua;
+            this.GiaLucDattb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GiaLucDattb.Location = new System.Drawing.Point(202, 741);
+            this.GiaLucDattb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GiaLucDattb.Name = "GiaLucDattb";
+            this.GiaLucDattb.PasswordChar = '\0';
+            this.GiaLucDattb.PlaceholderText = "";
+            this.GiaLucDattb.ReadOnly = true;
+            this.GiaLucDattb.SelectedText = "";
+            this.GiaLucDattb.Size = new System.Drawing.Size(254, 48);
+            this.GiaLucDattb.TabIndex = 51;
             // 
-            // label8
+            // NgayDattb
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(72, 725);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 19);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Ngày trả :";
+            this.NgayDattb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NgayDattb.BackColor = System.Drawing.Color.White;
+            this.NgayDattb.BorderRadius = 19;
+            this.NgayDattb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NgayDattb.DefaultText = "";
+            this.NgayDattb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NgayDattb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NgayDattb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NgayDattb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NgayDattb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NgayDattb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayDattb.ForeColor = System.Drawing.Color.Aqua;
+            this.NgayDattb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NgayDattb.Location = new System.Drawing.Point(202, 685);
+            this.NgayDattb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NgayDattb.Name = "NgayDattb";
+            this.NgayDattb.PasswordChar = '\0';
+            this.NgayDattb.PlaceholderText = "";
+            this.NgayDattb.ReadOnly = true;
+            this.NgayDattb.SelectedText = "";
+            this.NgayDattb.Size = new System.Drawing.Size(254, 48);
+            this.NgayDattb.TabIndex = 50;
+            // 
+            // SDTtb
+            // 
+            this.SDTtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SDTtb.BackColor = System.Drawing.Color.White;
+            this.SDTtb.BorderRadius = 19;
+            this.SDTtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SDTtb.DefaultText = "";
+            this.SDTtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SDTtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SDTtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SDTtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SDTtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SDTtb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDTtb.ForeColor = System.Drawing.Color.Aqua;
+            this.SDTtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SDTtb.Location = new System.Drawing.Point(202, 629);
+            this.SDTtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SDTtb.Name = "SDTtb";
+            this.SDTtb.PasswordChar = '\0';
+            this.SDTtb.PlaceholderText = "";
+            this.SDTtb.ReadOnly = true;
+            this.SDTtb.SelectedText = "";
+            this.SDTtb.Size = new System.Drawing.Size(254, 48);
+            this.SDTtb.TabIndex = 49;
+            // 
+            // SoPDtb
+            // 
+            this.SoPDtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SoPDtb.BackColor = System.Drawing.Color.White;
+            this.SoPDtb.BorderRadius = 19;
+            this.SoPDtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SoPDtb.DefaultText = "";
+            this.SoPDtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SoPDtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SoPDtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SoPDtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SoPDtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SoPDtb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoPDtb.ForeColor = System.Drawing.Color.Aqua;
+            this.SoPDtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SoPDtb.Location = new System.Drawing.Point(202, 573);
+            this.SoPDtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SoPDtb.Name = "SoPDtb";
+            this.SoPDtb.PasswordChar = '\0';
+            this.SoPDtb.PlaceholderText = "";
+            this.SoPDtb.ReadOnly = true;
+            this.SoPDtb.SelectedText = "";
+            this.SoPDtb.Size = new System.Drawing.Size(254, 48);
+            this.SoPDtb.TabIndex = 48;
+            // 
+            // Phongtb
+            // 
+            this.Phongtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Phongtb.BackColor = System.Drawing.Color.White;
+            this.Phongtb.BorderRadius = 19;
+            this.Phongtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Phongtb.DefaultText = "";
+            this.Phongtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Phongtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Phongtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Phongtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Phongtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Phongtb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phongtb.ForeColor = System.Drawing.Color.Aqua;
+            this.Phongtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Phongtb.Location = new System.Drawing.Point(202, 517);
+            this.Phongtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Phongtb.Name = "Phongtb";
+            this.Phongtb.PasswordChar = '\0';
+            this.Phongtb.PlaceholderText = "";
+            this.Phongtb.ReadOnly = true;
+            this.Phongtb.SelectedText = "";
+            this.Phongtb.Size = new System.Drawing.Size(254, 48);
+            this.Phongtb.TabIndex = 47;
+            // 
+            // TenKHtb
+            // 
+            this.TenKHtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TenKHtb.BackColor = System.Drawing.Color.White;
+            this.TenKHtb.BorderRadius = 19;
+            this.TenKHtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TenKHtb.DefaultText = "";
+            this.TenKHtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TenKHtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TenKHtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TenKHtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TenKHtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TenKHtb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenKHtb.ForeColor = System.Drawing.Color.Aqua;
+            this.TenKHtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TenKHtb.Location = new System.Drawing.Point(202, 461);
+            this.TenKHtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TenKHtb.Name = "TenKHtb";
+            this.TenKHtb.PasswordChar = '\0';
+            this.TenKHtb.PlaceholderText = "";
+            this.TenKHtb.ReadOnly = true;
+            this.TenKHtb.SelectedText = "";
+            this.TenKHtb.Size = new System.Drawing.Size(254, 48);
+            this.TenKHtb.TabIndex = 46;
+            // 
+            // Changebt
+            // 
+            this.Changebt.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Changebt.BorderRadius = 20;
+            this.Changebt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Changebt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Changebt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Changebt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Changebt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Changebt.ForeColor = System.Drawing.Color.White;
+            this.Changebt.Location = new System.Drawing.Point(1581, 67);
+            this.Changebt.Name = "Changebt";
+            this.Changebt.Size = new System.Drawing.Size(147, 45);
+            this.Changebt.TabIndex = 45;
+            this.Changebt.Text = "Sửa lại";
+            // 
+            // Confirmbt
+            // 
+            this.Confirmbt.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Confirmbt.BorderRadius = 20;
+            this.Confirmbt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Confirmbt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Confirmbt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Confirmbt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Confirmbt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Confirmbt.ForeColor = System.Drawing.Color.White;
+            this.Confirmbt.Location = new System.Drawing.Point(1402, 67);
+            this.Confirmbt.Name = "Confirmbt";
+            this.Confirmbt.Size = new System.Drawing.Size(147, 45);
+            this.Confirmbt.TabIndex = 6;
+            this.Confirmbt.Text = "Xác nhận";
+            // 
+            // txtPhong
+            // 
+            this.txtPhong.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPhong.BackColor = System.Drawing.Color.White;
+            this.txtPhong.BorderRadius = 19;
+            this.txtPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhong.DefaultText = "";
+            this.txtPhong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhong.ForeColor = System.Drawing.Color.Black;
+            this.txtPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhong.Location = new System.Drawing.Point(91, 245);
+            this.txtPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhong.Name = "txtPhong";
+            this.txtPhong.PasswordChar = '\0';
+            this.txtPhong.PlaceholderText = "";
+            this.txtPhong.SelectedText = "";
+            this.txtPhong.Size = new System.Drawing.Size(310, 48);
+            this.txtPhong.TabIndex = 44;
             // 
             // txtSDT
             // 
@@ -405,29 +571,64 @@ namespace Mee_Hotel.GUI
             this.txtSDT.Size = new System.Drawing.Size(310, 48);
             this.txtSDT.TabIndex = 43;
             // 
-            // txtPhong
+            // label8
             // 
-            this.txtPhong.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPhong.BackColor = System.Drawing.Color.White;
-            this.txtPhong.BorderRadius = 19;
-            this.txtPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhong.DefaultText = "";
-            this.txtPhong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhong.ForeColor = System.Drawing.Color.Black;
-            this.txtPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhong.Location = new System.Drawing.Point(91, 245);
-            this.txtPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.PasswordChar = '\0';
-            this.txtPhong.PlaceholderText = "";
-            this.txtPhong.SelectedText = "";
-            this.txtPhong.Size = new System.Drawing.Size(310, 48);
-            this.txtPhong.TabIndex = 44;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(46, 702);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 19);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Ngày đặt :";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(47, 755);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 19);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Giá lúc đặt:";
+            // 
+            // siticoneShapes2
+            // 
+            this.siticoneShapes2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.siticoneShapes2.BackColor = System.Drawing.Color.White;
+            this.siticoneShapes2.BorderColor = System.Drawing.Color.White;
+            this.siticoneShapes2.FillColor = System.Drawing.Color.White;
+            this.siticoneShapes2.Location = new System.Drawing.Point(9, 376);
+            this.siticoneShapes2.Name = "siticoneShapes2";
+            this.siticoneShapes2.PolygonSkip = 1;
+            this.siticoneShapes2.Rotate = 0F;
+            this.siticoneShapes2.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
+            this.siticoneShapes2.Size = new System.Drawing.Size(473, 541);
+            this.siticoneShapes2.TabIndex = 46;
+            this.siticoneShapes2.Text = "siticoneShapes2";
+            this.siticoneShapes2.Zoom = 80;
+            this.siticoneShapes2.Click += new System.EventHandler(this.siticoneShapes2_Click_1);
+            // 
+            // siticoneShapes1
+            // 
+            this.siticoneShapes1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.siticoneShapes1.BackColor = System.Drawing.Color.White;
+            this.siticoneShapes1.BorderColor = System.Drawing.Color.White;
+            this.siticoneShapes1.FillColor = System.Drawing.Color.White;
+            this.siticoneShapes1.Location = new System.Drawing.Point(9, 9);
+            this.siticoneShapes1.Name = "siticoneShapes1";
+            this.siticoneShapes1.PolygonSkip = 1;
+            this.siticoneShapes1.Rotate = 0F;
+            this.siticoneShapes1.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
+            this.siticoneShapes1.Size = new System.Drawing.Size(473, 365);
+            this.siticoneShapes1.TabIndex = 0;
+            this.siticoneShapes1.Text = "siticoneShapes1";
+            this.siticoneShapes1.Zoom = 80;
+            this.siticoneShapes1.Click += new System.EventHandler(this.siticoneShapes1_Click);
             // 
             // frmHoaDon
             // 
@@ -462,15 +663,23 @@ namespace Mee_Hotel.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton Findcheckoutbt;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoten;
         private System.Windows.Forms.Label label1;
-        private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes1;
-        private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtPhong;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtSDT;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton Changebt;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton Confirmbt;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox SDTtb;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox SoPDtb;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox Phongtb;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox TenKHtb;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox GiaLucDattb;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox NgayDattb;
+        private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes1;
+        private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes2;
     }
 }

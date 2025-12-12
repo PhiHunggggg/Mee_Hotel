@@ -45,5 +45,15 @@ namespace Mee_Hotel.DAL
             return dt;
         }
 
+        public DataTable getDanhSachCO()
+        { 
+            DataTable dt = DataProvider.Instance.CallProcQuery("getDanhSachCO");
+
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            return dt;
+        }
     }
 }
