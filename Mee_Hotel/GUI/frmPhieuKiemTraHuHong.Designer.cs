@@ -120,7 +120,7 @@
             this.dtpNgayTim.FillColor = System.Drawing.Color.White;
             this.dtpNgayTim.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpNgayTim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayTim.Location = new System.Drawing.Point(975, 23);
+            this.dtpNgayTim.Location = new System.Drawing.Point(884, 27);
             this.dtpNgayTim.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTim.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayTim.Name = "dtpNgayTim";
@@ -132,7 +132,7 @@
             // 
             this.lblNgayTim.AutoSize = true;
             this.lblNgayTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblNgayTim.Location = new System.Drawing.Point(900, 40);
+            this.lblNgayTim.Location = new System.Drawing.Point(822, 40);
             this.lblNgayTim.Name = "lblNgayTim";
             this.lblNgayTim.Size = new System.Drawing.Size(69, 27);
             this.lblNgayTim.TabIndex = 6;
@@ -150,7 +150,7 @@
             this.txtNhanVienTim.PasswordChar = '\0';
             this.txtNhanVienTim.PlaceholderText = "";
             this.txtNhanVienTim.SelectedText = "";
-            this.txtNhanVienTim.Size = new System.Drawing.Size(278, 44);
+            this.txtNhanVienTim.Size = new System.Drawing.Size(144, 44);
             this.txtNhanVienTim.TabIndex = 5;
             // 
             // lblNhanVienTim
@@ -173,7 +173,7 @@
             this.cmbPhongTim.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbPhongTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbPhongTim.ItemHeight = 36;
-            this.cmbPhongTim.Location = new System.Drawing.Point(750, 27);
+            this.cmbPhongTim.Location = new System.Drawing.Point(628, 29);
             this.cmbPhongTim.Name = "cmbPhongTim";
             this.cmbPhongTim.Size = new System.Drawing.Size(118, 42);
             this.cmbPhongTim.TabIndex = 3;
@@ -182,7 +182,7 @@
             // 
             this.lblPhongTim.AutoSize = true;
             this.lblPhongTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblPhongTim.Location = new System.Drawing.Point(676, 40);
+            this.lblPhongTim.Location = new System.Drawing.Point(553, 40);
             this.lblPhongTim.Name = "lblPhongTim";
             this.lblPhongTim.Size = new System.Drawing.Size(79, 27);
             this.lblPhongTim.TabIndex = 2;

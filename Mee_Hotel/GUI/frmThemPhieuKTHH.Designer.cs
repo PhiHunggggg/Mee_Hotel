@@ -116,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label2.Location = new System.Drawing.Point(875, 205);
+            this.label2.Location = new System.Drawing.Point(875, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 27);
             this.label2.TabIndex = 37;
@@ -206,13 +206,13 @@
             this.txtNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhanVien.DefaultText = "";
             this.txtNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtNhanVien.Location = new System.Drawing.Point(885, 236);
+            this.txtNhanVien.Location = new System.Drawing.Point(998, 219);
             this.txtNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNhanVien.Name = "txtNhanVien";
             this.txtNhanVien.PasswordChar = '\0';
             this.txtNhanVien.PlaceholderText = "";
             this.txtNhanVien.SelectedText = "";
-            this.txtNhanVien.Size = new System.Drawing.Size(304, 52);
+            this.txtNhanVien.Size = new System.Drawing.Size(140, 52);
             this.txtNhanVien.TabIndex = 30;
             // 
             // dtpNgayKiemTra
