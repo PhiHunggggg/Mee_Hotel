@@ -52,9 +52,11 @@ namespace Mee_Hotel.GUI.Phong
                 ));
             }
 
-            return root.Elements().Any() ? root.ToString() : "<root></root>";
-        }
-        private void SetupDataGridView()
+            return root.HasElements
+                    ? root.ToString()
+                    : "<root></root>"; // ĐÚNG CHUẨN – SQL SERVER NHẬN ĐƯỢC
+            }
+            private void SetupDataGridView()
         {
             dataGridView1.RowTemplate.Height = 40;
             dataGridView1.AllowUserToAddRows = false;
@@ -129,7 +131,7 @@ namespace Mee_Hotel.GUI.Phong
 
             dataGridView1.DataSource = bangPhong;
             dataGridView1.Columns["MaLoaiPhong"].Visible = false;
-            dataGridView1.Columns["PhanTramPhongTrong"].Visible = false;
+            dataGridView1.Columns["Phần trăm trống (%)"].Visible = false;
             dataGridView1.Columns["SoPhongChon"].Visible = false;
             dataGridView1.Columns["Tổng số phòng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns["Số phòng trống"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;

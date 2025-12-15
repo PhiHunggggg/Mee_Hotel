@@ -32,6 +32,7 @@ namespace Mee_Hotel.GUI
             {
                 cbcPhong.SelectedValue = maPhong;
             }
+            dtpNgaySuDung.Value = DateTime.Today.Date;
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -103,6 +104,15 @@ namespace Mee_Hotel.GUI
                 decimal donGia = Convert.ToDecimal(bangDichVu.Rows[0]["DonGia"]);
                 decimal tongTien = donGia * Convert.ToInt32(cbcSoLuong.SelectedItem);
                 lblTongTien.Text = "$ " + tongTien.ToString() + "đ";
+            }
+        }
+
+        private void dtpNgaySuDung_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpNgaySuDung.Value.Date < DateTime.Today)
+            {
+                MessageBox.Show("Không thể đặt dịch vụ trước ngày hôm nay !!!");
+                dtpNgaySuDung.Value = DateTime.Today.Date;
             }
         }
     }

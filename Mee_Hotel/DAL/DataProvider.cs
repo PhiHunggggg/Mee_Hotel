@@ -89,5 +89,31 @@ namespace Mee_Hotel.DAL
                 CloseConnection();
             }
         }
+        public DataSet CallProcQuerySet(string procName, SqlParameter[] parameters = null)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(procName, conn))
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null && parameters.Length > 0)
+                        cmd.Parameters.AddRange(parameters);
+
+                    da.Fill(ds); // Fill tự động xử lý nhiều result set
+                }
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex; // Có thể log lại ở đây nếu cần
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
     }
 }

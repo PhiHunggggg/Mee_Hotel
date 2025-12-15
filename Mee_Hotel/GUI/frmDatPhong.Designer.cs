@@ -31,6 +31,10 @@ namespace Mee_Hotel.GUI.Phong
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNgayDangKi = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTongPhongDat = new System.Windows.Forms.Label();
             this.lblCanhBaoSoNguoi = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTongNguoiToiDa = new System.Windows.Forms.Label();
@@ -43,14 +47,10 @@ namespace Mee_Hotel.GUI.Phong
             this.dtpNgayTra = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.dtpNgayDen = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.btnXacNhan = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.voucherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTongTienDuKien = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.voucherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTongPhongDat = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblNgayDangKi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voucherBindingSource)).BeginInit();
@@ -85,6 +85,52 @@ namespace Mee_Hotel.GUI.Phong
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1571, 832);
             this.panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(985, 411);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 24);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Số ngày đăng ký :";
+            // 
+            // lblNgayDangKi
+            // 
+            this.lblNgayDangKi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNgayDangKi.AutoSize = true;
+            this.lblNgayDangKi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayDangKi.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblNgayDangKi.Location = new System.Drawing.Point(1160, 411);
+            this.lblNgayDangKi.Name = "lblNgayDangKi";
+            this.lblNgayDangKi.Size = new System.Drawing.Size(24, 26);
+            this.lblNgayDangKi.TabIndex = 48;
+            this.lblNgayDangKi.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(970, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 24);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Số phòng đăng kí :";
+            // 
+            // lblTongPhongDat
+            // 
+            this.lblTongPhongDat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTongPhongDat.AutoSize = true;
+            this.lblTongPhongDat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongPhongDat.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTongPhongDat.Location = new System.Drawing.Point(1151, 32);
+            this.lblTongPhongDat.Name = "lblTongPhongDat";
+            this.lblTongPhongDat.Size = new System.Drawing.Size(24, 26);
+            this.lblTongPhongDat.TabIndex = 46;
+            this.lblTongPhongDat.Text = "0";
             // 
             // lblCanhBaoSoNguoi
             // 
@@ -147,7 +193,7 @@ namespace Mee_Hotel.GUI.Phong
             this.txtSoNguoiDangKy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoNguoiDangKy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoNguoiDangKy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoNguoiDangKy.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoNguoiDangKy.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.txtSoNguoiDangKy.ForeColor = System.Drawing.Color.Black;
             this.txtSoNguoiDangKy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoNguoiDangKy.Location = new System.Drawing.Point(1369, 336);
@@ -265,10 +311,6 @@ namespace Mee_Hotel.GUI.Phong
             this.btnXacNhan.Text = "Xác nhận đặt";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
-            // voucherBindingSource
-            // 
-            this.voucherBindingSource.DataMember = "Voucher";
-            // 
             // lblTongTienDuKien
             // 
             this.lblTongTienDuKien.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -292,51 +334,9 @@ namespace Mee_Hotel.GUI.Phong
             this.label1.TabIndex = 2;
             this.label1.Text = "Tổng tiền dự kiến :";
             // 
-            // label4
+            // voucherBindingSource
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(970, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 24);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Số phòng đăng kí :";
-            // 
-            // lblTongPhongDat
-            // 
-            this.lblTongPhongDat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTongPhongDat.AutoSize = true;
-            this.lblTongPhongDat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongPhongDat.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTongPhongDat.Location = new System.Drawing.Point(1151, 32);
-            this.lblTongPhongDat.Name = "lblTongPhongDat";
-            this.lblTongPhongDat.Size = new System.Drawing.Size(24, 26);
-            this.lblTongPhongDat.TabIndex = 46;
-            this.lblTongPhongDat.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(985, 411);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 24);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Số ngày đăng ký :";
-            // 
-            // lblNgayDangKi
-            // 
-            this.lblNgayDangKi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNgayDangKi.AutoSize = true;
-            this.lblNgayDangKi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayDangKi.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNgayDangKi.Location = new System.Drawing.Point(1160, 411);
-            this.lblNgayDangKi.Name = "lblNgayDangKi";
-            this.lblNgayDangKi.Size = new System.Drawing.Size(24, 26);
-            this.lblNgayDangKi.TabIndex = 48;
-            this.lblNgayDangKi.Text = "0";
+            this.voucherBindingSource.DataMember = "Voucher";
             // 
             // frmDatPhong
             // 

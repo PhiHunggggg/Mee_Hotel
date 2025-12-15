@@ -31,6 +31,8 @@ namespace Mee_Hotel.GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblNgayNhanPhong = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGhiChu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -63,8 +65,6 @@ namespace Mee_Hotel.GUI
             this.phongTableAdapter = new Mee_Hotel.Quan_Ly_Khach_SanDataSetTableAdapters.PhongTableAdapter();
             this.dichVuTableAdapter = new Mee_Hotel.Quan_Ly_Khach_SanDataSet1TableAdapters.DichVuTableAdapter();
             this.nhanVienTableAdapter = new Mee_Hotel.Quan_Ly_Khach_SanDataSet2TableAdapters.NhanVienTableAdapter();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblTongTien = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_Ly_Khach_SanDataSet2)).BeginInit();
@@ -106,6 +106,30 @@ namespace Mee_Hotel.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1364, 752);
             this.panel1.TabIndex = 0;
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.BackColor = System.Drawing.Color.White;
+            this.lblTongTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTongTien.Location = new System.Drawing.Point(839, 497);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(90, 25);
+            this.lblTongTien.TabIndex = 26;
+            this.lblTongTien.Text = "$ 00.0đ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(730, 500);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 22);
+            this.label12.TabIndex = 25;
+            this.label12.Tag = "";
+            this.label12.Text = "Tổng tiền  :";
             // 
             // lblNgayNhanPhong
             // 
@@ -387,6 +411,7 @@ namespace Mee_Hotel.GUI
             this.dtpNgaySuDung.Size = new System.Drawing.Size(205, 36);
             this.dtpNgaySuDung.TabIndex = 7;
             this.dtpNgaySuDung.Value = new System.DateTime(2025, 12, 10, 8, 27, 6, 541);
+            this.dtpNgaySuDung.ValueChanged += new System.EventHandler(this.dtpNgaySuDung_ValueChanged);
             // 
             // label11
             // 
@@ -483,30 +508,6 @@ namespace Mee_Hotel.GUI
             // nhanVienTableAdapter
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(730, 500);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 22);
-            this.label12.TabIndex = 25;
-            this.label12.Tag = "";
-            this.label12.Text = "Tổng tiền  :";
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.BackColor = System.Drawing.Color.White;
-            this.lblTongTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTongTien.Location = new System.Drawing.Point(839, 497);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(90, 25);
-            this.lblTongTien.TabIndex = 26;
-            this.lblTongTien.Text = "$ 00.0đ";
             // 
             // frmThemDichVu
             // 
