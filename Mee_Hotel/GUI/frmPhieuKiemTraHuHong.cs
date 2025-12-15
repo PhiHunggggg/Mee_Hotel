@@ -18,9 +18,9 @@ namespace Mee_Hotel.GUI
             InitializeComponent();
         }
 
-        private void LoadDanhSachPhieu(string maPhieu = "", string maPhong = "", string maNV = "", DateTime? ngayTim = null)
+        private void LoadDanhSachPhieu(string maPhieu = "", string maPhong = "", string tenNV = "", DateTime? ngayTim = null)
         {
-            DataTable dt = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhieu(maPhieu, maPhong, maNV, ngayTim);
+            DataTable dt = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhieu(maPhieu, maPhong, tenNV, ngayTim);
             if (dt != null && dt.Rows.Count > 0)
             {
                 dataGridView1.DataSource = dt;
@@ -37,7 +37,7 @@ namespace Mee_Hotel.GUI
             if (dataGridView1.Columns.Contains("MaPhieu")) dataGridView1.Columns["MaPhieu"].HeaderText = "Mã Phiếu";
             if (dataGridView1.Columns.Contains("MaPhong")) dataGridView1.Columns["MaPhong"].HeaderText = "Mã Phòng";
             if (dataGridView1.Columns.Contains("TenPhong")) dataGridView1.Columns["TenPhong"].HeaderText = "Tên Phòng";
-            if (dataGridView1.Columns.Contains("MaNV")) dataGridView1.Columns["MaNV"].HeaderText = "Mã Nhân Viên";
+            if (dataGridView1.Columns.Contains("TenNV")) dataGridView1.Columns["MaNV"].HeaderText = "Mã Nhân Viên";
             if (dataGridView1.Columns.Contains("NgayKiemTra"))
             {
                 dataGridView1.Columns["NgayKiemTra"].HeaderText = "Ngày Kiểm Tra";
@@ -61,7 +61,7 @@ namespace Mee_Hotel.GUI
         private void frmPhieuKiemTraHuHong_Load(object sender, EventArgs e)
         {
             // Load danh sách phòng vào cmbPhongTim
-            DataTable dtPhong = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhongDangO();
+            DataTable dtPhong = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhong();
             if (dtPhong != null)
             {
                 cmbPhongTim.DataSource = dtPhong;
@@ -86,12 +86,15 @@ namespace Mee_Hotel.GUI
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridView1.ColumnHeadersHeight = 75;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-
-
-
+            // Khởi tạo checkbox tìm theo ngày
+            chkTimTheoNgay.Checked = false;
+            dtpNgayTim.Enabled = false;
             LoadDanhSachPhieu();
+        }
+
+        private void chkTimTheoNgay_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpNgayTim.Enabled = chkTimTheoNgay.Checked;
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -144,9 +147,9 @@ namespace Mee_Hotel.GUI
         {
             string maPhieu = txtMaPhieuTim.Text.Trim();
             string maPhong = cmbPhongTim.SelectedValue?.ToString() ?? "";
-            string maNV = txtNhanVienTim.Text.Trim();
-            DateTime? ngayTim = dtpNgayTim.Checked ? (DateTime?)dtpNgayTim.Value.Date : null;
-            LoadDanhSachPhieu(maPhieu, maPhong, maNV, ngayTim);
+            string tenNV = txtNhanVienTim.Text.Trim();
+            DateTime? ngayTim = chkTimTheoNgay.Checked ? (DateTime?)dtpNgayTim.Value.Date : null;
+            LoadDanhSachPhieu(maPhieu, maPhong, tenNV, ngayTim);
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -154,21 +157,9 @@ namespace Mee_Hotel.GUI
             txtMaPhieuTim.Text = "";
             cmbPhongTim.SelectedIndex = -1;
             txtNhanVienTim.Text = "";
-            dtpNgayTim.Checked = false;
+            chkTimTheoNgay.Checked = false;
             LoadDanhSachPhieu();
         }
-
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            // Implement in phiếu (sử dụng Crystal Report hoặc PrintDocument)
-            MessageBox.Show("Chức năng in phiếu đang được triển khai...");
-        }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         
     }
 }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.separatorControl3 = new DevExpress.XtraEditors.SeparatorControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblChonPhong = new System.Windows.Forms.Label();
@@ -52,7 +55,13 @@
             this.lblHuHong = new System.Windows.Forms.Label();
             this.dataGridHuHong = new System.Windows.Forms.DataGridView();
             this.btnCheckOut = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lblTongTienDVLabel = new System.Windows.Forms.Label();
+            this.lblTongTienDV = new System.Windows.Forms.Label();
+            this.lblTongTienHuHongLabel = new System.Windows.Forms.Label();
+            this.lblTongTienHuHong = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
@@ -61,6 +70,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.separatorControl3);
+            this.panel1.Controls.Add(this.labelControl1);
+            this.panel1.Controls.Add(this.separatorControl2);
             this.panel1.Controls.Add(this.separatorControl1);
             this.panel1.Controls.Add(this.lblTieuDe);
             this.panel1.Controls.Add(this.lblChonPhong);
@@ -84,11 +96,44 @@
             this.panel1.Controls.Add(this.lblHuHong);
             this.panel1.Controls.Add(this.dataGridHuHong);
             this.panel1.Controls.Add(this.btnCheckOut);
+            this.panel1.Controls.Add(this.lblTongTienDVLabel);
+            this.panel1.Controls.Add(this.lblTongTienDV);
+            this.panel1.Controls.Add(this.lblTongTienHuHongLabel);
+            this.panel1.Controls.Add(this.lblTongTienHuHong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 1055);
             this.panel1.TabIndex = 0;
+            // 
+            // separatorControl3
+            // 
+            this.separatorControl3.Location = new System.Drawing.Point(981, 77);
+            this.separatorControl3.Name = "separatorControl3";
+            this.separatorControl3.Size = new System.Drawing.Size(680, 23);
+            this.separatorControl3.TabIndex = 29;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.AppearancePressed.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(1025, 30);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(388, 34);
+            this.labelControl1.TabIndex = 28;
+            this.labelControl1.Text = "Kiểm tra thông tin sử dụng ";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Location = new System.Drawing.Point(1004, 564);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(649, 23);
+            this.separatorControl2.TabIndex = 27;
             // 
             // separatorControl1
             // 
@@ -152,7 +197,7 @@
             // 
             this.lblMaPhong.AutoSize = true;
             this.lblMaPhong.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblMaPhong.Location = new System.Drawing.Point(336, 240);
+            this.lblMaPhong.Location = new System.Drawing.Point(415, 240);
             this.lblMaPhong.Name = "lblMaPhong";
             this.lblMaPhong.Size = new System.Drawing.Size(90, 29);
             this.lblMaPhong.TabIndex = 4;
@@ -173,7 +218,7 @@
             // 
             this.lblTenPhong.AutoSize = true;
             this.lblTenPhong.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblTenPhong.Location = new System.Drawing.Point(336, 290);
+            this.lblTenPhong.Location = new System.Drawing.Point(415, 290);
             this.lblTenPhong.Name = "lblTenPhong";
             this.lblTenPhong.Size = new System.Drawing.Size(90, 29);
             this.lblTenPhong.TabIndex = 6;
@@ -186,15 +231,15 @@
             this.lblMaDPLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblMaDPLabel.Location = new System.Drawing.Point(100, 340);
             this.lblMaDPLabel.Name = "lblMaDPLabel";
-            this.lblMaDPLabel.Size = new System.Drawing.Size(190, 29);
+            this.lblMaDPLabel.Size = new System.Drawing.Size(264, 29);
             this.lblMaDPLabel.TabIndex = 7;
-            this.lblMaDPLabel.Text = "Mã Đặt Phòng:";
+            this.lblMaDPLabel.Text = "Mã Phiếu Đặt Phòng:";
             // 
             // lblMaDP
             // 
             this.lblMaDP.AutoSize = true;
             this.lblMaDP.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblMaDP.Location = new System.Drawing.Point(336, 340);
+            this.lblMaDP.Location = new System.Drawing.Point(415, 340);
             this.lblMaDP.Name = "lblMaDP";
             this.lblMaDP.Size = new System.Drawing.Size(90, 29);
             this.lblMaDP.TabIndex = 8;
@@ -215,7 +260,7 @@
             // 
             this.lblTenKH.AutoSize = true;
             this.lblTenKH.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblTenKH.Location = new System.Drawing.Point(336, 390);
+            this.lblTenKH.Location = new System.Drawing.Point(415, 401);
             this.lblTenKH.Name = "lblTenKH";
             this.lblTenKH.Size = new System.Drawing.Size(90, 29);
             this.lblTenKH.TabIndex = 10;
@@ -236,7 +281,7 @@
             // 
             this.lblNgayDen.AutoSize = true;
             this.lblNgayDen.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblNgayDen.Location = new System.Drawing.Point(336, 440);
+            this.lblNgayDen.Location = new System.Drawing.Point(415, 440);
             this.lblNgayDen.Name = "lblNgayDen";
             this.lblNgayDen.Size = new System.Drawing.Size(90, 29);
             this.lblNgayDen.TabIndex = 12;
@@ -249,15 +294,15 @@
             this.lblNgayTraDuKienLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblNgayTraDuKienLabel.Location = new System.Drawing.Point(100, 490);
             this.lblNgayTraDuKienLabel.Name = "lblNgayTraDuKienLabel";
-            this.lblNgayTraDuKienLabel.Size = new System.Drawing.Size(221, 29);
+            this.lblNgayTraDuKienLabel.Size = new System.Drawing.Size(125, 29);
             this.lblNgayTraDuKienLabel.TabIndex = 13;
-            this.lblNgayTraDuKienLabel.Text = "Ngày trả dự kiến:";
+            this.lblNgayTraDuKienLabel.Text = "Ngày trả:";
             // 
             // lblNgayTraDuKien
             // 
             this.lblNgayTraDuKien.AutoSize = true;
             this.lblNgayTraDuKien.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.lblNgayTraDuKien.Location = new System.Drawing.Point(336, 490);
+            this.lblNgayTraDuKien.Location = new System.Drawing.Point(415, 500);
             this.lblNgayTraDuKien.Name = "lblNgayTraDuKien";
             this.lblNgayTraDuKien.Size = new System.Drawing.Size(90, 29);
             this.lblNgayTraDuKien.TabIndex = 14;
@@ -279,7 +324,7 @@
             this.lblSoNgayO.AutoSize = true;
             this.lblSoNgayO.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblSoNgayO.ForeColor = System.Drawing.Color.Red;
-            this.lblSoNgayO.Location = new System.Drawing.Point(320, 540);
+            this.lblSoNgayO.Location = new System.Drawing.Point(412, 540);
             this.lblSoNgayO.Name = "lblSoNgayO";
             this.lblSoNgayO.Size = new System.Drawing.Size(93, 29);
             this.lblSoNgayO.TabIndex = 16;
@@ -288,11 +333,11 @@
             // lblDichVu
             // 
             this.lblDichVu.AutoSize = true;
-            this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.lblDichVu.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDichVu.Location = new System.Drawing.Point(751, 50);
+            this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDichVu.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblDichVu.Location = new System.Drawing.Point(736, 71);
             this.lblDichVu.Name = "lblDichVu";
-            this.lblDichVu.Size = new System.Drawing.Size(268, 33);
+            this.lblDichVu.Size = new System.Drawing.Size(239, 29);
             this.lblDichVu.TabIndex = 17;
             this.lblDichVu.Text = "DỊCH VỤ SỬ DỤNG";
             // 
@@ -304,23 +349,23 @@
             this.dataGridDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dataGridDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDichVu.ColumnHeadersHeight = 50;
-            this.dataGridDichVu.Location = new System.Drawing.Point(742, 86);
+            this.dataGridDichVu.Location = new System.Drawing.Point(742, 107);
             this.dataGridDichVu.Name = "dataGridDichVu";
             this.dataGridDichVu.ReadOnly = true;
             this.dataGridDichVu.RowHeadersVisible = false;
             this.dataGridDichVu.RowHeadersWidth = 51;
             this.dataGridDichVu.RowTemplate.Height = 40;
-            this.dataGridDichVu.Size = new System.Drawing.Size(919, 401);
+            this.dataGridDichVu.Size = new System.Drawing.Size(919, 380);
             this.dataGridDichVu.TabIndex = 18;
             // 
             // lblHuHong
             // 
             this.lblHuHong.AutoSize = true;
-            this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.lblHuHong.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblHuHong.Location = new System.Drawing.Point(751, 490);
+            this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuHong.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblHuHong.Location = new System.Drawing.Point(751, 558);
             this.lblHuHong.Name = "lblHuHong";
-            this.lblHuHong.Size = new System.Drawing.Size(281, 33);
+            this.lblHuHong.Size = new System.Drawing.Size(247, 29);
             this.lblHuHong.TabIndex = 19;
             this.lblHuHong.Text = "HƯ HỎNG THIẾT BỊ";
             // 
@@ -332,13 +377,13 @@
             this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
             this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridHuHong.ColumnHeadersHeight = 50;
-            this.dataGridHuHong.Location = new System.Drawing.Point(748, 526);
+            this.dataGridHuHong.Location = new System.Drawing.Point(748, 594);
             this.dataGridHuHong.Name = "dataGridHuHong";
             this.dataGridHuHong.ReadOnly = true;
             this.dataGridHuHong.RowHeadersVisible = false;
             this.dataGridHuHong.RowHeadersWidth = 51;
             this.dataGridHuHong.RowTemplate.Height = 40;
-            this.dataGridHuHong.Size = new System.Drawing.Size(913, 359);
+            this.dataGridHuHong.Size = new System.Drawing.Size(913, 297);
             this.dataGridHuHong.TabIndex = 20;
             // 
             // btnCheckOut
@@ -354,6 +399,50 @@
             this.btnCheckOut.Text = "Check Out ";
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
+            // lblTongTienDVLabel
+            // 
+            this.lblTongTienDVLabel.AutoSize = true;
+            this.lblTongTienDVLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTongTienDVLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTongTienDVLabel.Location = new System.Drawing.Point(915, 500);
+            this.lblTongTienDVLabel.Name = "lblTongTienDVLabel";
+            this.lblTongTienDVLabel.Size = new System.Drawing.Size(228, 29);
+            this.lblTongTienDVLabel.TabIndex = 23;
+            this.lblTongTienDVLabel.Text = "Tổng tiền dịch vụ:";
+            // 
+            // lblTongTienDV
+            // 
+            this.lblTongTienDV.AutoSize = true;
+            this.lblTongTienDV.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTongTienDV.ForeColor = System.Drawing.Color.Red;
+            this.lblTongTienDV.Location = new System.Drawing.Point(1204, 500);
+            this.lblTongTienDV.Name = "lblTongTienDV";
+            this.lblTongTienDV.Size = new System.Drawing.Size(88, 29);
+            this.lblTongTienDV.TabIndex = 24;
+            this.lblTongTienDV.Text = "0 VND";
+            // 
+            // lblTongTienHuHongLabel
+            // 
+            this.lblTongTienHuHongLabel.AutoSize = true;
+            this.lblTongTienHuHongLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTongTienHuHongLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTongTienHuHongLabel.Location = new System.Drawing.Point(875, 910);
+            this.lblTongTienHuHongLabel.Name = "lblTongTienHuHongLabel";
+            this.lblTongTienHuHongLabel.Size = new System.Drawing.Size(241, 29);
+            this.lblTongTienHuHongLabel.TabIndex = 25;
+            this.lblTongTienHuHongLabel.Text = "Tổng tiền hư hỏng:";
+            // 
+            // lblTongTienHuHong
+            // 
+            this.lblTongTienHuHong.AutoSize = true;
+            this.lblTongTienHuHong.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTongTienHuHong.ForeColor = System.Drawing.Color.Red;
+            this.lblTongTienHuHong.Location = new System.Drawing.Point(1216, 910);
+            this.lblTongTienHuHong.Name = "lblTongTienHuHong";
+            this.lblTongTienHuHong.Size = new System.Drawing.Size(88, 29);
+            this.lblTongTienHuHong.TabIndex = 26;
+            this.lblTongTienHuHong.Text = "0 VND";
+            // 
             // frmCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,6 +457,8 @@
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
@@ -401,5 +492,12 @@
         private System.Windows.Forms.DataGridView dataGridHuHong;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOut;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private System.Windows.Forms.Label lblTongTienDVLabel;
+        private System.Windows.Forms.Label lblTongTienDV;
+        private System.Windows.Forms.Label lblTongTienHuHongLabel;
+        private System.Windows.Forms.Label lblTongTienHuHong;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl3;
     }
 }

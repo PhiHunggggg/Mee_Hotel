@@ -30,7 +30,11 @@ namespace Mee_Hotel.DAL
         {
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");
         }
-
+        // Lấy danh sách các phòng 
+        public DataTable GetDanhSachPhong()
+        {
+            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhong");
+        }
         // 3. Tạo mã phiếu mới tự động
         public string TaoMaPhieuMoi()
         {
@@ -39,13 +43,13 @@ namespace Mee_Hotel.DAL
         }
 
         // 4. Lấy danh sách tất cả phiếu kiểm tra 
-        public DataTable GetDanhSachPhieu(string maPhieu = "", string maPhong = "", string maNV = "", DateTime? ngayTim = null)
+        public DataTable GetDanhSachPhieu(string maPhieu = "", string maPhong = "", string tenNV = "", DateTime? ngayTim = null)
         {
             SqlParameter[] parameters =
             {
         new SqlParameter("@MaPhieu", string.IsNullOrEmpty(maPhieu) ? (object)DBNull.Value : maPhieu),
         new SqlParameter("@MaPhong", string.IsNullOrEmpty(maPhong) ? (object)DBNull.Value : maPhong),
-        new SqlParameter("@MaNV", string.IsNullOrEmpty(maNV) ? (object)DBNull.Value : maNV),
+        new SqlParameter("@TenNV", string.IsNullOrEmpty(tenNV) ? (object)DBNull.Value : tenNV),
         new SqlParameter("@NgayKiemTra", ngayTim.HasValue ? (object)ngayTim.Value : DBNull.Value)
     };
 

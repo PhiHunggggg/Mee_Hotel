@@ -40,12 +40,12 @@
             this.lblPhongTim = new System.Windows.Forms.Label();
             this.txtMaPhieuTim = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lblMaPhieuTim = new System.Windows.Forms.Label();
+            this.chkTimTheoNgay = new System.Windows.Forms.CheckBox();
             this.btnXoa = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSua = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnLamMoi = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnIn = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1.SuspendLayout();
             this.panelLoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,7 +61,6 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.btnLamMoi);
-            this.panel1.Controls.Add(this.btnIn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -75,7 +74,7 @@
             this.siticoneButton1.CheckedState.ForeColor = System.Drawing.Color.White;
             this.siticoneButton1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(1074, 161);
+            this.siticoneButton1.Location = new System.Drawing.Point(1055, 184);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(164, 60);
             this.siticoneButton1.TabIndex = 31;
@@ -94,9 +93,10 @@
             this.panelLoc.Controls.Add(this.lblPhongTim);
             this.panelLoc.Controls.Add(this.txtMaPhieuTim);
             this.panelLoc.Controls.Add(this.lblMaPhieuTim);
-            this.panelLoc.Location = new System.Drawing.Point(51, 60);
+            this.panelLoc.Controls.Add(this.chkTimTheoNgay);
+            this.panelLoc.Location = new System.Drawing.Point(27, 60);
             this.panelLoc.Name = "panelLoc";
-            this.panelLoc.Size = new System.Drawing.Size(1377, 97);
+            this.panelLoc.Size = new System.Drawing.Size(1407, 118);
             this.panelLoc.TabIndex = 30;
             // 
             // btnTim
@@ -106,7 +106,7 @@
             this.btnTim.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnTim.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(1191, 23);
+            this.btnTim.Location = new System.Drawing.Point(1208, 24);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(165, 60);
             this.btnTim.TabIndex = 8;
@@ -120,7 +120,7 @@
             this.dtpNgayTim.FillColor = System.Drawing.Color.White;
             this.dtpNgayTim.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpNgayTim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayTim.Location = new System.Drawing.Point(884, 27);
+            this.dtpNgayTim.Location = new System.Drawing.Point(973, 24);
             this.dtpNgayTim.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTim.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayTim.Name = "dtpNgayTim";
@@ -132,7 +132,7 @@
             // 
             this.lblNgayTim.AutoSize = true;
             this.lblNgayTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblNgayTim.Location = new System.Drawing.Point(822, 40);
+            this.lblNgayTim.Location = new System.Drawing.Point(898, 40);
             this.lblNgayTim.Name = "lblNgayTim";
             this.lblNgayTim.Size = new System.Drawing.Size(69, 27);
             this.lblNgayTim.TabIndex = 6;
@@ -150,7 +150,7 @@
             this.txtNhanVienTim.PasswordChar = '\0';
             this.txtNhanVienTim.PlaceholderText = "";
             this.txtNhanVienTim.SelectedText = "";
-            this.txtNhanVienTim.Size = new System.Drawing.Size(144, 44);
+            this.txtNhanVienTim.Size = new System.Drawing.Size(264, 44);
             this.txtNhanVienTim.TabIndex = 5;
             // 
             // lblNhanVienTim
@@ -173,16 +173,16 @@
             this.cmbPhongTim.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbPhongTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbPhongTim.ItemHeight = 36;
-            this.cmbPhongTim.Location = new System.Drawing.Point(628, 29);
+            this.cmbPhongTim.Location = new System.Drawing.Point(714, 29);
             this.cmbPhongTim.Name = "cmbPhongTim";
-            this.cmbPhongTim.Size = new System.Drawing.Size(118, 42);
+            this.cmbPhongTim.Size = new System.Drawing.Size(166, 42);
             this.cmbPhongTim.TabIndex = 3;
             // 
             // lblPhongTim
             // 
             this.lblPhongTim.AutoSize = true;
             this.lblPhongTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblPhongTim.Location = new System.Drawing.Point(553, 40);
+            this.lblPhongTim.Location = new System.Drawing.Point(629, 40);
             this.lblPhongTim.Name = "lblPhongTim";
             this.lblPhongTim.Size = new System.Drawing.Size(79, 27);
             this.lblPhongTim.TabIndex = 2;
@@ -213,6 +213,18 @@
             this.lblMaPhieuTim.TabIndex = 0;
             this.lblMaPhieuTim.Text = "Mã phiếu:";
             // 
+            // chkTimTheoNgay
+            // 
+            this.chkTimTheoNgay.AutoSize = true;
+            this.chkTimTheoNgay.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.chkTimTheoNgay.Location = new System.Drawing.Point(973, 84);
+            this.chkTimTheoNgay.Name = "chkTimTheoNgay";
+            this.chkTimTheoNgay.Size = new System.Drawing.Size(172, 31);
+            this.chkTimTheoNgay.TabIndex = 9;
+            this.chkTimTheoNgay.Text = "Lọc theo ngày";
+            this.chkTimTheoNgay.UseVisualStyleBackColor = true;
+            this.chkTimTheoNgay.CheckedChanged += new System.EventHandler(this.chkTimTheoNgay_CheckedChanged);
+            // 
             // btnXoa
             // 
             this.btnXoa.BorderRadius = 19;
@@ -220,7 +232,7 @@
             this.btnXoa.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(1492, 163);
+            this.btnXoa.Location = new System.Drawing.Point(1416, 182);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(152, 60);
             this.btnXoa.TabIndex = 29;
@@ -234,7 +246,7 @@
             this.btnSua.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(1286, 163);
+            this.btnSua.Location = new System.Drawing.Point(1237, 184);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(163, 58);
             this.btnSua.TabIndex = 28;
@@ -246,12 +258,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeight = 75;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 227);
+            this.dataGridView1.Location = new System.Drawing.Point(84, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(1435, 738);
+            this.dataGridView1.Size = new System.Drawing.Size(1432, 707);
             this.dataGridView1.TabIndex = 10;
             // 
             // lblTitle
@@ -278,20 +290,6 @@
             this.btnLamMoi.TabIndex = 15;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.BorderRadius = 19;
-            this.btnIn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnIn.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnIn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnIn.ForeColor = System.Drawing.Color.White;
-            this.btnIn.Location = new System.Drawing.Point(850, 161);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(181, 60);
-            this.btnIn.TabIndex = 14;
-            this.btnIn.Text = "In Phiếu";
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frmPhieuKiemTraHuHong
             // 
@@ -330,6 +328,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblTitle;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnLamMoi;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnIn;
+        private System.Windows.Forms.CheckBox chkTimTheoNgay;
     }
 }

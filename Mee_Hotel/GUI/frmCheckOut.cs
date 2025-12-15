@@ -39,8 +39,8 @@ namespace Mee_Hotel.GUI
                 lblTenPhong.Text = cmbPhong.Text;
                 lblMaDP.Text = row["MaDP"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
-                lblNgayDen.Text = Convert.ToDateTime(row["NgayDen"]).ToString("dd/MM/yyyy");
-                lblNgayTraDuKien.Text = Convert.ToDateTime(row["NgayTraDuKien"]).ToString("dd/MM/yyyy");
+                lblNgayDen.Text = Convert.ToDateTime(row["NgayDen"]).ToString("dd/MM/yyyy HH:mm");
+                lblNgayTraDuKien.Text = Convert.ToDateTime(row["NgayTraDuKien"]).ToString("dd/MM/yyyy HH:mm");
                 lblSoNgayO.Text = CheckOutDAL.Instance.GetSoNgayOThucTe(maPhong).ToString() + " ngày";
             }
             else
@@ -141,13 +141,15 @@ namespace Mee_Hotel.GUI
             return tong;
         }
 
+      
         private decimal TinhTongTienHuHong()
         {
-            if (dataGridHuHong.Rows.Count > 0)
+            decimal tong = 0;
+            foreach (DataGridViewRow row in dataGridHuHong.Rows)
             {
-                return Convert.ToDecimal(dataGridHuHong.Rows[0].Cells["TongTienHuHong"].Value); // Từ Proc
+                tong += Convert.ToDecimal(row.Cells["ThanhTien"].Value);  // Cộng tất cả ThanhTien từ các rows
             }
-            return 0;
+            return tong;
         }
 
         private void frmCheckOut_Load(object sender, EventArgs e)
@@ -165,9 +167,12 @@ namespace Mee_Hotel.GUI
                 LoadThongTinCheckOut(maPhong);
                 LoadDichVu(maPhong);
                 LoadHuHong(maPhong);
+
+                // Hiển thị tổng tiền dịch vụ và hư hỏng
+                lblTongTienDV.Text = TinhTongTienDV().ToString("N0") + " VND";
+                lblTongTienHuHong.Text = TinhTongTienHuHong().ToString("N0") + " VND";
             }
         }
-
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(lblMaDP.Text))
@@ -196,10 +201,9 @@ namespace Mee_Hotel.GUI
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void labelControl1_Click(object sender, EventArgs e)
         {
 
         }
-
     }
 }
