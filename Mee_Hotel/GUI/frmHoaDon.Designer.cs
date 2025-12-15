@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GiaLucDatlb = new System.Windows.Forms.Label();
+            this.NgayDatlb = new System.Windows.Forms.Label();
+            this.SDTlb = new System.Windows.Forms.Label();
+            this.SoPhongDatlb = new System.Windows.Forms.Label();
+            this.LoaiPhonglb = new System.Windows.Forms.Label();
+            this.TenKHlb = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSDT = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtHoten = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblNgayDen = new System.Windows.Forms.Label();
             this.lblNgayTra = new System.Windows.Forms.Label();
@@ -51,16 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
-            this.txtHoten = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtSDT = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TenKHlb = new System.Windows.Forms.Label();
-            this.LoaiPhonglb = new System.Windows.Forms.Label();
-            this.SoPhongDatlb = new System.Windows.Forms.Label();
-            this.SDTlb = new System.Windows.Forms.Label();
-            this.NgayDatlb = new System.Windows.Forms.Label();
-            this.GiaLucDatlb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_DP_HD)).BeginInit();
@@ -105,6 +105,150 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1779, 959);
             this.panel1.TabIndex = 1;
+            // 
+            // GiaLucDatlb
+            // 
+            this.GiaLucDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.GiaLucDatlb.AutoSize = true;
+            this.GiaLucDatlb.BackColor = System.Drawing.Color.White;
+            this.GiaLucDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiaLucDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GiaLucDatlb.Location = new System.Drawing.Point(181, 804);
+            this.GiaLucDatlb.Name = "GiaLucDatlb";
+            this.GiaLucDatlb.Size = new System.Drawing.Size(0, 19);
+            this.GiaLucDatlb.TabIndex = 50;
+            // 
+            // NgayDatlb
+            // 
+            this.NgayDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NgayDatlb.AutoSize = true;
+            this.NgayDatlb.BackColor = System.Drawing.Color.White;
+            this.NgayDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.NgayDatlb.Location = new System.Drawing.Point(167, 738);
+            this.NgayDatlb.Name = "NgayDatlb";
+            this.NgayDatlb.Size = new System.Drawing.Size(0, 19);
+            this.NgayDatlb.TabIndex = 49;
+            // 
+            // SDTlb
+            // 
+            this.SDTlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SDTlb.AutoSize = true;
+            this.SDTlb.BackColor = System.Drawing.Color.White;
+            this.SDTlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDTlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SDTlb.Location = new System.Drawing.Point(200, 674);
+            this.SDTlb.Name = "SDTlb";
+            this.SDTlb.Size = new System.Drawing.Size(0, 19);
+            this.SDTlb.TabIndex = 48;
+            // 
+            // SoPhongDatlb
+            // 
+            this.SoPhongDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SoPhongDatlb.AutoSize = true;
+            this.SoPhongDatlb.BackColor = System.Drawing.Color.White;
+            this.SoPhongDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoPhongDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SoPhongDatlb.Location = new System.Drawing.Point(200, 611);
+            this.SoPhongDatlb.Name = "SoPhongDatlb";
+            this.SoPhongDatlb.Size = new System.Drawing.Size(0, 19);
+            this.SoPhongDatlb.TabIndex = 47;
+            // 
+            // LoaiPhonglb
+            // 
+            this.LoaiPhonglb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LoaiPhonglb.AutoSize = true;
+            this.LoaiPhonglb.BackColor = System.Drawing.Color.White;
+            this.LoaiPhonglb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoaiPhonglb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.LoaiPhonglb.Location = new System.Drawing.Point(183, 548);
+            this.LoaiPhonglb.Name = "LoaiPhonglb";
+            this.LoaiPhonglb.Size = new System.Drawing.Size(0, 19);
+            this.LoaiPhonglb.TabIndex = 46;
+            // 
+            // TenKHlb
+            // 
+            this.TenKHlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TenKHlb.AutoSize = true;
+            this.TenKHlb.BackColor = System.Drawing.Color.White;
+            this.TenKHlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenKHlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.TenKHlb.Location = new System.Drawing.Point(228, 485);
+            this.TenKHlb.Name = "TenKHlb";
+            this.TenKHlb.Size = new System.Drawing.Size(0, 19);
+            this.TenKHlb.TabIndex = 45;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(73, 804);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(102, 19);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Giá lúc đặt:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(73, 738);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 19);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Ngày đặt:";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtSDT.BackColor = System.Drawing.Color.White;
+            this.txtSDT.BorderRadius = 19;
+            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSDT.DefaultText = "";
+            this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.ForeColor = System.Drawing.Color.Black;
+            this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSDT.Location = new System.Drawing.Point(91, 298);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.PasswordChar = '\0';
+            this.txtSDT.PlaceholderText = "";
+            this.txtSDT.SelectedText = "";
+            this.txtSDT.Size = new System.Drawing.Size(310, 48);
+            this.txtSDT.TabIndex = 42;
+            // 
+            // txtHoten
+            // 
+            this.txtHoten.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtHoten.BackColor = System.Drawing.Color.White;
+            this.txtHoten.BorderRadius = 19;
+            this.txtHoten.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoten.DefaultText = "";
+            this.txtHoten.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHoten.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHoten.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoten.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoten.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoten.ForeColor = System.Drawing.Color.Black;
+            this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoten.Location = new System.Drawing.Point(91, 219);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoten.Name = "txtHoten";
+            this.txtHoten.PasswordChar = '\0';
+            this.txtHoten.PlaceholderText = "";
+            this.txtHoten.SelectedText = "";
+            this.txtHoten.Size = new System.Drawing.Size(310, 48);
+            this.txtHoten.TabIndex = 41;
             // 
             // label6
             // 
@@ -313,6 +457,7 @@
             this.siticoneButton3.Size = new System.Drawing.Size(147, 45);
             this.siticoneButton3.TabIndex = 7;
             this.siticoneButton3.Text = "Check dịch vụ";
+            this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
             // 
             // siticoneButton2
             // 
@@ -345,6 +490,7 @@
             this.siticoneButton1.Size = new System.Drawing.Size(147, 45);
             this.siticoneButton1.TabIndex = 5;
             this.siticoneButton1.Text = "Tìm kiếm";
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // txtPhong
             // 
@@ -411,150 +557,6 @@
             this.siticoneShapes2.TabIndex = 4;
             this.siticoneShapes2.Text = "siticoneShapes2";
             this.siticoneShapes2.Zoom = 80;
-            // 
-            // txtHoten
-            // 
-            this.txtHoten.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtHoten.BackColor = System.Drawing.Color.White;
-            this.txtHoten.BorderRadius = 19;
-            this.txtHoten.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoten.DefaultText = "";
-            this.txtHoten.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHoten.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHoten.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoten.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoten.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoten.ForeColor = System.Drawing.Color.Black;
-            this.txtHoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoten.Location = new System.Drawing.Point(91, 219);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtHoten.Name = "txtHoten";
-            this.txtHoten.PasswordChar = '\0';
-            this.txtHoten.PlaceholderText = "";
-            this.txtHoten.SelectedText = "";
-            this.txtHoten.Size = new System.Drawing.Size(310, 48);
-            this.txtHoten.TabIndex = 41;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSDT.BackColor = System.Drawing.Color.White;
-            this.txtSDT.BorderRadius = 19;
-            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSDT.DefaultText = "";
-            this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.ForeColor = System.Drawing.Color.Black;
-            this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.Location = new System.Drawing.Point(91, 298);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.PasswordChar = '\0';
-            this.txtSDT.PlaceholderText = "";
-            this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(310, 48);
-            this.txtSDT.TabIndex = 42;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(73, 738);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 19);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Ngày đặt:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(73, 804);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 19);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "Giá lúc đặt:";
-            // 
-            // TenKHlb
-            // 
-            this.TenKHlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TenKHlb.AutoSize = true;
-            this.TenKHlb.BackColor = System.Drawing.Color.White;
-            this.TenKHlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKHlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TenKHlb.Location = new System.Drawing.Point(228, 485);
-            this.TenKHlb.Name = "TenKHlb";
-            this.TenKHlb.Size = new System.Drawing.Size(0, 19);
-            this.TenKHlb.TabIndex = 45;
-            // 
-            // LoaiPhonglb
-            // 
-            this.LoaiPhonglb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LoaiPhonglb.AutoSize = true;
-            this.LoaiPhonglb.BackColor = System.Drawing.Color.White;
-            this.LoaiPhonglb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiPhonglb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoaiPhonglb.Location = new System.Drawing.Point(183, 548);
-            this.LoaiPhonglb.Name = "LoaiPhonglb";
-            this.LoaiPhonglb.Size = new System.Drawing.Size(0, 19);
-            this.LoaiPhonglb.TabIndex = 46;
-            // 
-            // SoPhongDatlb
-            // 
-            this.SoPhongDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SoPhongDatlb.AutoSize = true;
-            this.SoPhongDatlb.BackColor = System.Drawing.Color.White;
-            this.SoPhongDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoPhongDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SoPhongDatlb.Location = new System.Drawing.Point(200, 611);
-            this.SoPhongDatlb.Name = "SoPhongDatlb";
-            this.SoPhongDatlb.Size = new System.Drawing.Size(0, 19);
-            this.SoPhongDatlb.TabIndex = 47;
-            // 
-            // SDTlb
-            // 
-            this.SDTlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SDTlb.AutoSize = true;
-            this.SDTlb.BackColor = System.Drawing.Color.White;
-            this.SDTlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SDTlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SDTlb.Location = new System.Drawing.Point(200, 674);
-            this.SDTlb.Name = "SDTlb";
-            this.SDTlb.Size = new System.Drawing.Size(0, 19);
-            this.SDTlb.TabIndex = 48;
-            // 
-            // NgayDatlb
-            // 
-            this.NgayDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NgayDatlb.AutoSize = true;
-            this.NgayDatlb.BackColor = System.Drawing.Color.White;
-            this.NgayDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgayDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.NgayDatlb.Location = new System.Drawing.Point(167, 738);
-            this.NgayDatlb.Name = "NgayDatlb";
-            this.NgayDatlb.Size = new System.Drawing.Size(0, 19);
-            this.NgayDatlb.TabIndex = 49;
-            // 
-            // GiaLucDatlb
-            // 
-            this.GiaLucDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.GiaLucDatlb.AutoSize = true;
-            this.GiaLucDatlb.BackColor = System.Drawing.Color.White;
-            this.GiaLucDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GiaLucDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GiaLucDatlb.Location = new System.Drawing.Point(181, 804);
-            this.GiaLucDatlb.Name = "GiaLucDatlb";
-            this.GiaLucDatlb.Size = new System.Drawing.Size(0, 19);
-            this.GiaLucDatlb.TabIndex = 50;
             // 
             // frmHoaDon
             // 

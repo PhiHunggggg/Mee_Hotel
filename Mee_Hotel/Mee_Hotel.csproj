@@ -78,6 +78,12 @@
     <Compile Include="GUI\frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmKiemTraDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmKiemTraDV.Designer.cs">
+      <DependentUpon>frmKiemTraDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmKiemTraDV.resx">
+      <DependentUpon>frmKiemTraDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

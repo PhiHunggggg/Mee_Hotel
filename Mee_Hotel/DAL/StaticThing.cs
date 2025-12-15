@@ -23,4 +23,22 @@ namespace Mee_Hotel.DAL
             return (tuoi < 0) ? 0 : tuoi;
         }
     }
+
+    public static class ThongTinDonHang
+    {
+        public static string TenKH;
+        public static string MaKH;
+        public static string NgayDat;
+        public static string MaDP;
+        /*
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        */
+        public static DateTime NgayBD;
+        public static DateTime NgayKT;
+        public static Decimal TongTienDV;
+    }
 }
