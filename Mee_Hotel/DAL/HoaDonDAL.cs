@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Mee_Hotel.DAL
 {
-    class HoaDonDAL: DataProvider
+    class HoaDonDAL : DataProvider
     {
         private static HoaDonDAL instance;
         public new static HoaDonDAL Instance
@@ -25,7 +25,7 @@ namespace Mee_Hotel.DAL
         }
         private HoaDonDAL() { }
 
-        public DataTable getDanhSachCheckOut(String phong,String hoTen, String SDT, DateTime tuNgay, DateTime denNgay)
+        public DataTable getDanhSachCheckOut(String phong, String hoTen, String SDT, DateTime tuNgay, DateTime denNgay)
         {
             SqlParameter[] pr =
             {
@@ -37,7 +37,7 @@ namespace Mee_Hotel.DAL
             };
 
             DataTable dt = DataProvider.Instance.CallProcQuery("getDanhSachCheckOut", pr);
-            
+
             if (dt.Rows.Count == 0)
             {
                 return null;
@@ -46,7 +46,7 @@ namespace Mee_Hotel.DAL
         }
 
         public DataTable getDanhSachCO()
-        { 
+        {
             DataTable dt = DataProvider.Instance.CallProcQuery("getDanhSachCO");
 
             if (dt.Rows.Count == 0)
@@ -57,3 +57,4 @@ namespace Mee_Hotel.DAL
         }
     }
 }
+

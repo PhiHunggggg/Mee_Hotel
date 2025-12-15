@@ -58,6 +58,7 @@
     <Compile Include="DAL\CheckOutDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
+    <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\PhieuKiemTraHuHongDAL.cs" />
     <Compile Include="DAL\Phong1DAL.cs" />
     <Compile Include="DAL\SQL_Connection.cs" />
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="GUI\frmCheckOut.Designer.cs">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
@@ -111,6 +118,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

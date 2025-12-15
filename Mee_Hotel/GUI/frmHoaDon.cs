@@ -18,67 +18,6 @@ namespace Mee_Hotel.GUI
             InitializeComponent();
         }
 
-
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-            LoadDSCheckOut();
-        }
-
-        private void Data_DP_HD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void siticoneShapes1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void siticoneShapes2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoadHet()
-        {
-            Data_DP_HD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Data_DP_HD.AllowUserToResizeColumns = false;
-            Data_DP_HD.AllowUserToResizeRows = false;
-            DataTable bangcheckout = HoaDonDAL.Instance.getDanhSachCO();
-            Data_DP_HD.DataSource = bangcheckout;
-            if (bangcheckout != null)
-            {
-                Data_DP_HD.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
-                Data_DP_HD.Columns["SDT"].HeaderText = "Số điện thoại";
-                Data_DP_HD.Columns["NgayDat"].HeaderText = "Ngày đặt";
-                Data_DP_HD.Columns["TenLoaiPhong "].HeaderText = "Tên loại phòng";
-                Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
-                Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
-            }
-        }
-        private void LoadDSCheckOut()
-        {
-            Data_DP_HD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Data_DP_HD.AllowUserToResizeColumns = false;
-            Data_DP_HD.AllowUserToResizeRows = false;
-            DataTable bangcheckout = HoaDonDAL.Instance.getDanhSachCheckOut(txtPhong.Text, txtHoten.Text, txtSDT.Text, dtpTu.Value, dtpDen.Value);
-            Data_DP_HD.DataSource = bangcheckout;
-            if (bangcheckout != null)
-            {
-                Data_DP_HD.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
-                Data_DP_HD.Columns["SDT"].HeaderText = "Số điện thoại";
-                Data_DP_HD.Columns["NgayDat"].HeaderText = "Ngày đặt";
-                Data_DP_HD.Columns["TenLoaiPhong "].HeaderText = "Tên loại phòng";
-                Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
-                Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             LoadHet();
@@ -126,7 +65,41 @@ namespace Mee_Hotel.GUI
             txtSDT.PlaceholderForeColor = Color.Silver;
 
             LoadHet();
+        }
 
+        private void LoadHet()
+        {
+            Data_DP_HD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Data_DP_HD.AllowUserToResizeColumns = false;
+            Data_DP_HD.AllowUserToResizeRows = false;
+            DataTable bangcheckout = HoaDonDAL.Instance.getDanhSachCO();
+            Data_DP_HD.DataSource = bangcheckout;
+            if (bangcheckout != null)
+            {
+                Data_DP_HD.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
+                Data_DP_HD.Columns["SDT"].HeaderText = "Số điện thoại";
+                Data_DP_HD.Columns["NgayDat"].HeaderText = "Ngày đặt";
+                Data_DP_HD.Columns["TenLoaiPhong "].HeaderText = "Tên loại phòng";
+                Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
+                Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
+            }
+        }
+        private void LoadDSCheckOut()
+        {
+            Data_DP_HD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Data_DP_HD.AllowUserToResizeColumns = false;
+            Data_DP_HD.AllowUserToResizeRows = false;
+            DataTable bangcheckout = HoaDonDAL.Instance.getDanhSachCheckOut(txtPhong.Text, txtHoten.Text, txtSDT.Text, dtpTu.Value, dtpDen.Value);
+            Data_DP_HD.DataSource = bangcheckout;
+            if (bangcheckout != null)
+            {
+                Data_DP_HD.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
+                Data_DP_HD.Columns["SDT"].HeaderText = "Số điện thoại";
+                Data_DP_HD.Columns["NgayDat"].HeaderText = "Ngày đặt";
+                Data_DP_HD.Columns["TenLoaiPhong "].HeaderText = "Tên loại phòng";
+                Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
+                Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
+            }
         }
 
         private void Data_DP_HD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,33 +107,13 @@ namespace Mee_Hotel.GUI
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = Data_DP_HD.Rows[e.RowIndex];
-                TenKHtb.Text = row.Cells["TenKhachHang"].Value?.ToString();
-                Phongtb.Text = row.Cells["TenLoaiPhong "].Value?.ToString();
-                SoPDtb.Text = row.Cells["SoLuongPhong"].Value?.ToString();
-                SDTtb.Text = row.Cells["SDT"].Value?.ToString();
-                NgayDattb.Text = row.Cells["NgayDat"].Value?.ToString();
-                GiaLucDattb.Text = row.Cells["GiaLucDat"].Value?.ToString();
+                TenKHlb.Text = row.Cells["TenKhachHang"].Value?.ToString();
+                LoaiPhonglb.Text = row.Cells["TenLoaiPhong "].Value?.ToString();
+                SoPhongDatlb.Text = row.Cells["SoLuongPhong"].Value?.ToString();
+                SDTlb.Text = row.Cells["SDT"].Value?.ToString();
+                NgayDatlb.Text = row.Cells["NgayDat"].Value?.ToString();
+                GiaLucDatlb.Text = row.Cells["GiaLucDat"].Value?.ToString();
             }
-        }
-
-        private void NgayTradtb_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NgayDendtb_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void siticoneShapes2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
