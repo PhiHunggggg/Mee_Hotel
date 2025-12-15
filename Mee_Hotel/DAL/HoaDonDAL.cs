@@ -56,5 +56,10 @@ namespace Mee_Hotel.DAL
             return dt;
         }
     }
+
+    class HoaDon_DVDAL : DataProvider
+    {
+
+    }
 }
 
