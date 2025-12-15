@@ -30,13 +30,13 @@ namespace Mee_Hotel.DAL
             SqlParameter[] pr =
             {
                 new SqlParameter("@Account", user),
-                new SqlParameter("@Password", pass)
+                new SqlParameter("@Password",pass)
              };
 
             DataTable dt = DataProvider.Instance.CallProcQuery("sp_Login", pr);
 
             if (dt.Rows.Count == 0)
-                return null; // Sai tài khoản hoặc mật khẩu
+                return null; 
 
             DataRow row = dt.Rows[0];
 

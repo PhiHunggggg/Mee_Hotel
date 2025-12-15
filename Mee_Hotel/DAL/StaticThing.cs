@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Mee_Hotel.DAL
 {
@@ -22,5 +24,24 @@ namespace Mee_Hotel.DAL
             int tuoi = today.Year - ngaySinh.Year;
             return (tuoi < 0) ? 0 : tuoi;
         }
+    }
+
+    public static class ThongTinDonHang
+    {
+        public static string TenKH;
+        public static string MaKH;
+        public static string NgayDat;
+        public static string MaDP;
+        /*
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        public static string TenKH;
+        */
+        public static DateTime NgayBD;
+        public static DateTime NgayKT;
+        public static Decimal TongTienDV;
+        public static DataTable DSPhong;
     }
 }
