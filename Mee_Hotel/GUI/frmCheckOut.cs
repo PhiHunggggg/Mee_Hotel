@@ -14,43 +14,71 @@ namespace Mee_Hotel.GUI
         {
             InitializeComponent();
         }
+        private string _currentMaDP = null;
+
         private void LoadPhieuDaCheckIn(string searchTerm = "")
         {
-            DataTable dt = CheckOutDAL.Instance.GetPhieuDaCheckIn(
-            string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
-            string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
-            string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
-            string.IsNullOrEmpty(searchTerm) ? null : searchTerm);
-            dgvPhieuDP.DataSource = dt;
-            if (dgvPhieuDP.Columns.Contains("NgayDen"))
-                dgvPhieuDP.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
-            if (dgvPhieuDP.Columns.Contains("NgayTraDuKien"))
-                dgvPhieuDP.Columns["NgayTraDuKien"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
-            ConfigGrid(dgvPhieuDP);
+            try
+            {
+                DataTable dt = CheckOutDAL.Instance.GetPhieuDaCheckIn(searchTerm, searchTerm, searchTerm, searchTerm);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy phiếu nào. Kiểm tra dữ liệu hoặc từ khóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                dgvPhieuDP.DataSource = dt;
+
+                if (dgvPhieuDP.Columns.Contains("NgayDen"))
+                    dgvPhieuDP.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                if (dgvPhieuDP.Columns.Contains("NgayTraDuKien"))
+                    dgvPhieuDP.Columns["NgayTraDuKien"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+
+                ConfigGrid(dgvPhieuDP);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải phiếu: " + ex.Message + "\nKiểm tra kết nối DB hoặc stored procedure.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void LoadPhongCuaPhieu(string maDP)
         {
-            DataTable dt = CheckOutDAL.Instance.GetPhongCuaPhieu(maDP);
-            dgvPhongBatch.DataSource = dt;
-            if (dgvPhongBatch.Columns.Contains("chkSelect"))
-                dgvPhongBatch.Columns.Remove("chkSelect");
-            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn
+
+            try
             {
-                HeaderText = "Chọn",
-                Name = "chkSelect",
-                Width = 60,
-                TrueValue = true,
-                FalseValue = false
-            };
-            dgvPhongBatch.Columns.Insert(0, chk);
-            dgvPhongBatch.ReadOnly = false;
-            foreach (DataGridViewColumn col in dgvPhongBatch.Columns)
-            {
-                if (col.Name != "chkSelect")
-                    col.ReadOnly = true;
+                DataTable dt = CheckOutDAL.Instance.GetPhongCuaPhieu(maDP);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Phiếu này không có phòng đang ở.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                dgvPhongBatch.DataSource = dt;
+
+                if (dgvPhongBatch.Columns.Contains("chkSelect"))
+                    dgvPhongBatch.Columns.Remove("chkSelect");
+
+                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn
+                {
+                    HeaderText = "Chọn",
+                    Name = "chkSelect",
+                    Width = 60,
+                    TrueValue = true,
+                    FalseValue = false
+                };
+                dgvPhongBatch.Columns.Insert(0, chk);
+
+                dgvPhongBatch.ReadOnly = false;
+                foreach (DataGridViewColumn col in dgvPhongBatch.Columns)
+                {
+                    if (col.Name != "chkSelect")
+                        col.ReadOnly = true;
+                }
+               
+                ConfigGrid(dgvPhongBatch);
+                dgvPhongBatch.EditMode = DataGridViewEditMode.EditOnEnter;
+                ClearChiTiet();
             }
-            ConfigGrid(dgvPhongBatch);
-            ClearChiTiet();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải phòng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void LoadChiTietSelectedRooms()
         {
@@ -61,16 +89,16 @@ namespace Mee_Hotel.GUI
                 return;
             }
             string maPhongList = string.Join(",", selectedRooms);
-            // Số ngày ở thực tế
-            DataTable dtSoNgay = CheckOutDAL.Instance.GetSoNgayOThucTeList(maPhongList);
+            // Số ngày ở thực tế
+            DataTable dtSoNgay = CheckOutDAL.Instance.GetSoNgayOThucTeList(maPhongList);
             dgvSoNgayO.DataSource = dtSoNgay;
             ConfigGrid(dgvSoNgayO);
-            // Dịch vụ
-            DataTable dtDV = CheckOutDAL.Instance.GetDichVuTheoPhongList(maPhongList);
+            // Dịch vụ
+            DataTable dtDV = CheckOutDAL.Instance.GetDichVuTheoPhongList(maPhongList);
             dataGridDichVu.DataSource = dtDV;
             ConfigGrid(dataGridDichVu);
-            // Hư hỏng
-            DataTable dtHH = CheckOutDAL.Instance.GetHuHongTheoPhongList(maPhongList);
+            // Hư hỏng
+            DataTable dtHH = CheckOutDAL.Instance.GetHuHongTheoPhongList(maPhongList);
             dataGridHuHong.DataSource = dtHH;
             ConfigGrid(dataGridHuHong);
         }
@@ -96,7 +124,7 @@ namespace Mee_Hotel.GUI
         {
             grid.AllowUserToAddRows = false;
             grid.AllowUserToDeleteRows = false;
-            grid.ReadOnly = true;
+            
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grid.MultiSelect = false;
             grid.BorderStyle = BorderStyle.None;
@@ -107,12 +135,12 @@ namespace Mee_Hotel.GUI
             grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             grid.EnableHeadersVisualStyles = false;
-            grid.ColumnHeadersHeight = 75;
+            grid.ColumnHeadersHeight = 60 ;
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-            grid.RowTemplate.Height = 50;
+            grid.RowTemplate.Height = 40;
         }
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
@@ -122,6 +150,8 @@ namespace Mee_Hotel.GUI
             ConfigGrid(dgvSoNgayO);
             ConfigGrid(dataGridDichVu);
             ConfigGrid(dataGridHuHong);
+            dgvPhongBatch.CurrentCellDirtyStateChanged += dgvPhongBatch_CurrentCellDirtyStateChanged;
+
         }
         private void btnTimPhieu_Click(object sender, EventArgs e)
         {
@@ -137,9 +167,15 @@ namespace Mee_Hotel.GUI
         }
         private void dgvPhieuDP_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvPhieuDP.CurrentRow != null && dgvPhieuDP.CurrentRow.Cells["MaDP"].Value != null)
+            if (dgvPhieuDP.CurrentRow == null) return;
+
+            string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value?.ToString();
+            if (string.IsNullOrEmpty(maDP)) return;
+
+            // LOAD KHI ĐỔI PHIẾU
+            if (_currentMaDP != maDP)
             {
-                string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value.ToString();
+                _currentMaDP = maDP;
                 LoadPhongCuaPhieu(maDP);
             }
         }
@@ -150,6 +186,17 @@ namespace Mee_Hotel.GUI
                 LoadChiTietSelectedRooms();
             }
         }
+        private void dgvPhongBatch_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvPhongBatch.Columns[e.ColumnIndex].Name == "chkSelect")
+            {
+                bool current = Convert.ToBoolean(
+                    dgvPhongBatch.Rows[e.RowIndex].Cells["chkSelect"].Value ?? false);
+
+                dgvPhongBatch.Rows[e.RowIndex].Cells["chkSelect"].Value = !current;
+            }
+        }
+
         private void dgvPhongBatch_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             if (dgvPhongBatch.IsCurrentCellDirty)
@@ -189,13 +236,11 @@ namespace Mee_Hotel.GUI
                 }
             }
         }
-        private void btnCheckOutDoan_Click(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            frmCheckOutTheoDoan f = new frmCheckOutTheoDoan();
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                LoadPhieuDaCheckIn();
-            }
+            LoadPhieuDaCheckIn(txtSearch.Text.Trim());
         }
+
+       
     }
 }
