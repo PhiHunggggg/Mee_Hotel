@@ -28,13 +28,13 @@ namespace Mee_Hotel
             TaiKhoan TaiKhoan = TaiKhoanDAL.Instance.Login(username, password);
             if (TaiKhoan != null)
             {
-
                 if (TaiKhoan.VaiTro == "Nhân viên")
                 {
                     StaticThing.LoaiTaiKhoan = "NV";
                     try
                     {
                         StaticThing.MaNV = TaiKhoan.MaNV;
+                        StaticThing.TenNV = TaiKhoan.TenDangNhap;
                     }
                     catch (Exception ex)
                     {

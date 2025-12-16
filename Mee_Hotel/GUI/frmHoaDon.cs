@@ -116,6 +116,7 @@ namespace Mee_Hotel.GUI
                 NgayDatlb.Text = row.Cells["NgayDat"].Value?.ToString();
                 GiaLucDatlb.Text = row.Cells["GiaLucDat"].Value?.ToString();
                 ThongTinDonHang.MaDP = row.Cells["MaDP"].Value?.ToString();
+                ThongTinDonHang.TongTienDP = Convert.ToDecimal(row.Cells["GiaLucDat"].Value?.ToString());
             }
         }
 
