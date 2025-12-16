@@ -42,6 +42,7 @@ namespace Mee_Hotel.DAL
         public static DateTime NgayBD;
         public static DateTime NgayKT;
         public static Decimal TongTienDV;
+        public static Decimal TongTienDP;
         public static DataTable DSPhong;
     }
 }

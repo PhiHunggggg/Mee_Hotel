@@ -101,7 +101,6 @@ namespace Mee_Hotel.GUI
                 Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
                 Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
                 Data_DP_HD.Columns["MaDP"].HeaderText = "Mã đặt phòng";
-
             }
         }
 
@@ -141,7 +140,11 @@ namespace Mee_Hotel.GUI
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
             ThongTinDonHang.TenKH = TenKHlb.Text;
-
+            this.Hide();
+            frmKiemTraDV frm = new frmKiemTraDV();
+            frm.ShowDialog();
+            this.Show();
+            
         }
     }
 }

@@ -108,6 +108,12 @@
     <Compile Include="GUI\frmPhieuKiemTraHuHong.Designer.cs">
       <DependentUpon>frmPhieuKiemTraHuHong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmTaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTaoHoaDon.Designer.cs">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmThemPhieuKTHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuKiemTraHuHong.resx">
       <DependentUpon>frmPhieuKiemTraHuHong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTaoHoaDon.resx">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThemPhieuKTHH.resx">
       <DependentUpon>frmThemPhieuKTHH.cs</DependentUpon>

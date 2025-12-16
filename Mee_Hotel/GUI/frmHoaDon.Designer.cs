@@ -548,7 +548,7 @@
             this.siticoneShapes2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.siticoneShapes2.BorderColor = System.Drawing.Color.White;
             this.siticoneShapes2.FillColor = System.Drawing.Color.White;
-            this.siticoneShapes2.Location = new System.Drawing.Point(0, 387);
+            this.siticoneShapes2.Location = new System.Drawing.Point(-19, 382);
             this.siticoneShapes2.Name = "siticoneShapes2";
             this.siticoneShapes2.PolygonSkip = 1;
             this.siticoneShapes2.Rotate = 0F;
