@@ -61,6 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.siticoneButton4 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_DP_HD)).BeginInit();
@@ -69,6 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.siticoneButton4);
             this.panel1.Controls.Add(this.GiaLucDatlb);
             this.panel1.Controls.Add(this.NgayDatlb);
             this.panel1.Controls.Add(this.SDTlb);
@@ -558,6 +560,23 @@
             this.siticoneShapes2.Text = "siticoneShapes2";
             this.siticoneShapes2.Zoom = 80;
             // 
+            // siticoneButton4
+            // 
+            this.siticoneButton4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.siticoneButton4.BorderRadius = 20;
+            this.siticoneButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton4.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton4.Location = new System.Drawing.Point(160, 886);
+            this.siticoneButton4.Name = "siticoneButton4";
+            this.siticoneButton4.Size = new System.Drawing.Size(147, 45);
+            this.siticoneButton4.TabIndex = 51;
+            this.siticoneButton4.Text = "Tạo hóa đơn";
+            this.siticoneButton4.Click += new System.EventHandler(this.siticoneButton4_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,5 +630,6 @@
         private System.Windows.Forms.Label SDTlb;
         private System.Windows.Forms.Label SoPhongDatlb;
         private System.Windows.Forms.Label LoaiPhonglb;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton4;
     }
 }

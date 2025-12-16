@@ -29,12 +29,13 @@ namespace Mee_Hotel
             if (TaiKhoan != null)
             {
 
-                if (TaiKhoan.VaiTro == "Nhân viên")
+                if (TaiKhoan.VaiTro == "Lễ tân")
                 {
                     StaticThing.LoaiTaiKhoan = "NV";
                     try
                     {
                         StaticThing.MaNV = TaiKhoan.MaNV;
+                        StaticThing.TenNV = TaiKhoan.TenDangNhap;
                     }
                     catch (Exception ex)
                     {

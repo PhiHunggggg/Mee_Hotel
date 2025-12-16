@@ -30,6 +30,7 @@ namespace Mee_Hotel.GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SlDVlb = new System.Windows.Forms.Label();
             this.ChonPhongcbb = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.TSDVlb = new System.Windows.Forms.Label();
             this.MaDP_DVlb = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace Mee_Hotel.GUI
             this.Data_DV_KT = new System.Windows.Forms.DataGridView();
             this.txtTongTien = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.SlDVlb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_DV_KT)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,18 @@ namespace Mee_Hotel.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1085, 540);
             this.panel1.TabIndex = 1;
+            // 
+            // SlDVlb
+            // 
+            this.SlDVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SlDVlb.AutoSize = true;
+            this.SlDVlb.BackColor = System.Drawing.Color.White;
+            this.SlDVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlDVlb.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SlDVlb.Location = new System.Drawing.Point(807, 332);
+            this.SlDVlb.Name = "SlDVlb";
+            this.SlDVlb.Size = new System.Drawing.Size(0, 19);
+            this.SlDVlb.TabIndex = 76;
             // 
             // ChonPhongcbb
             // 
@@ -428,18 +440,6 @@ namespace Mee_Hotel.GUI
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "CHI TIẾT PHIẾU KIỂM TRA DỊCH VỤ";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
-            // 
-            // SlDVlb
-            // 
-            this.SlDVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SlDVlb.AutoSize = true;
-            this.SlDVlb.BackColor = System.Drawing.Color.White;
-            this.SlDVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlDVlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SlDVlb.Location = new System.Drawing.Point(807, 332);
-            this.SlDVlb.Name = "SlDVlb";
-            this.SlDVlb.Size = new System.Drawing.Size(0, 19);
-            this.SlDVlb.TabIndex = 76;
             // 
             // frmKiemTraDV
             // 

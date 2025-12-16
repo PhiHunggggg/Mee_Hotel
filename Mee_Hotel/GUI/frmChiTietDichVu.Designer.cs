@@ -30,6 +30,7 @@ namespace Mee_Hotel.GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckbLocTheoNgay = new System.Windows.Forms.CheckBox();
             this.lblNgayDen = new System.Windows.Forms.Label();
             this.lblNgayTra = new System.Windows.Forms.Label();
             this.lblPhong = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@ namespace Mee_Hotel.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.txtGhiChu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,6 +62,9 @@ namespace Mee_Hotel.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtGhiChu);
+            this.panel1.Controls.Add(this.ckbLocTheoNgay);
             this.panel1.Controls.Add(this.lblNgayDen);
             this.panel1.Controls.Add(this.lblNgayTra);
             this.panel1.Controls.Add(this.lblPhong);
@@ -85,6 +91,18 @@ namespace Mee_Hotel.GUI
             this.panel1.Size = new System.Drawing.Size(1779, 959);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // ckbLocTheoNgay
+            // 
+            this.ckbLocTheoNgay.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ckbLocTheoNgay.AutoSize = true;
+            this.ckbLocTheoNgay.Location = new System.Drawing.Point(622, 154);
+            this.ckbLocTheoNgay.Name = "ckbLocTheoNgay";
+            this.ckbLocTheoNgay.Size = new System.Drawing.Size(94, 17);
+            this.ckbLocTheoNgay.TabIndex = 4;
+            this.ckbLocTheoNgay.Text = "Lọc theo ngày";
+            this.ckbLocTheoNgay.UseVisualStyleBackColor = true;
+            this.ckbLocTheoNgay.CheckedChanged += new System.EventHandler(this.ckbLocTheoNgay_CheckedChanged);
             // 
             // lblNgayDen
             // 
@@ -162,7 +180,7 @@ namespace Mee_Hotel.GUI
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -174,7 +192,7 @@ namespace Mee_Hotel.GUI
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -186,7 +204,7 @@ namespace Mee_Hotel.GUI
             // 
             // dtpDen
             // 
-            this.dtpDen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDen.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dtpDen.BorderThickness = 1;
             this.dtpDen.Checked = true;
             this.dtpDen.CheckedState.BorderColor = System.Drawing.Color.Black;
@@ -205,7 +223,7 @@ namespace Mee_Hotel.GUI
             // 
             // dtpTu
             // 
-            this.dtpTu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTu.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dtpTu.BorderThickness = 1;
             this.dtpTu.Checked = true;
             this.dtpTu.CheckedState.BorderColor = System.Drawing.Color.Black;
@@ -285,6 +303,7 @@ namespace Mee_Hotel.GUI
             this.siticoneButton3.Size = new System.Drawing.Size(147, 45);
             this.siticoneButton3.TabIndex = 7;
             this.siticoneButton3.Text = "Sửa dịch vụ";
+            this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
             // 
             // siticoneButton2
             // 
@@ -301,6 +320,7 @@ namespace Mee_Hotel.GUI
             this.siticoneButton2.Size = new System.Drawing.Size(147, 45);
             this.siticoneButton2.TabIndex = 6;
             this.siticoneButton2.Text = "Xóa dịch vụ";
+            this.siticoneButton2.Click += new System.EventHandler(this.siticoneButton2_Click);
             // 
             // siticoneButton1
             // 
@@ -317,6 +337,7 @@ namespace Mee_Hotel.GUI
             this.siticoneButton1.Size = new System.Drawing.Size(147, 45);
             this.siticoneButton1.TabIndex = 5;
             this.siticoneButton1.Text = "Thêm dịch vụ";
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // txtTimKiem
             // 
@@ -386,6 +407,44 @@ namespace Mee_Hotel.GUI
             this.siticoneShapes2.Text = "siticoneShapes2";
             this.siticoneShapes2.Zoom = 80;
             // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtGhiChu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGhiChu.BorderRadius = 20;
+            this.txtGhiChu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGhiChu.DefaultText = "";
+            this.txtGhiChu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGhiChu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGhiChu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGhiChu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGhiChu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGhiChu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhiChu.ForeColor = System.Drawing.Color.Black;
+            this.txtGhiChu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGhiChu.Location = new System.Drawing.Point(51, 677);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.PasswordChar = '\0';
+            this.txtGhiChu.PlaceholderText = "";
+            this.txtGhiChu.ReadOnly = true;
+            this.txtGhiChu.SelectedText = "";
+            this.txtGhiChu.Size = new System.Drawing.Size(403, 232);
+            this.txtGhiChu.TabIndex = 40;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(62, 638);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(364, 23);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Ghi chú                                               ";
+            // 
             // frmChiTietDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,5 +486,8 @@ namespace Mee_Hotel.GUI
         private System.Windows.Forms.Label lblNgayTra;
         private System.Windows.Forms.Label lblPhong;
         private System.Windows.Forms.Label lblTenKH;
+        private System.Windows.Forms.CheckBox ckbLocTheoNgay;
+        private System.Windows.Forms.Label label6;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtGhiChu;
     }
 }
