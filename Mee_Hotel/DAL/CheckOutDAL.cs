@@ -7,9 +7,16 @@ namespace Mee_Hotel.DAL
     class CheckOutDAL : DataProvider
     {
         private static CheckOutDAL instance;
-        public static CheckOutDAL Instance
+        public new static CheckOutDAL Instance
         {
-            get => instance ?? (instance = new CheckOutDAL());
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new CheckOutDAL();
+                }
+                return instance;
+            }
             private set => instance = value;
         }
         private CheckOutDAL() { }

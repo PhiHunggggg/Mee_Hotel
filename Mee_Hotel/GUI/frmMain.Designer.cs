@@ -338,7 +338,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement12.Appearance.Normal.Options.UseFont = true;
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "Kiểm Tra Hư Hỏng ";
-            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
+      //      this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
             // accordionControlElement13
             // 

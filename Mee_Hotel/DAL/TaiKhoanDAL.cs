@@ -39,7 +39,6 @@ namespace Mee_Hotel.DAL
                 return null; 
 
             DataRow row = dt.Rows[0];
-
             StaticThing.TenNV = row["TenNV"].ToString();
             return new TaiKhoan
             {

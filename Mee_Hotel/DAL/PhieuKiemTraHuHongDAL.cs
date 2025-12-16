@@ -8,9 +8,16 @@ namespace Mee_Hotel.DAL
     class PhieuKiemTraHuHongDAL : DataProvider
     {
         private static PhieuKiemTraHuHongDAL instance;
-        public static PhieuKiemTraHuHongDAL Instance
+        public new static PhieuKiemTraHuHongDAL Instance
         {
-            get => instance ?? (instance = new PhieuKiemTraHuHongDAL());
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new PhieuKiemTraHuHongDAL();
+                }
+                return instance;
+            }
             private set => instance = value;
         }
         private PhieuKiemTraHuHongDAL() { }

@@ -8,9 +8,16 @@ namespace Mee_Hotel.DAL
     class TrangThietBiDAL : DataProvider
     {
         private static TrangThietBiDAL instance;
-        public static TrangThietBiDAL Instance
+        public new static TrangThietBiDAL Instance
         {
-            get => instance ?? (instance = new TrangThietBiDAL());
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new TrangThietBiDAL();
+                }
+                return instance;
+            }
             private set => instance = value;
         }
         private TrangThietBiDAL() { }
