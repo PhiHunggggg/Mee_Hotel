@@ -75,8 +75,7 @@ namespace Mee_Hotel.GUI
 
         private void accordionControlElement13_Click(object sender, EventArgs e)
         {
-            frmTaoHoaDon frm = new frmTaoHoaDon();
-            frm.ShowDialog();
+            OpenChildForm(new frmQuanLyHoaDon());
         }
 
         private void panelMain_Click(object sender, EventArgs e)

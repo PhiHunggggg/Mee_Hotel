@@ -48,5 +48,7 @@ namespace Mee_Hotel.DAL
         public static Decimal TongTienBT;
         public static Decimal TongTien;
         public static DataTable DSPhong;
+        public static string MaKTHH;
+        public static Decimal PhanTramThue;
     }
 }

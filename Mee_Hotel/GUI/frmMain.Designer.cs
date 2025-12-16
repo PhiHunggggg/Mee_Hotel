@@ -319,7 +319,7 @@ namespace Mee_Hotel.GUI
             // accordionControlElement13
             // 
             this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Text = "Tạo hóa đơn";
+            this.accordionControlElement13.Text = "Quản lí hóa đơn";
             this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
             // 
             // fluentDesignFormControl1

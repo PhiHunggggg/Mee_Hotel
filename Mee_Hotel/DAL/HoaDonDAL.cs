@@ -55,6 +55,56 @@ namespace Mee_Hotel.DAL
             }
             return dt;
         }
+
+        public int TaoHoaDon(String MaKH, String MaDP, DateTime NgayThanhToan, Decimal TongTien, Decimal Thue, Decimal PhiDichVu, String TrangThaiTT, String GhiChu, String MaPhieu_KTTH)
+        {
+            SqlParameter[] pr =
+            {
+                new SqlParameter("@MaKH", MaKH),
+                new SqlParameter("@MaDP", MaDP),
+                new SqlParameter("@NgayThanhToan", NgayThanhToan),
+                new SqlParameter("@TongTien", TongTien),
+                new SqlParameter("@Thue", Thue),
+                new SqlParameter("@PhiDichVu", PhiDichVu),
+                new SqlParameter("@TrangThaiTT", TrangThaiTT),
+                new SqlParameter("@GhiChu", GhiChu),
+                new SqlParameter("@MaPhieu_KTTH", MaPhieu_KTTH),
+            };
+
+            int tst = DataProvider.Instance.CallProcNonQuery("sp_ThemHoaDon", pr);
+
+            return tst;
+        }
+
+        public DataTable HienThiHoaDon()
+        {
+            DataTable dt = DataProvider.Instance.CallProcQuery("sp_LoadHDFull");
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            return dt;
+        }
+
+        public DataTable getDanhSachHD(String MaHD, String hoTen, String SDT, DateTime tuNgay, DateTime denNgay)
+        {
+            SqlParameter[] pr =
+            {
+                new SqlParameter("@MaHD", MaHD),
+                new SqlParameter("@HoTen",hoTen),
+                new SqlParameter("@SDT",SDT),
+                new SqlParameter("@TuNgay", tuNgay),
+                new SqlParameter("@DenNgay", denNgay)
+            };
+
+            DataTable dt = DataProvider.Instance.CallProcQuery("getDanhSachHD", pr);
+
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            return dt;
+        }
     }
 
     class HoaDon_DVDAL : DataProvider
@@ -108,6 +158,7 @@ namespace Mee_Hotel.DAL
             return dt;
         }
 
+        
     }
 
     

@@ -45,5 +45,30 @@ namespace Mee_Hotel.GUI
             ThongTinDonHang.TongTien = ThongTinDonHang.TongTienDV + ThongTinDonHang.TongTienBT + ThongTinDonHang.TongTienDP;
             TongTT_tb.Text = ThongTinDonHang.TongTien.ToString() + " VND";
         }
+
+        private void btnTao_Click(object sender, EventArgs e)
+        {
+            if (ThongTinDonHang.MaKTHH == null || ThongTinDonHang.MaDP == null || ThongTinDonHang.MaKTHH == null)
+            {
+                MessageBox.Show("Bạn chưa check hết các thông tin!!");
+                return;
+            }
+            int tst = HoaDonDAL.Instance.TaoHoaDon(ThongTinDonHang.MaKH, ThongTinDonHang.MaDP, DateTime.UtcNow, ThongTinDonHang.TongTien, PhanTramThue_Num.Value, ThongTinDonHang.TongTienDV, "Chưa thanh toán", "Chưa rõ", ThongTinDonHang.MaKTHH);
+            if (tst > 0) MessageBox.Show("Thêm hóa đơn thành công");
+            else MessageBox.Show("Thêm hóa đơn không thành công");
+            this.Close();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            frmThanhToan frm = new frmThanhToan();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }
