@@ -83,5 +83,10 @@ namespace Mee_Hotel
         {
             btnsign.FillColor = Color.MediumBlue;
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
