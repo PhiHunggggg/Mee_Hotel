@@ -41,7 +41,7 @@ namespace Mee_Hotel.GUI
             Data_DP_HD.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             Data_DP_HD.EnableHeadersVisualStyles = false;
             Data_DP_HD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Data_DP_HD.ColumnHeadersHeight = 75;   // bạn muốn cao bao nhiêu thì ghi vào đây
+            Data_DP_HD.ColumnHeadersHeight = 75;   
             Data_DP_HD.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             // Căn giữa tất cả cột
             foreach (DataGridViewColumn col in Data_DP_HD.Columns)
