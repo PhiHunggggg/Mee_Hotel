@@ -80,12 +80,6 @@
     <Compile Include="GUI\frmCheckOut.Designer.cs">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmCheckOutTheoDoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmCheckOutTheoDoan.Designer.cs">
-      <DependentUpon>frmCheckOutTheoDoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmCheckOutTheoDoan.resx">
-      <DependentUpon>frmCheckOutTheoDoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
