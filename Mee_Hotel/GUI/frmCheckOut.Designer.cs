@@ -1,99 +1,300 @@
 ﻿namespace Mee_Hotel.GUI
 {
     partial class frmCheckOut
-{
-    private System.ComponentModel.IContainer components = null;
-
-    protected override void Dispose(bool disposing)
     {
-        if (disposing && (components != null))
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
-        base.Dispose(disposing);
-    }
 
-    private void InitializeComponent()
-    {
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblHuHong = new System.Windows.Forms.Label();
-            this.dataGridHuHong = new System.Windows.Forms.DataGridView();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.lblTieuDe = new System.Windows.Forms.Label();
+            this.lblChonPhong = new System.Windows.Forms.Label();
+            this.cmbPhong = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.lblMaPhongLabel = new System.Windows.Forms.Label();
+            this.lblMaPhong = new System.Windows.Forms.Label();
+            this.lblTenPhongLabel = new System.Windows.Forms.Label();
+            this.lblTenPhong = new System.Windows.Forms.Label();
+            this.lblMaDPLabel = new System.Windows.Forms.Label();
+            this.lblMaDP = new System.Windows.Forms.Label();
+            this.lblTenKHLabel = new System.Windows.Forms.Label();
+            this.lblTenKH = new System.Windows.Forms.Label();
+            this.lblNgayDenLabel = new System.Windows.Forms.Label();
+            this.lblNgayDen = new System.Windows.Forms.Label();
+            this.lblNgayTraDuKienLabel = new System.Windows.Forms.Label();
+            this.lblNgayTraDuKien = new System.Windows.Forms.Label();
+            this.lblSoNgayOLabel = new System.Windows.Forms.Label();
+            this.lblSoNgayO = new System.Windows.Forms.Label();
             this.lblDichVu = new System.Windows.Forms.Label();
             this.dataGridDichVu = new System.Windows.Forms.DataGridView();
-            this.dgvSoNgayO = new System.Windows.Forms.DataGridView();
-            this.btnCheckOutBatch = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.dgvPhongBatch = new System.Windows.Forms.DataGridView();
-            this.dgvPhieuDP = new System.Windows.Forms.DataGridView();
-            this.btnTimPhieu = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtSearch = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.lblTimPhieu = new System.Windows.Forms.Label();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblHuHong = new System.Windows.Forms.Label();
+            this.dataGridHuHong = new System.Windows.Forms.DataGridView();
+            this.btnCheckOut = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.labelControl1);
-            this.panel1.Controls.Add(this.lblHuHong);
-            this.panel1.Controls.Add(this.dataGridHuHong);
+            this.panel1.Controls.Add(this.separatorControl1);
+            this.panel1.Controls.Add(this.lblTieuDe);
+            this.panel1.Controls.Add(this.lblChonPhong);
+            this.panel1.Controls.Add(this.cmbPhong);
+            this.panel1.Controls.Add(this.lblMaPhongLabel);
+            this.panel1.Controls.Add(this.lblMaPhong);
+            this.panel1.Controls.Add(this.lblTenPhongLabel);
+            this.panel1.Controls.Add(this.lblTenPhong);
+            this.panel1.Controls.Add(this.lblMaDPLabel);
+            this.panel1.Controls.Add(this.lblMaDP);
+            this.panel1.Controls.Add(this.lblTenKHLabel);
+            this.panel1.Controls.Add(this.lblTenKH);
+            this.panel1.Controls.Add(this.lblNgayDenLabel);
+            this.panel1.Controls.Add(this.lblNgayDen);
+            this.panel1.Controls.Add(this.lblNgayTraDuKienLabel);
+            this.panel1.Controls.Add(this.lblNgayTraDuKien);
+            this.panel1.Controls.Add(this.lblSoNgayOLabel);
+            this.panel1.Controls.Add(this.lblSoNgayO);
             this.panel1.Controls.Add(this.lblDichVu);
             this.panel1.Controls.Add(this.dataGridDichVu);
-            this.panel1.Controls.Add(this.dgvSoNgayO);
-            this.panel1.Controls.Add(this.btnCheckOutBatch);
-            this.panel1.Controls.Add(this.dgvPhongBatch);
-            this.panel1.Controls.Add(this.dgvPhieuDP);
-            this.panel1.Controls.Add(this.btnTimPhieu);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.lblSearch);
-            this.panel1.Controls.Add(this.lblTimPhieu);
+            this.panel1.Controls.Add(this.lblHuHong);
+            this.panel1.Controls.Add(this.dataGridHuHong);
+            this.panel1.Controls.Add(this.btnCheckOut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 1055);
             this.panel1.TabIndex = 0;
             // 
-            // lblHuHong
+            // separatorControl1
             // 
-            this.lblHuHong.AutoSize = true;
-            this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.lblHuHong.Location = new System.Drawing.Point(748, 581);
-            this.lblHuHong.Name = "lblHuHong";
-            this.lblHuHong.Size = new System.Drawing.Size(324, 29);
-            this.lblHuHong.TabIndex = 12;
-            this.lblHuHong.Text = "Hư hỏng thiết bị (nếu có):";
+            this.separatorControl1.Location = new System.Drawing.Point(13, 157);
+            this.separatorControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Padding = new System.Windows.Forms.Padding(11);
+            this.separatorControl1.Size = new System.Drawing.Size(722, 23);
+            this.separatorControl1.TabIndex = 22;
             // 
-            // dataGridHuHong
+            // lblTieuDe
             // 
-            this.dataGridHuHong.AllowUserToAddRows = false;
-            this.dataGridHuHong.AllowUserToDeleteRows = false;
-            this.dataGridHuHong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridHuHong.ColumnHeadersHeight = 50;
-            this.dataGridHuHong.Location = new System.Drawing.Point(753, 640);
-            this.dataGridHuHong.Name = "dataGridHuHong";
-            this.dataGridHuHong.ReadOnly = true;
-            this.dataGridHuHong.RowHeadersWidth = 51;
-            this.dataGridHuHong.RowTemplate.Height = 40;
-            this.dataGridHuHong.Size = new System.Drawing.Size(699, 239);
-            this.dataGridHuHong.TabIndex = 13;
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Tahoma", 26F, System.Drawing.FontStyle.Bold);
+            this.lblTieuDe.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblTieuDe.Location = new System.Drawing.Point(100, 30);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(457, 53);
+            this.lblTieuDe.TabIndex = 0;
+            this.lblTieuDe.Text = "CHECK OUT PHÒNG";
+            // 
+            // lblChonPhong
+            // 
+            this.lblChonPhong.AutoSize = true;
+            this.lblChonPhong.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblChonPhong.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblChonPhong.Location = new System.Drawing.Point(44, 107);
+            this.lblChonPhong.Name = "lblChonPhong";
+            this.lblChonPhong.Size = new System.Drawing.Size(166, 29);
+            this.lblChonPhong.TabIndex = 1;
+            this.lblChonPhong.Text = "Chọn Phòng:";
+            // 
+            // cmbPhong
+            // 
+            this.cmbPhong.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPhong.BorderRadius = 19;
+            this.cmbPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPhong.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbPhong.ItemHeight = 36;
+            this.cmbPhong.Location = new System.Drawing.Point(219, 108);
+            this.cmbPhong.Name = "cmbPhong";
+            this.cmbPhong.Size = new System.Drawing.Size(267, 42);
+            this.cmbPhong.TabIndex = 2;
+            this.cmbPhong.SelectedIndexChanged += new System.EventHandler(this.cmbPhong_SelectedIndexChanged);
+            // 
+            // lblMaPhongLabel
+            // 
+            this.lblMaPhongLabel.AutoSize = true;
+            this.lblMaPhongLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblMaPhongLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblMaPhongLabel.Location = new System.Drawing.Point(100, 240);
+            this.lblMaPhongLabel.Name = "lblMaPhongLabel";
+            this.lblMaPhongLabel.Size = new System.Drawing.Size(140, 29);
+            this.lblMaPhongLabel.TabIndex = 3;
+            this.lblMaPhongLabel.Text = "Mã Phòng:";
+            // 
+            // lblMaPhong
+            // 
+            this.lblMaPhong.AutoSize = true;
+            this.lblMaPhong.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblMaPhong.Location = new System.Drawing.Point(336, 240);
+            this.lblMaPhong.Name = "lblMaPhong";
+            this.lblMaPhong.Size = new System.Drawing.Size(90, 29);
+            this.lblMaPhong.TabIndex = 4;
+            this.lblMaPhong.Text = "...........";
+            // 
+            // lblTenPhongLabel
+            // 
+            this.lblTenPhongLabel.AutoSize = true;
+            this.lblTenPhongLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTenPhongLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTenPhongLabel.Location = new System.Drawing.Point(100, 290);
+            this.lblTenPhongLabel.Name = "lblTenPhongLabel";
+            this.lblTenPhongLabel.Size = new System.Drawing.Size(149, 29);
+            this.lblTenPhongLabel.TabIndex = 5;
+            this.lblTenPhongLabel.Text = "Tên Phòng:";
+            // 
+            // lblTenPhong
+            // 
+            this.lblTenPhong.AutoSize = true;
+            this.lblTenPhong.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblTenPhong.Location = new System.Drawing.Point(336, 290);
+            this.lblTenPhong.Name = "lblTenPhong";
+            this.lblTenPhong.Size = new System.Drawing.Size(90, 29);
+            this.lblTenPhong.TabIndex = 6;
+            this.lblTenPhong.Text = "...........";
+            // 
+            // lblMaDPLabel
+            // 
+            this.lblMaDPLabel.AutoSize = true;
+            this.lblMaDPLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblMaDPLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblMaDPLabel.Location = new System.Drawing.Point(100, 340);
+            this.lblMaDPLabel.Name = "lblMaDPLabel";
+            this.lblMaDPLabel.Size = new System.Drawing.Size(190, 29);
+            this.lblMaDPLabel.TabIndex = 7;
+            this.lblMaDPLabel.Text = "Mã Đặt Phòng:";
+            // 
+            // lblMaDP
+            // 
+            this.lblMaDP.AutoSize = true;
+            this.lblMaDP.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblMaDP.Location = new System.Drawing.Point(336, 340);
+            this.lblMaDP.Name = "lblMaDP";
+            this.lblMaDP.Size = new System.Drawing.Size(90, 29);
+            this.lblMaDP.TabIndex = 8;
+            this.lblMaDP.Text = "...........";
+            // 
+            // lblTenKHLabel
+            // 
+            this.lblTenKHLabel.AutoSize = true;
+            this.lblTenKHLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTenKHLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblTenKHLabel.Location = new System.Drawing.Point(100, 390);
+            this.lblTenKHLabel.Name = "lblTenKHLabel";
+            this.lblTenKHLabel.Size = new System.Drawing.Size(216, 29);
+            this.lblTenKHLabel.TabIndex = 9;
+            this.lblTenKHLabel.Text = "Tên Khách Hàng:";
+            // 
+            // lblTenKH
+            // 
+            this.lblTenKH.AutoSize = true;
+            this.lblTenKH.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblTenKH.Location = new System.Drawing.Point(336, 390);
+            this.lblTenKH.Name = "lblTenKH";
+            this.lblTenKH.Size = new System.Drawing.Size(90, 29);
+            this.lblTenKH.TabIndex = 10;
+            this.lblTenKH.Text = "...........";
+            // 
+            // lblNgayDenLabel
+            // 
+            this.lblNgayDenLabel.AutoSize = true;
+            this.lblNgayDenLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblNgayDenLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblNgayDenLabel.Location = new System.Drawing.Point(100, 440);
+            this.lblNgayDenLabel.Name = "lblNgayDenLabel";
+            this.lblNgayDenLabel.Size = new System.Drawing.Size(135, 29);
+            this.lblNgayDenLabel.TabIndex = 11;
+            this.lblNgayDenLabel.Text = "Ngày đến:";
+            // 
+            // lblNgayDen
+            // 
+            this.lblNgayDen.AutoSize = true;
+            this.lblNgayDen.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblNgayDen.Location = new System.Drawing.Point(336, 440);
+            this.lblNgayDen.Name = "lblNgayDen";
+            this.lblNgayDen.Size = new System.Drawing.Size(90, 29);
+            this.lblNgayDen.TabIndex = 12;
+            this.lblNgayDen.Text = "...........";
+            // 
+            // lblNgayTraDuKienLabel
+            // 
+            this.lblNgayTraDuKienLabel.AutoSize = true;
+            this.lblNgayTraDuKienLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblNgayTraDuKienLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblNgayTraDuKienLabel.Location = new System.Drawing.Point(100, 490);
+            this.lblNgayTraDuKienLabel.Name = "lblNgayTraDuKienLabel";
+            this.lblNgayTraDuKienLabel.Size = new System.Drawing.Size(221, 29);
+            this.lblNgayTraDuKienLabel.TabIndex = 13;
+            this.lblNgayTraDuKienLabel.Text = "Ngày trả dự kiến:";
+            // 
+            // lblNgayTraDuKien
+            // 
+            this.lblNgayTraDuKien.AutoSize = true;
+            this.lblNgayTraDuKien.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.lblNgayTraDuKien.Location = new System.Drawing.Point(336, 490);
+            this.lblNgayTraDuKien.Name = "lblNgayTraDuKien";
+            this.lblNgayTraDuKien.Size = new System.Drawing.Size(90, 29);
+            this.lblNgayTraDuKien.TabIndex = 14;
+            this.lblNgayTraDuKien.Text = "...........";
+            // 
+            // lblSoNgayOLabel
+            // 
+            this.lblSoNgayOLabel.AutoSize = true;
+            this.lblSoNgayOLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblSoNgayOLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSoNgayOLabel.Location = new System.Drawing.Point(100, 540);
+            this.lblSoNgayOLabel.Name = "lblSoNgayOLabel";
+            this.lblSoNgayOLabel.Size = new System.Drawing.Size(139, 29);
+            this.lblSoNgayOLabel.TabIndex = 15;
+            this.lblSoNgayOLabel.Text = "Số ngày ở:";
+            // 
+            // lblSoNgayO
+            // 
+            this.lblSoNgayO.AutoSize = true;
+            this.lblSoNgayO.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblSoNgayO.ForeColor = System.Drawing.Color.Red;
+            this.lblSoNgayO.Location = new System.Drawing.Point(320, 540);
+            this.lblSoNgayO.Name = "lblSoNgayO";
+            this.lblSoNgayO.Size = new System.Drawing.Size(93, 29);
+            this.lblSoNgayO.TabIndex = 16;
+            this.lblSoNgayO.Text = "0 ngày";
             // 
             // lblDichVu
             // 
             this.lblDichVu.AutoSize = true;
-            this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.lblDichVu.Location = new System.Drawing.Point(748, 252);
+            this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblDichVu.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblDichVu.Location = new System.Drawing.Point(751, 50);
             this.lblDichVu.Name = "lblDichVu";
-            this.lblDichVu.Size = new System.Drawing.Size(250, 29);
-            this.lblDichVu.TabIndex = 10;
-            this.lblDichVu.Text = "Dịch vụ đã sử dụng:";
+            this.lblDichVu.Size = new System.Drawing.Size(268, 33);
+            this.lblDichVu.TabIndex = 17;
+            this.lblDichVu.Text = "DỊCH VỤ SỬ DỤNG";
             // 
             // dataGridDichVu
             // 
@@ -103,140 +304,60 @@
             this.dataGridDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dataGridDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDichVu.ColumnHeadersHeight = 50;
-            this.dataGridDichVu.Location = new System.Drawing.Point(742, 284);
+            this.dataGridDichVu.Location = new System.Drawing.Point(742, 86);
             this.dataGridDichVu.Name = "dataGridDichVu";
             this.dataGridDichVu.ReadOnly = true;
+            this.dataGridDichVu.RowHeadersVisible = false;
             this.dataGridDichVu.RowHeadersWidth = 51;
             this.dataGridDichVu.RowTemplate.Height = 40;
-            this.dataGridDichVu.Size = new System.Drawing.Size(685, 294);
-            this.dataGridDichVu.TabIndex = 11;
+            this.dataGridDichVu.Size = new System.Drawing.Size(919, 401);
+            this.dataGridDichVu.TabIndex = 18;
             // 
-            // dgvSoNgayO
+            // lblHuHong
             // 
-            this.dgvSoNgayO.AllowUserToAddRows = false;
-            this.dgvSoNgayO.AllowUserToDeleteRows = false;
-            this.dgvSoNgayO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSoNgayO.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSoNgayO.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSoNgayO.ColumnHeadersHeight = 50;
-            this.dgvSoNgayO.Location = new System.Drawing.Point(742, 58);
-            this.dgvSoNgayO.Name = "dgvSoNgayO";
-            this.dgvSoNgayO.ReadOnly = true;
-            this.dgvSoNgayO.RowHeadersWidth = 51;
-            this.dgvSoNgayO.RowTemplate.Height = 40;
-            this.dgvSoNgayO.Size = new System.Drawing.Size(681, 191);
-            this.dgvSoNgayO.TabIndex = 9;
+            this.lblHuHong.AutoSize = true;
+            this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblHuHong.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblHuHong.Location = new System.Drawing.Point(751, 490);
+            this.lblHuHong.Name = "lblHuHong";
+            this.lblHuHong.Size = new System.Drawing.Size(281, 33);
+            this.lblHuHong.TabIndex = 19;
+            this.lblHuHong.Text = "HƯ HỎNG THIẾT BỊ";
             // 
-            // btnCheckOutBatch
+            // dataGridHuHong
             // 
-            this.btnCheckOutBatch.BorderRadius = 19;
-            this.btnCheckOutBatch.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnCheckOutBatch.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOutBatch.Location = new System.Drawing.Point(201, 674);
-            this.btnCheckOutBatch.Name = "btnCheckOutBatch";
-            this.btnCheckOutBatch.Size = new System.Drawing.Size(211, 60);
-            this.btnCheckOutBatch.TabIndex = 7;
-            this.btnCheckOutBatch.Text = "Check Out";
-            this.btnCheckOutBatch.Click += new System.EventHandler(this.btnCheckOutBatch_Click);
+            this.dataGridHuHong.AllowUserToAddRows = false;
+            this.dataGridHuHong.AllowUserToDeleteRows = false;
+            this.dataGridHuHong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridHuHong.ColumnHeadersHeight = 50;
+            this.dataGridHuHong.Location = new System.Drawing.Point(748, 526);
+            this.dataGridHuHong.Name = "dataGridHuHong";
+            this.dataGridHuHong.ReadOnly = true;
+            this.dataGridHuHong.RowHeadersVisible = false;
+            this.dataGridHuHong.RowHeadersWidth = 51;
+            this.dataGridHuHong.RowTemplate.Height = 40;
+            this.dataGridHuHong.Size = new System.Drawing.Size(913, 359);
+            this.dataGridHuHong.TabIndex = 20;
             // 
-            // dgvPhongBatch
+            // btnCheckOut
             // 
-            this.dgvPhongBatch.AllowUserToAddRows = false;
-            this.dgvPhongBatch.AllowUserToDeleteRows = false;
-            this.dgvPhongBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhongBatch.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPhongBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPhongBatch.ColumnHeadersHeight = 50;
-            this.dgvPhongBatch.Location = new System.Drawing.Point(12, 430);
-            this.dgvPhongBatch.Name = "dgvPhongBatch";
-            this.dgvPhongBatch.RowHeadersWidth = 51;
-            this.dgvPhongBatch.RowTemplate.Height = 40;
-            this.dgvPhongBatch.Size = new System.Drawing.Size(665, 220);
-            this.dgvPhongBatch.TabIndex = 5;
-            this.dgvPhongBatch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBatch_CellClick);
-            this.dgvPhongBatch.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBatch_CellValueChanged);
-            this.dgvPhongBatch.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvPhongBatch_CurrentCellDirtyStateChanged);
-            // 
-            // dgvPhieuDP
-            // 
-            this.dgvPhieuDP.AllowUserToAddRows = false;
-            this.dgvPhieuDP.AllowUserToDeleteRows = false;
-            this.dgvPhieuDP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhieuDP.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPhieuDP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPhieuDP.ColumnHeadersHeight = 50;
-            this.dgvPhieuDP.Location = new System.Drawing.Point(12, 204);
-            this.dgvPhieuDP.Name = "dgvPhieuDP";
-            this.dgvPhieuDP.ReadOnly = true;
-            this.dgvPhieuDP.RowHeadersWidth = 51;
-            this.dgvPhieuDP.RowTemplate.Height = 40;
-            this.dgvPhieuDP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuDP.Size = new System.Drawing.Size(665, 220);
-            this.dgvPhieuDP.TabIndex = 4;
-            this.dgvPhieuDP.SelectionChanged += new System.EventHandler(this.dgvPhieuDP_SelectionChanged);
-            // 
-            // btnTimPhieu
-            // 
-            this.btnTimPhieu.BorderRadius = 19;
-            this.btnTimPhieu.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnTimPhieu.ForeColor = System.Drawing.Color.White;
-            this.btnTimPhieu.Location = new System.Drawing.Point(542, 126);
-            this.btnTimPhieu.Name = "btnTimPhieu";
-            this.btnTimPhieu.Size = new System.Drawing.Size(165, 40);
-            this.btnTimPhieu.TabIndex = 3;
-            this.btnTimPhieu.Text = "Tìm kiếm";
-            this.btnTimPhieu.Click += new System.EventHandler(this.btnTimPhieu_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Location = new System.Drawing.Point(174, 131);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(339, 35);
-            this.txtSearch.TabIndex = 2;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblSearch.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSearch.Location = new System.Drawing.Point(45, 78);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(550, 29);
-            this.lblSearch.TabIndex = 1;
-            this.lblSearch.Text = "Tìm kiếm (mã phiếu / tên KH / SDT / CCCD):";
-            // 
-            // lblTimPhieu
-            // 
-            this.lblTimPhieu.AutoSize = true;
-            this.lblTimPhieu.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTimPhieu.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblTimPhieu.Location = new System.Drawing.Point(136, 27);
-            this.lblTimPhieu.Name = "lblTimPhieu";
-            this.lblTimPhieu.Size = new System.Drawing.Size(528, 33);
-            this.lblTimPhieu.TabIndex = 0;
-            this.lblTimPhieu.Text = "CHECK OUT THEO PHIẾU ĐẶT PHÒNG";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(742, 27);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(238, 29);
-            this.labelControl1.TabIndex = 14;
-            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
+            this.btnCheckOut.BorderRadius = 19;
+            this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOut.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btnCheckOut.Location = new System.Drawing.Point(291, 619);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(172, 55);
+            this.btnCheckOut.TabIndex = 21;
+            this.btnCheckOut.Text = "Check Out ";
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // frmCheckOut
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -247,28 +368,38 @@
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
             this.ResumeLayout(false);
 
-    }
+        }
 
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Label lblTimPhieu;
-    private System.Windows.Forms.Label lblSearch;
-    private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtSearch;
-    private Siticone.Desktop.UI.WinForms.SiticoneButton btnTimPhieu;
-    private System.Windows.Forms.DataGridView dgvPhieuDP;
-    private System.Windows.Forms.DataGridView dgvPhongBatch;
-    private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOutBatch;
-    private System.Windows.Forms.DataGridView dgvSoNgayO;
-    private System.Windows.Forms.Label lblDichVu;
-    private System.Windows.Forms.DataGridView dataGridDichVu;
-    private System.Windows.Forms.Label lblHuHong;
-    private System.Windows.Forms.DataGridView dataGridHuHong;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTieuDe;
+        private System.Windows.Forms.Label lblChonPhong;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cmbPhong;
+        private System.Windows.Forms.Label lblMaPhongLabel;
+        private System.Windows.Forms.Label lblMaPhong;
+        private System.Windows.Forms.Label lblTenPhongLabel;
+        private System.Windows.Forms.Label lblTenPhong;
+        private System.Windows.Forms.Label lblMaDPLabel;
+        private System.Windows.Forms.Label lblMaDP;
+        private System.Windows.Forms.Label lblTenKHLabel;
+        private System.Windows.Forms.Label lblTenKH;
+        private System.Windows.Forms.Label lblNgayDenLabel;
+        private System.Windows.Forms.Label lblNgayDen;
+        private System.Windows.Forms.Label lblNgayTraDuKienLabel;
+        private System.Windows.Forms.Label lblNgayTraDuKien;
+        private System.Windows.Forms.Label lblSoNgayOLabel;
+        private System.Windows.Forms.Label lblSoNgayO;
+        private System.Windows.Forms.Label lblDichVu;
+        private System.Windows.Forms.DataGridView dataGridDichVu;
+        private System.Windows.Forms.Label lblHuHong;
+        private System.Windows.Forms.DataGridView dataGridHuHong;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOut;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
     }
 }

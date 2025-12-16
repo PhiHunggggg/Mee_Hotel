@@ -85,12 +85,7 @@ namespace Mee_Hotel.GUI
 
         private void accordionControlElement14_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void accordionControlElement8_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmCheckOut());
+            OpenChildForm(new frmHoaDon());
         }
     }
 }

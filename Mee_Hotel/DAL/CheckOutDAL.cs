@@ -7,88 +7,70 @@ namespace Mee_Hotel.DAL
     class CheckOutDAL : DataProvider
     {
         private static CheckOutDAL instance;
-        public new static CheckOutDAL Instance
+        public static CheckOutDAL Instance
         {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new CheckOutDAL();
-                }
-                return instance;
-            }
+            get => instance ?? (instance = new CheckOutDAL());
             private set => instance = value;
         }
         private CheckOutDAL() { }
 
-        
-       
-        // Lấy số ngày ở thực tế cho nhiều phòng (trả về DataTable)
-        public DataTable GetSoNgayOThucTeList(string maPhongList)
+        // Lấy danh sách phòng đang ở (TinhTrang = 3) 
+        public DataTable GetDanhSachPhongDangO()
         {
-            SqlParameter[] parameters =
-            {
-        new SqlParameter("@MaPhongList", maPhongList)
-    };
-            return DataProvider.Instance.CallProcQuery("proc_GetSoNgayOThucTeList", parameters);
-        }
+            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");         }
 
-        // Lấy dịch vụ sử dụng cho nhiều phòng
-        public DataTable GetDichVuTheoPhongList(string maPhongList)
+        // Lấy thông tin checkout theo phòng (PhieuDP + KhachHang)
+        public DataTable GetThongTinCheckOut(string maPhong)
         {
             SqlParameter[] parameters =
             {
-        new SqlParameter("@MaPhongList", maPhongList)
-    };
-            return DataProvider.Instance.CallProcQuery("proc_GetDichVuTheoPhongList", parameters);
-        }
-
-        // Lấy hư hỏng cho nhiều phòng
-        public DataTable GetHuHongTheoPhongList(string maPhongList)
-        {
-            SqlParameter[] parameters =
-            {
-        new SqlParameter("@MaPhongList", maPhongList)
-    };
-            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhongList", parameters);
-        }
-       
-        // Tìm phiếu đã check in
-        public DataTable GetPhieuDaCheckIn(string maDP = "", string tenKH = "", string sdt = "", string cccd = "")
-        {
-            SqlParameter[] parameters =
-            {
-                new SqlParameter("@MaDP", string.IsNullOrEmpty(maDP) ? (object)DBNull.Value : maDP),
-                new SqlParameter("@TenKH", string.IsNullOrEmpty(tenKH) ? (object)DBNull.Value : tenKH),
-                new SqlParameter("@SDT", string.IsNullOrEmpty(sdt) ? (object)DBNull.Value : sdt),
-                new SqlParameter("@CCCD",string.IsNullOrEmpty(cccd)?(object)DBNull.Value:cccd )
-
+                new SqlParameter("@MaPhong", maPhong)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetPhieuDaCheckIn", parameters);
-        }
+            return DataProvider.Instance.CallProcQuery("proc_GetThongTinCheckOut", parameters);         }
 
-        // Lấy phòng của phiếu
-        public DataTable GetPhongCuaPhieu(string maDP)
+        // Lấy số ngày ở thực tế (DATEDIFF)
+        public int GetSoNgayOThucTe(string maPhong)
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaDP", maDP)
+                new SqlParameter("@MaPhong", maPhong)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetPhongCuaPhieu", parameters);
+            object result = DataProvider.Instance.CallProcScalar("proc_GetSoNgayOThucTe", parameters);
+            return result != null ? Convert.ToInt32(result) : 0;
         }
 
-        // Check out batch
-        public bool CheckOutTheoPhieu(string maDP, decimal tongTienDV, decimal tongTienHuHong, string maPhongList)
+        // Lấy dịch vụ sử dụng theo phòng
+        public DataTable GetDichVuTheoPhong (string maPhong)
         {
             SqlParameter[] parameters =
             {
+                new SqlParameter("@MaPhong", maPhong)
+            };
+            return DataProvider.Instance.CallProcQuery("proc_GetDichVuTheoPhong", parameters); 
+        }
+
+        // Lấy phiếu hư hỏng theo phòng (nếu có)
+        public DataTable GetHuHongTheoPhong(string maPhong)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaPhong", maPhong)
+            };
+            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhong", parameters); 
+        }
+
+        // Thực hiện checkout: Update phòng, PhieuDP, tạo hóa đơn nếu cần
+        public bool CheckOut(string maPhong, string maDP, decimal tongTienDV, decimal tongTienHuHong)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaPhong", maPhong),
                 new SqlParameter("@MaDP", maDP),
                 new SqlParameter("@TongTienDV", tongTienDV),
                 new SqlParameter("@TongTienHuHong", tongTienHuHong),
-                new SqlParameter("@NgayCheckOut", DateTime.Now),
-                new SqlParameter("@MaPhongList", maPhongList)
+                new SqlParameter("@NgayCheckOut", DateTime.Now)
             };
-            int result = DataProvider.Instance.CallProcNonQuery("proc_CheckOutTheoPhieu", parameters);
+            int result = DataProvider.Instance.CallProcNonQuery("proc_CheckOut", parameters); 
             return result > 0;
         }
     }
