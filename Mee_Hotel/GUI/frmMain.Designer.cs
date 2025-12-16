@@ -136,7 +136,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement9.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_door_50;
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Text = "Phòng";
-            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
+  //          this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
             // 
             // accordionControlElement2
             // 
@@ -315,7 +315,7 @@ namespace Mee_Hotel.GUI
             // 
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Text = "CheckOut";
-            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click_1);
+       //     this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click_1);
             // 
             // accordionControlElement6
             // 
@@ -353,7 +353,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement12.Appearance.Normal.Options.UseFont = true;
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "Kiểm Tra Hư Hỏng ";
-            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
+          //  this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
             // accordionControlElement7
             // 
@@ -402,9 +402,9 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+    //    private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+     //   private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
     }
