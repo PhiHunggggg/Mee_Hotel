@@ -61,9 +61,17 @@
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\PhieuKiemTraHuHongDAL.cs" />
     <Compile Include="DAL\Phong1DAL.cs" />
+    <Compile Include="DAL\PhongDAL.cs" />
     <Compile Include="DAL\SQL_Connection.cs" />
     <Compile Include="DAL\StaticThing.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="Entity\Phong.cs" />
+    <Compile Include="Entity\RoomCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entity\RoomCard.Designer.cs">
+      <DependentUpon>RoomCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\TrangThietBiDAL.cs" />
     <Compile Include="Entity\TaiKhoan.cs" />
     <Compile Include="GUI\frmCheckOut.cs">
@@ -101,6 +109,54 @@
     </Compile>
     <Compile Include="GUI\frmChiTietDichVu.Designer.cs">
       <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyDichVu.Designer.cs">
+      <DependentUpon>frmQuanLyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemDichVu.Designer.cs">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSuaDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSuaDichVu.Designer.cs">
+      <DependentUpon>frmSuaDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCheckIn.Designer.cs">
+      <DependentUpon>frmCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDatPhong.Designer.cs">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDienThongTinDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDienThongTinDatPhong.Designer.cs">
+      <DependentUpon>frmDienThongTinDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPhieuDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPhieuDP.Designer.cs">
+      <DependentUpon>frmPhieuDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SuaPhieuDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SuaPhieuDP.Designer.cs">
+      <DependentUpon>SuaPhieuDP.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmPhieuKiemTraHuHong.cs">
       <SubType>Form</SubType>
@@ -140,6 +196,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quan_Ly_Khach_SanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quan_Ly_Khach_SanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Khach_SanDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quan_Ly_Khach_SanDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Khach_SanDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quan_Ly_Khach_SanDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Entity\RoomCard.resx">
+      <DependentUpon>RoomCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +231,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmChiTietDichVu.resx">
       <DependentUpon>frmChiTietDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanLyDichVu.resx">
+      <DependentUpon>frmQuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemDichVu.resx">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSuaDichVu.resx">
+      <DependentUpon>frmSuaDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCheckIn.resx">
+      <DependentUpon>frmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDatPhong.resx">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDienThongTinDatPhong.resx">
+      <DependentUpon>frmDienThongTinDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPhieuDP.resx">
+      <DependentUpon>frmPhieuDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SuaPhieuDP.resx">
+      <DependentUpon>SuaPhieuDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuKiemTraHuHong.resx">
       <DependentUpon>frmPhieuKiemTraHuHong.cs</DependentUpon>
@@ -201,6 +299,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Quan_Ly_Khach_SanDataSet.xsc">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quan_Ly_Khach_SanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet.xss">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet1.xsc">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quan_Ly_Khach_SanDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet1.xss">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet2.xsc">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quan_Ly_Khach_SanDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quan_Ly_Khach_SanDataSet2.xss">
+      <DependentUpon>Quan_Ly_Khach_SanDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\visualsofdana-T5pL6ciEn-I-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +354,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-bill-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-broom-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clock-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warning-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Phong\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

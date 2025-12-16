@@ -28,7 +28,8 @@ namespace Mee_Hotel
             TaiKhoan TaiKhoan = TaiKhoanDAL.Instance.Login(username, password);
             if (TaiKhoan != null)
             {
-                if (TaiKhoan.VaiTro == "Nhân viên")
+
+                if (TaiKhoan.VaiTro == "Lễ tân")
                 {
                     StaticThing.LoaiTaiKhoan = "NV";
                     try
