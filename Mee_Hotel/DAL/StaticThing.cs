@@ -13,6 +13,7 @@ namespace Mee_Hotel.DAL
         public static string LoaiTaiKhoan = null;
         public static string MaNV = null;
         public static string MaKH = null;
+        public static string TenNV = null;
         public static string MaQL = null;
         public static string idTaiKhoan = null;
         public static string mk = "";
@@ -32,6 +33,7 @@ namespace Mee_Hotel.DAL
         public static string MaKH;
         public static string NgayDat;
         public static string MaDP;
+        public static string TenNV;
         /*
         public static string TenKH;
         public static string TenKH;
@@ -42,6 +44,11 @@ namespace Mee_Hotel.DAL
         public static DateTime NgayBD;
         public static DateTime NgayKT;
         public static Decimal TongTienDV;
+        public static Decimal TongTienDP;
+        public static Decimal TongTienBT;
+        public static Decimal TongTien;
         public static DataTable DSPhong;
+        public static string MaKTHH;
+        public static Decimal PhanTramThue;
     }
 }

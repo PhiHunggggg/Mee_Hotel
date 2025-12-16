@@ -83,6 +83,7 @@ namespace Mee_Hotel.GUI
                 Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
                 Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
                 Data_DP_HD.Columns["MaDP"].HeaderText = "Mã đặt phòng";
+                Data_DP_HD.Columns["MaKH"].HeaderText = "Mã khách hàng";
             }
         }
         private void LoadDSCheckOut()
@@ -101,7 +102,7 @@ namespace Mee_Hotel.GUI
                 Data_DP_HD.Columns["SoLuongPhong"].HeaderText = "Số lượng phòng";
                 Data_DP_HD.Columns["GiaLucDat"].HeaderText = "Giá lúc đặt";
                 Data_DP_HD.Columns["MaDP"].HeaderText = "Mã đặt phòng";
-
+                Data_DP_HD.Columns["MaKH"].HeaderText = "Mã khách hàng";
             }
         }
 
@@ -116,7 +117,9 @@ namespace Mee_Hotel.GUI
                 SDTlb.Text = row.Cells["SDT"].Value?.ToString();
                 NgayDatlb.Text = row.Cells["NgayDat"].Value?.ToString();
                 GiaLucDatlb.Text = row.Cells["GiaLucDat"].Value?.ToString();
+                ThongTinDonHang.MaKH = row.Cells["MaKH"].Value?.ToString();
                 ThongTinDonHang.MaDP = row.Cells["MaDP"].Value?.ToString();
+                ThongTinDonHang.TongTienDP = Convert.ToDecimal(row.Cells["GiaLucDat"].Value?.ToString());
             }
         }
 
@@ -141,7 +144,17 @@ namespace Mee_Hotel.GUI
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
             ThongTinDonHang.TenKH = TenKHlb.Text;
+            this.Hide();
+            frmKiemTraDV frm = new frmKiemTraDV();
+            frm.ShowDialog();
+            this.Show();
+            
+        }
 
+        private void siticoneButton4_Click(object sender, EventArgs e)
+        {
+            frmTaoHoaDon frm = new frmTaoHoaDon();
+            frm.ShowDialog();
         }
     }
 }

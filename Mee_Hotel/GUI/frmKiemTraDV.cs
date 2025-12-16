@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mee_Hotel.DAL;
 
 namespace Mee_Hotel.GUI
 {
@@ -32,13 +33,50 @@ namespace Mee_Hotel.GUI
             
         }
 
-        private void LoadDVTheoPhong()
+        private void LoadDVTheoPhong(string MaPhong)
         {
+            Data_DV_KT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Data_DV_KT.AllowUserToResizeColumns = false;
+            Data_DV_KT.AllowUserToResizeRows = false;
+            DataTable dt = HoaDon_DVDAL.Instance.HienThiDV_Phong(MaPhong);
+            Data_DV_KT.DataSource = dt;
+            if (dt != null)
+            {
+                Data_DV_KT.Columns["MaPhong"].HeaderText = "Mã phòng";
+                Data_DV_KT.Columns["MaDV"].HeaderText = "Mã dịch vụ";
+                Data_DV_KT.Columns["NgaySuDung"].HeaderText = "Ngày sử dụng";
+                Data_DV_KT.Columns["SoLuong"].HeaderText = "Số lượng";
+                Data_DV_KT.Columns["DonGiaLucDung"].HeaderText = "Đơn giá lúc dùng";
+                Data_DV_KT.Columns["GhiChu"].HeaderText = "Ghi chú";
+                Data_DV_KT.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            }
+            int SumDV = 0;
+            decimal tongTien = 0;
+            foreach (DataGridViewRow row in Data_DV_KT.Rows)
+            {
+                int tg;
+                bool haiz = int.TryParse(row.Cells["SoLuong"].Value?.ToString(),out tg);
+                if (haiz) SumDV += tg;
+                tongTien += Convert.ToDecimal(row.Cells["DonGiaLucDung"].Value?.ToString()) * Convert.ToDecimal(row.Cells["SoLuong"].Value?.ToString());
+            }
+            SlDVlb.Text = SumDV.ToString();
+            txtTongTien.Text = tongTien.ToString();
+            //MaPhong, MaDV, NgaySuDung, SoLuong, DonGiaLucDung, GhiChu, MaNV
+        }
 
+        private void LoadDSPhong()
+        {
+            TenKH_DVlb.Text = ThongTinDonHang.TenKH;
+            MaDP_DVlb.Text = ThongTinDonHang.MaDP;
+            ChonPhongcbb.DataSource = HoaDon_DVDAL.Instance.GetDanhSachPhong(ThongTinDonHang.MaDP);
+            ChonPhongcbb.DisplayMember = "TenPhong";
+            ChonPhongcbb.ValueMember = "MaPhong";
+            ChonPhongcbb.SelectedIndex = -1;
         }
 
         private void frmKiemTraDV_Load(object sender, EventArgs e)
         {
+            LoadDSPhong();
             Data_DV_KT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Data_DV_KT.AllowUserToResizeColumns = false;
             Data_DV_KT.AllowUserToResizeRows = false;
@@ -74,6 +112,32 @@ namespace Mee_Hotel.GUI
                 Data_DV_KT.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(255, 245, 215);
             }
             Data_DV_KT.RowTemplate.Height = 50;
+        }
+
+        private void ChonPhongcbb_StyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChonPhongcbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ChonPhongcbb.SelectedValue == null) return;
+            if (ChonPhongcbb.SelectedValue is DataRowView) return;
+
+            string maPhong = ChonPhongcbb.SelectedValue.ToString();
+            LoadDVTheoPhong(maPhong);
+        }
+
+        private void siticoneShapes2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            ThongTinDonHang.TongTienDV = Convert.ToDecimal(txtTongTien.Text);
+            MessageBox.Show("Kiểm tra dịch vụ thành công");
+            this.Close();
         }
     }
 }

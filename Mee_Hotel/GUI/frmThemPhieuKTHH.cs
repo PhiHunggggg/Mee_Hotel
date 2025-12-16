@@ -179,6 +179,7 @@ namespace Mee_Hotel.GUI
 
                     decimal thanhTien = giaThietBi * soLuongHong * (phanTramHong / 100m);
                     row.Cells["ThanhTien"].Value = thanhTien;
+                    ThongTinDonHang.TongTienBT = thanhTien;
                     TinhTongTien();
                 }
             }
@@ -228,6 +229,7 @@ namespace Mee_Hotel.GUI
             if (success)
             {
                 MessageBox.Show("Lưu thành công!");
+                ThongTinDonHang.MaKTHH = maPhieu;
                 DialogResult = DialogResult.OK;
                 Close();
             }

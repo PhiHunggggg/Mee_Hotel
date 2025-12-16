@@ -35,6 +35,7 @@ namespace Mee_Hotel
                     try
                     {
                         StaticThing.MaNV = TaiKhoan.MaNV;
+                        StaticThing.TenNV = TaiKhoan.TenDangNhap;
                     }
                     catch (Exception ex)
                     {
