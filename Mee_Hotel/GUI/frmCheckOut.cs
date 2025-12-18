@@ -4,202 +4,197 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mee_Hotel.DAL;
-
 namespace Mee_Hotel.GUI
 {
-    public partial class frmCheckOut : Form
-    {
-        public frmCheckOut()
-        {
-            InitializeComponent();
-        }
-
-        private void LoadPhongDangO()
-        {
-            DataTable dt = CheckOutDAL.Instance.GetDanhSachPhongDangO();
-            if (dt != null)
-            {
-                cmbPhong.DataSource = dt;
-                cmbPhong.DisplayMember = "TenPhong";
-                cmbPhong.ValueMember = "MaPhong";
-            }
-        }
-
-        private void LoadThongTinCheckOut(string maPhong)
-        {
-            DataTable dt = CheckOutDAL.Instance.GetThongTinCheckOut(maPhong);
-            if (dt != null && dt.Rows.Count > 0)
-            {
-                DataRow row = dt.Rows[0];
-                lblMaPhong.Text = maPhong;
-                lblTenPhong.Text = cmbPhong.Text;
-                lblMaDP.Text = row["MaDP"].ToString();
-                lblTenKH.Text = row["TenKhachHang"].ToString();
-                lblNgayDen.Text = Convert.ToDateTime(row["NgayDen"]).ToString("dd/MM/yyyy");
-                lblNgayTraDuKien.Text = Convert.ToDateTime(row["NgayTraDuKien"]).ToString("dd/MM/yyyy");
-                lblSoNgayO.Text = CheckOutDAL.Instance.GetSoNgayOThucTe(maPhong).ToString() + " ngày";
-            }
-            else
-            {
-                ClearInfo();
-            }
-        }
-
-        private void LoadDichVu(string maPhong)
-        {
-            DataTable dt = CheckOutDAL.Instance.GetDichVuTheoPhong(maPhong);
-            if (dt != null)
-            {
-                dataGridDichVu.DataSource = dt;
-                dataGridDichVu.Columns["TenDV"].HeaderText = "Tên dịch vụ";
-                dataGridDichVu.Columns["NgaySuDung"].HeaderText = "Ngày sử dụng";
-                dataGridDichVu.Columns["SoLuong"].HeaderText = "Số lượng";
-                dataGridDichVu.Columns["DonGiaLucDung"].HeaderText = "Đơn giá";
-
-                dataGridDichVu.Columns["NgaySuDung"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridDichVu.Columns["SoLuong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridDichVu.Columns["DonGiaLucDung"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                // Cấu hình grid tương tự frmChiTietDichVu
-                ConfigGrid(dataGridDichVu);
-            }
-        }
-
-        private void LoadHuHong(string maPhong)
-        {
-            DataTable dt = CheckOutDAL.Instance.GetHuHongTheoPhong(maPhong);
-            if (dt != null)
-            {
-                dataGridHuHong.DataSource = dt;
-                dataGridHuHong.Columns["TenTB"].HeaderText = "Tên thiết bị";
-                dataGridHuHong.Columns["SoLuongHong"].HeaderText = "Số lượng hỏng";
-                dataGridHuHong.Columns["PhanTramHong"].HeaderText = "% hỏng";
-                dataGridHuHong.Columns["ThanhTien"].HeaderText = "Thành tiền";
-                dataGridHuHong.Columns["GhiChu"].HeaderText = "Ghi chú";
-
-                dataGridHuHong.Columns["SoLuongHong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridHuHong.Columns["PhanTramHong"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridHuHong.Columns["ThanhTien"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                // Cấu hình grid
-                ConfigGrid(dataGridHuHong);
-            }
-        }
-
-        private void ConfigGrid(DataGridView grid)
-        {
-            grid.AllowUserToAddRows = false;
-            grid.AllowUserToDeleteRows = false;
-            grid.ReadOnly = true;
-            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.MultiSelect = false;
-            grid.BorderStyle = BorderStyle.None;
-            grid.Font = new Font("Segoe UI", 10F);
-            grid.BackgroundColor = Color.White;
-            grid.GridColor = Color.LightGray;
-
-            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
-            grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            grid.EnableHeadersVisualStyles = false;
-            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            grid.ColumnHeadersHeight = 75;
-
-            foreach (DataGridViewColumn col in grid.Columns)
-            {
-                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
-
-            grid.RowTemplate.Height = 50;
-        }
-
-        private void ClearInfo()
-        {
-            lblMaPhong.Text = "";
-            lblTenPhong.Text = "";
-            lblMaDP.Text = "";
-            lblTenKH.Text = "";
-            lblNgayDen.Text = "";
-            lblNgayTraDuKien.Text = "";
-            lblSoNgayO.Text = "";
-            dataGridDichVu.DataSource = null;
-            dataGridHuHong.DataSource = null;
-        }
-
-        private decimal TinhTongTienDV()
-        {
-            decimal tong = 0;
-            foreach (DataGridViewRow row in dataGridDichVu.Rows)
-            {
-                tong += Convert.ToDecimal(row.Cells["SoLuong"].Value) * Convert.ToDecimal(row.Cells["DonGiaLucDung"].Value);
-        }
-            return tong;
-        }
-
-        private decimal TinhTongTienHuHong()
-        {
-            if (dataGridHuHong.Rows.Count > 0)
-            {
-                return Convert.ToDecimal(dataGridHuHong.Rows[0].Cells["TongTienHuHong"].Value); // Từ Proc
-            }
-            return 0;
-        }
-
-        private void frmCheckOut_Load(object sender, EventArgs e)
-        {
-            LoadPhongDangO();
-            ConfigGrid(dataGridDichVu);
-            ConfigGrid(dataGridHuHong);
-        }
-
-        private void cmbPhong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbPhong.SelectedValue != null)
-            {
-                string maPhong = cmbPhong.SelectedValue.ToString();
-                LoadThongTinCheckOut(maPhong);
-                LoadDichVu(maPhong);
-                LoadHuHong(maPhong);
-            }
-        }
-
-        private void btnCheckOut_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(lblMaDP.Text))
-            {
-                MessageBox.Show("Vui lòng chọn phòng!");
-                return;
-            }
-
-            if (MessageBox.Show("Xác nhận check out phòng " + cmbPhong.Text + "?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string maPhong = cmbPhong.SelectedValue.ToString();
-                string maDP = lblMaDP.Text;
-                decimal tongTienDV = TinhTongTienDV();
-                decimal tongTienHuHong = TinhTongTienHuHong();
-
-                if (CheckOutDAL.Instance.CheckOut(maPhong, maDP, tongTienDV, tongTienHuHong))
-                {
-                    MessageBox.Show("Check out thành công!");
-                    LoadPhongDangO(); // Refresh combo
-                    ClearInfo();
-                }
-                else
-                {
-                    MessageBox.Show("Check out thất bại!");
-                }
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-    }
+    public partial class frmCheckOut : Form
+    {
+        public frmCheckOut()
+        {
+            InitializeComponent();
+        }
+        private void LoadPhieuDaCheckIn(string searchTerm = "")
+        {
+            try
+            {
+                DataTable dt = CheckOutDAL.Instance.GetPhieuDaCheckIn(
+                    string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
+                    string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
+                    string.IsNullOrEmpty(searchTerm) ? null : searchTerm,
+                    string.IsNullOrEmpty(searchTerm) ? null : searchTerm);
+                dgvPhieuDP.DataSource = dt;
+                if (dgvPhieuDP.Columns.Contains("NgayDen"))
+                    dgvPhieuDP.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                if (dgvPhieuDP.Columns.Contains("NgayTraDuKien"))
+                    dgvPhieuDP.Columns["NgayTraDuKien"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                ConfigGrid(dgvPhieuDP);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải phiếu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadPhongCuaPhieu(string maDP)
+        {
+            DataTable dt = CheckOutDAL.Instance.GetPhongCuaPhieu(maDP);
+            dgvPhongBatch.DataSource = dt;
+            if (dgvPhongBatch.Columns.Contains("chkSelect"))
+                dgvPhongBatch.Columns.Remove("chkSelect");
+            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn
+            {
+                HeaderText = "Chọn",
+                Name = "chkSelect",
+                Width = 60,
+                TrueValue = true,
+                FalseValue = false
+            };
+            dgvPhongBatch.Columns.Insert(0, chk);
+            dgvPhongBatch.ReadOnly = false;
+            foreach (DataGridViewColumn col in dgvPhongBatch.Columns)
+            {
+                if (col.Name != "chkSelect")
+                    col.ReadOnly = true;
+            }
+            ConfigGrid(dgvPhongBatch);
+            ClearChiTiet();
+        }
+        private void LoadChiTietSelectedRooms()
+        {
+            List<string> selectedRooms = GetSelectedRooms();
+            if (selectedRooms.Count == 0)
+            {
+                ClearChiTiet();
+                return;
+            }
+            string maPhongList = string.Join(",", selectedRooms);
+            // Số ngày ở thực tế
+            DataTable dtSoNgay = CheckOutDAL.Instance.GetSoNgayOThucTeList(maPhongList);
+            dgvSoNgayO.DataSource = dtSoNgay;
+            ConfigGrid(dgvSoNgayO);
+            // Dịch vụ
+            DataTable dtDV = CheckOutDAL.Instance.GetDichVuTheoPhongList(maPhongList);
+            dataGridDichVu.DataSource = dtDV;
+            ConfigGrid(dataGridDichVu);
+            // Hư hỏng
+            DataTable dtHH = CheckOutDAL.Instance.GetHuHongTheoPhongList(maPhongList);
+            dataGridHuHong.DataSource = dtHH;
+            ConfigGrid(dataGridHuHong);
+        }
+        private List<string> GetSelectedRooms()
+        {
+            List<string> rooms = new List<string>();
+            foreach (DataGridViewRow row in dgvPhongBatch.Rows)
+            {
+                if (row.Cells["chkSelect"].Value != null && (bool)row.Cells["chkSelect"].Value)
+                {
+                    rooms.Add(row.Cells["MaPhong"].Value.ToString());
+                }
+            }
+            return rooms;
+        }
+        private void ClearChiTiet()
+        {
+            dgvSoNgayO.DataSource = null;
+            dataGridDichVu.DataSource = null;
+            dataGridHuHong.DataSource = null;
+        }
+        private void ConfigGrid(DataGridView grid)
+        {
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.MultiSelect = false;
+            grid.BorderStyle = BorderStyle.None;
+            grid.Font = new Font("Segoe UI", 10F);
+            grid.BackgroundColor = Color.White;
+            grid.GridColor = Color.LightGray;
+            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
+            grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            grid.EnableHeadersVisualStyles = false;
+            grid.ColumnHeadersHeight = 75;
+            foreach (DataGridViewColumn col in grid.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+            grid.RowTemplate.Height = 50;
+        }
+        private void frmCheckOut_Load(object sender, EventArgs e)
+        {
+            LoadPhieuDaCheckIn();
+            ConfigGrid(dgvPhieuDP);
+            ConfigGrid(dgvPhongBatch);
+            ConfigGrid(dgvSoNgayO);
+            ConfigGrid(dataGridDichVu);
+            ConfigGrid(dataGridHuHong);
+        }
+        private void btnTimPhieu_Click(object sender, EventArgs e)
+        {
+            LoadPhieuDaCheckIn(txtSearch.Text.Trim());
+        }
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadPhieuDaCheckIn(txtSearch.Text.Trim());
+                e.SuppressKeyPress = true;
+            }
+        }
+        private void dgvPhieuDP_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvPhieuDP.CurrentRow != null && dgvPhieuDP.CurrentRow.Cells["MaDP"].Value != null)
+            {
+                string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value.ToString();
+                LoadPhongCuaPhieu(maDP);
+            }
+        }
+        private void dgvPhongBatch_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && dgvPhongBatch.Columns[e.ColumnIndex].Name == "chkSelect")
+            {
+                LoadChiTietSelectedRooms();
+            }
+        }
+        private void dgvPhongBatch_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dgvPhongBatch.IsCurrentCellDirty)
+            {
+                dgvPhongBatch.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+        private void btnCheckOutBatch_Click(object sender, EventArgs e)
+        {
+            if (dgvPhieuDP.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn một phiếu đặt phòng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value.ToString();
+            List<string> selectedRooms = GetSelectedRooms();
+            if (selectedRooms.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn ít nhất một phòng để check-out!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string roomList = string.Join(",", selectedRooms);
+            if (MessageBox.Show($"Xác nhận check-out {selectedRooms.Count} phòng đã chọn trong phiếu {maDP}?",
+            "Xác nhận check-out", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bool success = CheckOutDAL.Instance.CheckOutTheoPhieu(maDP, 0, 0, roomList);
+                if (success)
+                {
+                    MessageBox.Show("Check-out thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadPhieuDaCheckIn();
+                    ClearChiTiet();
+                    dgvPhongBatch.DataSource = null;
+                }
+                else
+                {
+                    MessageBox.Show("Check-out thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        
+    }
 }

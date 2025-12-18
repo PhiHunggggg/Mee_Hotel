@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
 namespace Mee_Hotel.DAL
 {
     class CheckOutDAL : DataProvider
@@ -13,64 +12,67 @@ namespace Mee_Hotel.DAL
             private set => instance = value;
         }
         private CheckOutDAL() { }
-
-        // Lấy danh sách phòng đang ở (TinhTrang = 3) 
-        public DataTable GetDanhSachPhongDangO()
-        {
-            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");         }
-
-        // Lấy thông tin checkout theo phòng (PhieuDP + KhachHang)
-        public DataTable GetThongTinCheckOut(string maPhong)
+            
+        // Lấy số ngày ở thực tế cho nhiều phòng
+        public DataTable GetSoNgayOThucTeList(string maPhongList)
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaPhong", maPhong)
+             new SqlParameter("@MaPhongList", maPhongList)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetThongTinCheckOut", parameters);         }
-
-        // Lấy số ngày ở thực tế (DATEDIFF)
-        public int GetSoNgayOThucTe(string maPhong)
-        {
-            SqlParameter[] parameters =
-            {
-                new SqlParameter("@MaPhong", maPhong)
-            };
-            object result = DataProvider.Instance.CallProcScalar("proc_GetSoNgayOThucTe", parameters);
-            return result != null ? Convert.ToInt32(result) : 0;
+            return DataProvider.Instance.CallProcQuery("proc_GetSoNgayOThucTeList", parameters);
         }
-
-        // Lấy dịch vụ sử dụng theo phòng
-        public DataTable GetDichVuTheoPhong (string maPhong)
+        // Lấy dịch vụ sử dụng cho nhiều phòng
+        public DataTable GetDichVuTheoPhongList(string maPhongList)
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaPhong", maPhong)
+            new SqlParameter("@MaPhongList", maPhongList)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetDichVuTheoPhong", parameters); 
+            return DataProvider.Instance.CallProcQuery("proc_GetDichVuTheoPhongList", parameters);
         }
-
-        // Lấy phiếu hư hỏng theo phòng (nếu có)
-        public DataTable GetHuHongTheoPhong(string maPhong)
+        // Lấy hư hỏng cho nhiều phòng
+        public DataTable GetHuHongTheoPhongList(string maPhongList)
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaPhong", maPhong)
+            new SqlParameter("@MaPhongList", maPhongList)
             };
-            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhong", parameters); 
+            return DataProvider.Instance.CallProcQuery("proc_GetHuHongTheoPhongList", parameters);
         }
-
-        // Thực hiện checkout: Update phòng, PhieuDP, tạo hóa đơn nếu cần
-        public bool CheckOut(string maPhong, string maDP, decimal tongTienDV, decimal tongTienHuHong)
+        // Tìm phiếu đã check in
+        public DataTable GetPhieuDaCheckIn(string maDP = "", string tenKH = "", string sdt = "", string cccd = "")
         {
             SqlParameter[] parameters =
             {
-                new SqlParameter("@MaPhong", maPhong),
+                new SqlParameter("@MaDP", string.IsNullOrEmpty(maDP) ? (object)DBNull.Value : maDP),
+                new SqlParameter("@TenKH", string.IsNullOrEmpty(tenKH) ? (object)DBNull.Value : tenKH),
+                new SqlParameter("@SDT", string.IsNullOrEmpty(sdt) ? (object)DBNull.Value : sdt),
+                new SqlParameter("@CCCD", string.IsNullOrEmpty(cccd) ? (object)DBNull.Value : cccd)
+            };
+            return DataProvider.Instance.CallProcQuery("proc_GetPhieuDaCheckIn", parameters);
+        }
+        // Lấy phòng của phiếu
+        public DataTable GetPhongCuaPhieu(string maDP)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@MaDP", maDP)
+        };
+            return DataProvider.Instance.CallProcQuery("proc_GetPhongCuaPhieu", parameters);
+        }
+        // Check out batch
+        public bool CheckOutTheoPhieu(string maDP, decimal tongTienDV, decimal tongTienHuHong, string maPhongList)
+        {
+            SqlParameter[] parameters =
+            {
                 new SqlParameter("@MaDP", maDP),
                 new SqlParameter("@TongTienDV", tongTienDV),
                 new SqlParameter("@TongTienHuHong", tongTienHuHong),
-                new SqlParameter("@NgayCheckOut", DateTime.Now)
+                new SqlParameter("@NgayCheckOut", DateTime.Now),
+                new SqlParameter("@MaPhongList", maPhongList)
             };
-            int result = DataProvider.Instance.CallProcNonQuery("proc_CheckOut", parameters); 
+            int result = DataProvider.Instance.CallProcNonQuery("proc_CheckOutTheoPhieu", parameters);
             return result > 0;
         }
     }

@@ -87,5 +87,10 @@ namespace Mee_Hotel.GUI
         {
             OpenChildForm(new frmHoaDon());
         }
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+
+            OpenChildForm(new frmCheckOut());
+        }
     }
 }

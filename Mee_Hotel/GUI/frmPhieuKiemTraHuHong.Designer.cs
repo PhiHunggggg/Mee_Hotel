@@ -36,12 +36,11 @@
             this.chkTimTheoNgay = new System.Windows.Forms.CheckBox();
             this.txtTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lblTimKiem = new System.Windows.Forms.Label();
+            this.btnLamMoi = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnXoa = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSua = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnLamMoi = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnIn = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1.SuspendLayout();
             this.panelLoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,7 +110,7 @@
             this.dtpNgayTim.FillColor = System.Drawing.Color.White;
             this.dtpNgayTim.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpNgayTim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayTim.Location = new System.Drawing.Point(884, 27);
+            this.dtpNgayTim.Location = new System.Drawing.Point(985, 3);
             this.dtpNgayTim.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTim.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayTim.Name = "dtpNgayTim";
@@ -124,7 +123,7 @@
             // 
             this.chkTimTheoNgay.AutoSize = true;
             this.chkTimTheoNgay.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.chkTimTheoNgay.Location = new System.Drawing.Point(973, 84);
+            this.chkTimTheoNgay.Location = new System.Drawing.Point(995, 68);
             this.chkTimTheoNgay.Name = "chkTimTheoNgay";
             this.chkTimTheoNgay.Size = new System.Drawing.Size(172, 31);
             this.chkTimTheoNgay.TabIndex = 9;
@@ -157,6 +156,20 @@
             this.lblTimKiem.Size = new System.Drawing.Size(109, 27);
             this.lblTimKiem.TabIndex = 0;
             this.lblTimKiem.Text = "Tìm kiếm:";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BorderRadius = 19;
+            this.btnLamMoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLamMoi.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(1193, 3);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(181, 64);
+            this.btnLamMoi.TabIndex = 15;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -209,34 +222,6 @@
             this.lblTitle.Size = new System.Drawing.Size(575, 36);
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "PHIẾU KIỂM TRA HƯ HỎNG THIẾT BỊ";
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BorderRadius = 19;
-            this.btnLamMoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnLamMoi.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(1210, 24);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(181, 64);
-            this.btnLamMoi.TabIndex = 15;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.BorderRadius = 19;
-            this.btnIn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnIn.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnIn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnIn.ForeColor = System.Drawing.Color.White;
-            this.btnIn.Location = new System.Drawing.Point(850, 161);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(181, 60);
-            this.btnIn.TabIndex = 14;
-            this.btnIn.Text = "In Phiếu";
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frmPhieuKiemTraHuHong
             // 
