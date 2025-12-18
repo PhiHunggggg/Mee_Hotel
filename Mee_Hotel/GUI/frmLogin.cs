@@ -35,7 +35,6 @@ namespace Mee_Hotel
                     try
                     {
                         StaticThing.MaNV = TaiKhoan.MaNV;
-                        StaticThing.TenNV = TaiKhoan.TenDangNhap;
                     }
                     catch (Exception ex)
                     {
@@ -58,6 +57,7 @@ namespace Mee_Hotel
                 {
                     StaticThing.LoaiTaiKhoan = "QL";
                 }
+                StaticThing.MaNV = TaiKhoan.MaNV;
                 this.DialogResult = DialogResult.OK;
                 MessageBox.Show("Login successful !!!");
                 string taiKhoanID = TaiKhoan.MaTaiKhoan;

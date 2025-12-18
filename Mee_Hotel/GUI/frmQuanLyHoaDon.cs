@@ -138,6 +138,11 @@ namespace Mee_Hotel.GUI
 
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(MaHD_lb.Text))
+            {
+                MessageBox.Show("Chưa chọn hóa đơn!!");
+                return;
+            }
             frmThanhToan frm = new frmThanhToan();
             frm.ShowDialog();
         }

@@ -146,6 +146,11 @@ namespace Mee_Hotel.GUI
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
             ThongTinDonHang.TenKH = TenKHlb.Text;
+            if (string.IsNullOrEmpty(ThongTinDonHang.TenKH))
+            {
+                MessageBox.Show("Chưa chọn hóa đơn!!");
+                return;
+            }
             this.Hide();
             frmKiemTraDV frm = new frmKiemTraDV();
             frm.ShowDialog();
@@ -155,6 +160,11 @@ namespace Mee_Hotel.GUI
 
         private void siticoneButton4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(TenKHlb.Text))
+            {
+                MessageBox.Show("Chưa chọn phiếu đặt!!");
+                return;
+            }    
             frmTaoHoaDon frm = new frmTaoHoaDon();
             frm.ShowDialog();
         }

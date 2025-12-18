@@ -104,7 +104,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2668, 1475);
+            this.panel1.Size = new System.Drawing.Size(2564, 1475);
             this.panel1.TabIndex = 1;
             // 
             // siticoneButton4
@@ -117,7 +117,7 @@
             this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton4.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton4.Location = new System.Drawing.Point(2371, 132);
+            this.siticoneButton4.Location = new System.Drawing.Point(2267, 132);
             this.siticoneButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.siticoneButton4.Name = "siticoneButton4";
             this.siticoneButton4.Size = new System.Drawing.Size(220, 69);
@@ -285,7 +285,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(1083, 234);
+            this.label6.Location = new System.Drawing.Point(979, 234);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(405, 32);
@@ -348,7 +348,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.Data_DP_HD);
-            this.panel2.Location = new System.Drawing.Point(928, 306);
+            this.panel2.Location = new System.Drawing.Point(824, 306);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1740, 1165);
@@ -377,7 +377,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(1356, 78);
+            this.label12.Location = new System.Drawing.Point(1252, 78);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 32);
@@ -390,7 +390,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label11.Location = new System.Drawing.Point(1083, 78);
+            this.label11.Location = new System.Drawing.Point(979, 78);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 32);
@@ -407,7 +407,7 @@
             this.dtpDen.FocusedColor = System.Drawing.Color.White;
             this.dtpDen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDen.Location = new System.Drawing.Point(1256, 132);
+            this.dtpDen.Location = new System.Drawing.Point(1152, 132);
             this.dtpDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDen.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDen.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -426,7 +426,7 @@
             this.dtpTu.FocusedColor = System.Drawing.Color.White;
             this.dtpTu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTu.Location = new System.Drawing.Point(928, 132);
+            this.dtpTu.Location = new System.Drawing.Point(824, 132);
             this.dtpTu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpTu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -497,7 +497,7 @@
             this.siticoneButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton3.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton3.Location = new System.Drawing.Point(2120, 132);
+            this.siticoneButton3.Location = new System.Drawing.Point(2016, 132);
             this.siticoneButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.siticoneButton3.Name = "siticoneButton3";
             this.siticoneButton3.Size = new System.Drawing.Size(220, 69);
@@ -515,7 +515,7 @@
             this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(1860, 132);
+            this.siticoneButton1.Location = new System.Drawing.Point(1756, 132);
             this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(220, 69);
@@ -597,7 +597,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2668, 1475);
+            this.ClientSize = new System.Drawing.Size(2564, 1475);
             this.Controls.Add(this.panel1);
             this.Name = "frmHoaDon";
             this.Text = "frmHoaDon";
