@@ -42,20 +42,17 @@ namespace Mee_Hotel.DAL
             return result?.ToString() ?? "KTHH001";
         }
 
-        // 4. Lấy danh sách tất cả phiếu kiểm tra 
-        public DataTable GetDanhSachPhieu(string maPhieu = "", string maPhong = "", string tenNV = "", DateTime? ngayTim = null)
+        // 4. Lấy danh sách tất cả phiếu kiểm tra (tìm kiếm chung theo từ khóa + lọc ngày)
+        public DataTable GetDanhSachPhieu(string tuKhoa = "", DateTime? ngayTim = null)
         {
             SqlParameter[] parameters =
             {
-        new SqlParameter("@MaPhieu", string.IsNullOrEmpty(maPhieu) ? (object)DBNull.Value : maPhieu),
-        new SqlParameter("@MaPhong", string.IsNullOrEmpty(maPhong) ? (object)DBNull.Value : maPhong),
-        new SqlParameter("@TenNV", string.IsNullOrEmpty(tenNV) ? (object)DBNull.Value : tenNV),
+        new SqlParameter("@TuKhoa", string.IsNullOrEmpty(tuKhoa) ? (object)DBNull.Value : tuKhoa.Trim()),
         new SqlParameter("@NgayKiemTra", ngayTim.HasValue ? (object)ngayTim.Value : DBNull.Value)
     };
 
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhieuKiemTra", parameters);
         }
-
 
         // 5. Lấy thông tin 1 phiếu kiểm tra theo mã 
         public DataRow GetPhieuByMa(string maPhieu)

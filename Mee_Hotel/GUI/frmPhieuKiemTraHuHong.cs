@@ -18,26 +18,26 @@ namespace Mee_Hotel.GUI
             InitializeComponent();
         }
 
-        private void LoadDanhSachPhieu(string maPhieu = "", string maPhong = "", string tenNV = "", DateTime? ngayTim = null)
+        private void LoadDanhSachPhieu(string tuKhoa = "", DateTime? ngayTim = null)
         {
-            DataTable dt = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhieu(maPhieu, maPhong, tenNV, ngayTim);
+            DataTable dt = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhieu(tuKhoa, ngayTim); // Cập nhật DAL để hỗ trợ tuKhoa tìm nhiều trường
             if (dt != null && dt.Rows.Count > 0)
             {
                 dataGridView1.DataSource = dt;
-                FormatDataGridViewColumns(); 
+                FormatDataGridViewColumns();
             }
             else
             {
                 dataGridView1.DataSource = null;
             }
         }
-       
+
         void FormatDataGridViewColumns()
         {
             if (dataGridView1.Columns.Contains("MaPhieu")) dataGridView1.Columns["MaPhieu"].HeaderText = "Mã Phiếu";
             if (dataGridView1.Columns.Contains("MaPhong")) dataGridView1.Columns["MaPhong"].HeaderText = "Mã Phòng";
             if (dataGridView1.Columns.Contains("TenPhong")) dataGridView1.Columns["TenPhong"].HeaderText = "Tên Phòng";
-            if (dataGridView1.Columns.Contains("TenNV")) dataGridView1.Columns["MaNV"].HeaderText = "Mã Nhân Viên";
+            if (dataGridView1.Columns.Contains("MaNV")) dataGridView1.Columns["MaNV"].HeaderText = "Mã Nhân Viên";
             if (dataGridView1.Columns.Contains("NgayKiemTra"))
             {
                 dataGridView1.Columns["NgayKiemTra"].HeaderText = "Ngày Kiểm Tra";
@@ -60,16 +60,6 @@ namespace Mee_Hotel.GUI
 
         private void frmPhieuKiemTraHuHong_Load(object sender, EventArgs e)
         {
-            // Load danh sách phòng vào cmbPhongTim
-            DataTable dtPhong = PhieuKiemTraHuHongDAL.Instance.GetDanhSachPhong();
-            if (dtPhong != null)
-            {
-                cmbPhongTim.DataSource = dtPhong;
-                cmbPhongTim.DisplayMember = "TenPhong";
-                cmbPhongTim.ValueMember = "MaPhong";
-                cmbPhongTim.SelectedIndex = -1;
-            }
-
             // Cấu hình DataGridView
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
@@ -95,6 +85,20 @@ namespace Mee_Hotel.GUI
         private void chkTimTheoNgay_CheckedChanged(object sender, EventArgs e)
         {
             dtpNgayTim.Enabled = chkTimTheoNgay.Checked;
+            LoadDanhSachPhieu(txtTimKiem.Text.Trim(), chkTimTheoNgay.Checked ? (DateTime?)dtpNgayTim.Value.Date : null);
+        }
+
+        private void dtpNgayTim_ValueChanged(object sender, EventArgs e)
+        {
+            if (chkTimTheoNgay.Checked)
+            {
+                LoadDanhSachPhieu(txtTimKiem.Text.Trim(), dtpNgayTim.Value.Date);
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LoadDanhSachPhieu(txtTimKiem.Text.Trim(), chkTimTheoNgay.Checked ? (DateTime?)dtpNgayTim.Value.Date : null);
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -143,23 +147,32 @@ namespace Mee_Hotel.GUI
             }
         }
 
-        private void btnTim_Click(object sender, EventArgs e)
-        {
-            string maPhieu = txtMaPhieuTim.Text.Trim();
-            string maPhong = cmbPhongTim.SelectedValue?.ToString() ?? "";
-            string tenNV = txtNhanVienTim.Text.Trim();
-            DateTime? ngayTim = chkTimTheoNgay.Checked ? (DateTime?)dtpNgayTim.Value.Date : null;
-            LoadDanhSachPhieu(maPhieu, maPhong, tenNV, ngayTim);
-        }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            txtMaPhieuTim.Text = "";
-            cmbPhongTim.SelectedIndex = -1;
-            txtNhanVienTim.Text = "";
+            txtTimKiem.Text = "";
             chkTimTheoNgay.Checked = false;
             LoadDanhSachPhieu();
         }
-        
+
+        private void btnXemChiTiet_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn phiếu để xem chi tiết!");
+                return;
+            }
+
+           
+            string columnName = dataGridView1.Columns.Contains("MaPhieu") ? "MaPhieu" : "MaPhieu_KTHH";
+            if (dataGridView1.CurrentRow.Cells[columnName].Value == null)
+            {
+                MessageBox.Show("Không tìm thấy mã phiếu trong dòng chọn!");
+                return;
+            }
+
+            string maPhieu = dataGridView1.CurrentRow.Cells[columnName].Value.ToString();
+            frmChiTietKiemTraHuHong f = new frmChiTietKiemTraHuHong(maPhieu);
+            f.ShowDialog();
+        }
     }
 }

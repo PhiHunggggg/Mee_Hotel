@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXemChiTiet = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panelLoc = new System.Windows.Forms.Panel();
-            this.btnTim = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dtpNgayTim = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
-            this.lblNgayTim = new System.Windows.Forms.Label();
-            this.txtNhanVienTim = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblNhanVienTim = new System.Windows.Forms.Label();
-            this.cmbPhongTim = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.lblPhongTim = new System.Windows.Forms.Label();
-            this.txtMaPhieuTim = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblMaPhieuTim = new System.Windows.Forms.Label();
             this.chkTimTheoNgay = new System.Windows.Forms.CheckBox();
+            this.txtTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
             this.btnXoa = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSua = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,18 +49,32 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnXemChiTiet);
             this.panel1.Controls.Add(this.siticoneButton1);
             this.panel1.Controls.Add(this.panelLoc);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Controls.Add(this.btnLamMoi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1864, 1055);
             this.panel1.TabIndex = 0;
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.BorderRadius = 19;
+            this.btnXemChiTiet.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnXemChiTiet.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(726, 184);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(270, 60);
+            this.btnXemChiTiet.TabIndex = 32;
+            this.btnXemChiTiet.Text = "Xem Chi Tiết";
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // siticoneButton1
             // 
@@ -74,7 +83,7 @@
             this.siticoneButton1.CheckedState.ForeColor = System.Drawing.Color.White;
             this.siticoneButton1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(1055, 184);
+            this.siticoneButton1.Location = new System.Drawing.Point(1296, 184);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(164, 60);
             this.siticoneButton1.TabIndex = 31;
@@ -84,34 +93,15 @@
             // panelLoc
             // 
             this.panelLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
-            this.panelLoc.Controls.Add(this.btnTim);
             this.panelLoc.Controls.Add(this.dtpNgayTim);
-            this.panelLoc.Controls.Add(this.lblNgayTim);
-            this.panelLoc.Controls.Add(this.txtNhanVienTim);
-            this.panelLoc.Controls.Add(this.lblNhanVienTim);
-            this.panelLoc.Controls.Add(this.cmbPhongTim);
-            this.panelLoc.Controls.Add(this.lblPhongTim);
-            this.panelLoc.Controls.Add(this.txtMaPhieuTim);
-            this.panelLoc.Controls.Add(this.lblMaPhieuTim);
             this.panelLoc.Controls.Add(this.chkTimTheoNgay);
-            this.panelLoc.Location = new System.Drawing.Point(27, 60);
+            this.panelLoc.Controls.Add(this.txtTimKiem);
+            this.panelLoc.Controls.Add(this.lblTimKiem);
+            this.panelLoc.Controls.Add(this.btnLamMoi);
+            this.panelLoc.Location = new System.Drawing.Point(270, 60);
             this.panelLoc.Name = "panelLoc";
             this.panelLoc.Size = new System.Drawing.Size(1407, 118);
             this.panelLoc.TabIndex = 30;
-            // 
-            // btnTim
-            // 
-            this.btnTim.BorderRadius = 19;
-            this.btnTim.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnTim.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(1208, 24);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(165, 60);
-            this.btnTim.TabIndex = 8;
-            this.btnTim.Text = "Tìm Kiếm";
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // dtpNgayTim
             // 
@@ -127,91 +117,7 @@
             this.dtpNgayTim.Size = new System.Drawing.Size(182, 59);
             this.dtpNgayTim.TabIndex = 7;
             this.dtpNgayTim.Value = new System.DateTime(2025, 12, 11, 0, 0, 0, 0);
-            // 
-            // lblNgayTim
-            // 
-            this.lblNgayTim.AutoSize = true;
-            this.lblNgayTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblNgayTim.Location = new System.Drawing.Point(898, 40);
-            this.lblNgayTim.Name = "lblNgayTim";
-            this.lblNgayTim.Size = new System.Drawing.Size(69, 27);
-            this.lblNgayTim.TabIndex = 6;
-            this.lblNgayTim.Text = "Ngày:";
-            // 
-            // txtNhanVienTim
-            // 
-            this.txtNhanVienTim.BorderRadius = 19;
-            this.txtNhanVienTim.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhanVienTim.DefaultText = "";
-            this.txtNhanVienTim.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtNhanVienTim.Location = new System.Drawing.Point(358, 27);
-            this.txtNhanVienTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNhanVienTim.Name = "txtNhanVienTim";
-            this.txtNhanVienTim.PasswordChar = '\0';
-            this.txtNhanVienTim.PlaceholderText = "";
-            this.txtNhanVienTim.SelectedText = "";
-            this.txtNhanVienTim.Size = new System.Drawing.Size(264, 44);
-            this.txtNhanVienTim.TabIndex = 5;
-            // 
-            // lblNhanVienTim
-            // 
-            this.lblNhanVienTim.AutoSize = true;
-            this.lblNhanVienTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblNhanVienTim.Location = new System.Drawing.Point(245, 40);
-            this.lblNhanVienTim.Name = "lblNhanVienTim";
-            this.lblNhanVienTim.Size = new System.Drawing.Size(117, 27);
-            this.lblNhanVienTim.TabIndex = 4;
-            this.lblNhanVienTim.Text = "Nhân viên:";
-            // 
-            // cmbPhongTim
-            // 
-            this.cmbPhongTim.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPhongTim.BorderRadius = 19;
-            this.cmbPhongTim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPhongTim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPhongTim.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbPhongTim.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbPhongTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPhongTim.ItemHeight = 36;
-            this.cmbPhongTim.Location = new System.Drawing.Point(714, 29);
-            this.cmbPhongTim.Name = "cmbPhongTim";
-            this.cmbPhongTim.Size = new System.Drawing.Size(166, 42);
-            this.cmbPhongTim.TabIndex = 3;
-            // 
-            // lblPhongTim
-            // 
-            this.lblPhongTim.AutoSize = true;
-            this.lblPhongTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblPhongTim.Location = new System.Drawing.Point(629, 40);
-            this.lblPhongTim.Name = "lblPhongTim";
-            this.lblPhongTim.Size = new System.Drawing.Size(79, 27);
-            this.lblPhongTim.TabIndex = 2;
-            this.lblPhongTim.Text = "Phòng:";
-            // 
-            // txtMaPhieuTim
-            // 
-            this.txtMaPhieuTim.BorderRadius = 19;
-            this.txtMaPhieuTim.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaPhieuTim.DefaultText = "";
-            this.txtMaPhieuTim.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMaPhieuTim.Location = new System.Drawing.Point(108, 24);
-            this.txtMaPhieuTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMaPhieuTim.Name = "txtMaPhieuTim";
-            this.txtMaPhieuTim.PasswordChar = '\0';
-            this.txtMaPhieuTim.PlaceholderText = "";
-            this.txtMaPhieuTim.SelectedText = "";
-            this.txtMaPhieuTim.Size = new System.Drawing.Size(130, 45);
-            this.txtMaPhieuTim.TabIndex = 1;
-            // 
-            // lblMaPhieuTim
-            // 
-            this.lblMaPhieuTim.AutoSize = true;
-            this.lblMaPhieuTim.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.lblMaPhieuTim.Location = new System.Drawing.Point(3, 40);
-            this.lblMaPhieuTim.Name = "lblMaPhieuTim";
-            this.lblMaPhieuTim.Size = new System.Drawing.Size(109, 27);
-            this.lblMaPhieuTim.TabIndex = 0;
-            this.lblMaPhieuTim.Text = "Mã phiếu:";
+            this.dtpNgayTim.ValueChanged += new System.EventHandler(this.dtpNgayTim_ValueChanged);
             // 
             // chkTimTheoNgay
             // 
@@ -225,6 +131,32 @@
             this.chkTimTheoNgay.UseVisualStyleBackColor = true;
             this.chkTimTheoNgay.CheckedChanged += new System.EventHandler(this.chkTimTheoNgay_CheckedChanged);
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BorderRadius = 19;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTimKiem.Location = new System.Drawing.Point(118, 24);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Nhập từ khóa...";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(800, 59);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.lblTimKiem.Location = new System.Drawing.Point(3, 40);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(109, 27);
+            this.lblTimKiem.TabIndex = 0;
+            this.lblTimKiem.Text = "Tìm kiếm:";
+            // 
             // btnXoa
             // 
             this.btnXoa.BorderRadius = 19;
@@ -232,7 +164,7 @@
             this.btnXoa.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(1416, 182);
+            this.btnXoa.Location = new System.Drawing.Point(1683, 182);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(152, 60);
             this.btnXoa.TabIndex = 29;
@@ -246,7 +178,7 @@
             this.btnSua.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(1237, 184);
+            this.btnSua.Location = new System.Drawing.Point(1498, 184);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(163, 58);
             this.btnSua.TabIndex = 28;
@@ -258,12 +190,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeight = 75;
-            this.dataGridView1.Location = new System.Drawing.Point(84, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(99, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(1432, 707);
+            this.dataGridView1.Size = new System.Drawing.Size(1658, 707);
             this.dataGridView1.TabIndex = 10;
             // 
             // lblTitle
@@ -284,7 +216,7 @@
             this.btnLamMoi.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(1463, 79);
+            this.btnLamMoi.Location = new System.Drawing.Point(1210, 24);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(181, 64);
             this.btnLamMoi.TabIndex = 15;
@@ -314,20 +246,15 @@
         private System.Windows.Forms.Panel panel1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
         private System.Windows.Forms.Panel panelLoc;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnTim;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtpNgayTim;
-        private System.Windows.Forms.Label lblNgayTim;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtNhanVienTim;
-        private System.Windows.Forms.Label lblNhanVienTim;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cmbPhongTim;
-        private System.Windows.Forms.Label lblPhongTim;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMaPhieuTim;
-        private System.Windows.Forms.Label lblMaPhieuTim;
+        private System.Windows.Forms.CheckBox chkTimTheoNgay;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnXoa;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnSua;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblTitle;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnLamMoi;
-        private System.Windows.Forms.CheckBox chkTimTheoNgay;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnXemChiTiet;
     }
 }

@@ -40,7 +40,7 @@ namespace Mee_Hotel.DAL
 
             DataRow row = dt.Rows[0];
 
-           
+            StaticThing.TenNV = row["TenNV"].ToString();
             return new TaiKhoan
             {
                 MaTaiKhoan = row["MaTaiKhoan"].ToString(),
