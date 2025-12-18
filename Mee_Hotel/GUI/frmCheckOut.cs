@@ -167,7 +167,7 @@ namespace Mee_Hotel.GUI
         }
         private void dgvPhieuDP_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvPhieuDP.CurrentRow == null) return;
+         /*   if (dgvPhieuDP.CurrentRow == null) return;
 
             string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value?.ToString();
             if (string.IsNullOrEmpty(maDP)) return;
@@ -177,7 +177,7 @@ namespace Mee_Hotel.GUI
             {
                 _currentMaDP = maDP;
                 LoadPhongCuaPhieu(maDP);
-            }
+            }*/
         }
         private void dgvPhongBatch_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -241,6 +241,22 @@ namespace Mee_Hotel.GUI
             LoadPhieuDaCheckIn(txtSearch.Text.Trim());
         }
 
-       
+        private void dgvPhieuDP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+            {
+                if (dgvPhieuDP.CurrentRow == null) return;
+
+                string maDP = dgvPhieuDP.CurrentRow.Cells["MaDP"].Value?.ToString();
+                if (string.IsNullOrEmpty(maDP)) return;
+
+                // LOAD KHI ĐỔI PHIẾU
+                if (_currentMaDP != maDP)
+                {
+                    _currentMaDP = maDP;
+                    LoadPhongCuaPhieu(maDP);
+                }
+            }
+        }
     }
 }

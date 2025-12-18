@@ -16,6 +16,7 @@
     private void InitializeComponent()
     {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblHuHong = new System.Windows.Forms.Label();
             this.dataGridHuHong = new System.Windows.Forms.DataGridView();
             this.lblDichVu = new System.Windows.Forms.Label();
@@ -28,7 +29,6 @@
             this.txtSearch = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblTimPhieu = new System.Windows.Forms.Label();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
@@ -59,13 +59,24 @@
             this.panel1.Size = new System.Drawing.Size(1924, 1055);
             this.panel1.TabIndex = 0;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(742, 27);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(190, 23);
+            this.labelControl1.TabIndex = 14;
+            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
+            // 
             // lblHuHong
             // 
             this.lblHuHong.AutoSize = true;
             this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.lblHuHong.Location = new System.Drawing.Point(748, 581);
             this.lblHuHong.Name = "lblHuHong";
-            this.lblHuHong.Size = new System.Drawing.Size(324, 29);
+            this.lblHuHong.Size = new System.Drawing.Size(261, 23);
             this.lblHuHong.TabIndex = 12;
             this.lblHuHong.Text = "Hư hỏng thiết bị (nếu có):";
             // 
@@ -91,7 +102,7 @@
             this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.lblDichVu.Location = new System.Drawing.Point(748, 252);
             this.lblDichVu.Name = "lblDichVu";
-            this.lblDichVu.Size = new System.Drawing.Size(250, 29);
+            this.lblDichVu.Size = new System.Drawing.Size(200, 23);
             this.lblDichVu.TabIndex = 10;
             this.lblDichVu.Text = "Dịch vụ đã sử dụng:";
             // 
@@ -173,6 +184,7 @@
             this.dgvPhieuDP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhieuDP.Size = new System.Drawing.Size(665, 220);
             this.dgvPhieuDP.TabIndex = 4;
+            this.dgvPhieuDP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuDP_CellClick);
             this.dgvPhieuDP.SelectionChanged += new System.EventHandler(this.dgvPhieuDP_SelectionChanged);
             // 
             // btnTimPhieu
@@ -209,7 +221,7 @@
             this.lblSearch.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSearch.Location = new System.Drawing.Point(45, 78);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(550, 29);
+            this.lblSearch.Size = new System.Drawing.Size(442, 23);
             this.lblSearch.TabIndex = 1;
             this.lblSearch.Text = "Tìm kiếm (mã phiếu / tên KH / SDT / CCCD):";
             // 
@@ -220,20 +232,9 @@
             this.lblTimPhieu.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblTimPhieu.Location = new System.Drawing.Point(136, 27);
             this.lblTimPhieu.Name = "lblTimPhieu";
-            this.lblTimPhieu.Size = new System.Drawing.Size(528, 33);
+            this.lblTimPhieu.Size = new System.Drawing.Size(423, 27);
             this.lblTimPhieu.TabIndex = 0;
             this.lblTimPhieu.Text = "CHECK OUT THEO PHIẾU ĐẶT PHÒNG";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(742, 27);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(238, 29);
-            this.labelControl1.TabIndex = 14;
-            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
             // 
             // frmCheckOut
             // 

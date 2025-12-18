@@ -39,7 +39,7 @@ namespace Mee_Hotel
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Lỗi khi lấy ID bệnh nhân: " + ex.Message);
+                        MessageBox.Show("Lỗi khi đăng nhập: " + ex.Message);
                     }
                 }
                 else if (TaiKhoan.VaiTro == "Khách hàng")
@@ -51,7 +51,7 @@ namespace Mee_Hotel
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Lỗi khi lấy ID bệnh nhân: " + ex.Message);
+                        MessageBox.Show("Lỗi khi đăng nhập: " + ex.Message);
                     }
                 }
                 else if (TaiKhoan.VaiTro == "Quản lý")
@@ -70,24 +70,38 @@ namespace Mee_Hotel
             {
                 MessageBox.Show("Sai tài khoản, mật khẩu hoặc email! Vui lòng thử lại.");
                 txtTai_khoan.Clear();
-                txtMat_khau.Font = txtTai_khoan.Font = new Font("Segoe UI", 10, FontStyle.Regular);
-                txtTai_khoan.ForeColor = txtMat_khau.ForeColor = Color.DarkGray;
-                txtTai_khoan.Text = "(Account)";
                 txtMat_khau.Clear();
-                txtMat_khau.Text = "(Password)";
-                txtMat_khau.PasswordChar = '\0';
                 txtTai_khoan.Focus();
                 this.DialogResult = DialogResult.None;
             }
         }
-        private void btnsign_Leave(object sender, EventArgs e)
-        {
-            btnsign.FillColor = Color.MediumBlue;
-        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            txtMat_khau.UseSystemPasswordChar = true;
         }
+
+        private void ckbHienthimatkhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!ckbHienthimatkhau.Checked)
+            {
+                txtMat_khau.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtMat_khau.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnLogin_Enter(object sender, EventArgs e)
+        {
+            btnLogin.FillColor = Color.Purple;
+        }
+
+        private void btnLogin_Leave(object sender, EventArgs e)
+        {
+            btnLogin.FillColor = Color.DeepSkyBlue;
+        }
+
     }
 }

@@ -35,7 +35,7 @@ namespace Mee_Hotel.GUI
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmTongQuan());
         }
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
@@ -111,6 +111,31 @@ namespace Mee_Hotel.GUI
         private void accordionControlElement13_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new frmCheckOut());
+        }
+
+        private void accordionControlElement14_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmCheckIn());
+        }
+
+        private void accordionControlElement15_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmCheckOut());
+        }
+
+        private void accordionControlElement16_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmPhieuKiemTraHuHong());
+        }
+
+        private void accordionControlElement17_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmTrangThietBi());
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmTongQuan());
         }
     }
 }

@@ -29,13 +29,13 @@ namespace Mee_Hotel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ckbHienthimatkhau = new System.Windows.Forms.CheckBox();
             this.txtTai_khoan = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtMat_khau = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.btnsign = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,7 +53,6 @@ namespace Mee_Hotel
             this.panel1.Controls.Add(this.ckbHienthimatkhau);
             this.panel1.Controls.Add(this.txtTai_khoan);
             this.panel1.Controls.Add(this.txtMat_khau);
-            this.panel1.Controls.Add(this.btnsign);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Location = new System.Drawing.Point(0, -1);
@@ -96,12 +95,13 @@ namespace Mee_Hotel
             this.ckbHienthimatkhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ckbHienthimatkhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbHienthimatkhau.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbHienthimatkhau.Location = new System.Drawing.Point(244, 425);
+            this.ckbHienthimatkhau.Location = new System.Drawing.Point(553, 363);
             this.ckbHienthimatkhau.Name = "ckbHienthimatkhau";
             this.ckbHienthimatkhau.Size = new System.Drawing.Size(107, 18);
             this.ckbHienthimatkhau.TabIndex = 8;
             this.ckbHienthimatkhau.Text = "Hiển thị mật khẩu";
             this.ckbHienthimatkhau.UseVisualStyleBackColor = false;
+            this.ckbHienthimatkhau.CheckedChanged += new System.EventHandler(this.ckbHienthimatkhau_CheckedChanged);
             // 
             // txtTai_khoan
             // 
@@ -119,7 +119,7 @@ namespace Mee_Hotel
             this.txtTai_khoan.ForeColor = System.Drawing.Color.Black;
             this.txtTai_khoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTai_khoan.Location = new System.Drawing.Point(211, 282);
-            this.txtTai_khoan.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTai_khoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTai_khoan.Name = "txtTai_khoan";
             this.txtTai_khoan.PasswordChar = '\0';
             this.txtTai_khoan.PlaceholderText = "";
@@ -143,33 +143,13 @@ namespace Mee_Hotel
             this.txtMat_khau.ForeColor = System.Drawing.Color.Black;
             this.txtMat_khau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMat_khau.Location = new System.Drawing.Point(211, 347);
-            this.txtMat_khau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMat_khau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMat_khau.Name = "txtMat_khau";
-            this.txtMat_khau.PasswordChar = '*';
+            this.txtMat_khau.PasswordChar = '\0';
             this.txtMat_khau.PlaceholderText = "";
             this.txtMat_khau.SelectedText = "";
             this.txtMat_khau.Size = new System.Drawing.Size(337, 42);
             this.txtMat_khau.TabIndex = 1;
-            // 
-            // btnsign
-            // 
-            this.btnsign.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnsign.BackColor = System.Drawing.Color.White;
-            this.btnsign.BorderRadius = 19;
-            this.btnsign.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsign.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnsign.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnsign.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnsign.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnsign.FillColor = System.Drawing.Color.MediumBlue;
-            this.btnsign.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsign.ForeColor = System.Drawing.Color.White;
-            this.btnsign.Location = new System.Drawing.Point(411, 458);
-            this.btnsign.Margin = new System.Windows.Forms.Padding(2);
-            this.btnsign.Name = "btnsign";
-            this.btnsign.Size = new System.Drawing.Size(136, 43);
-            this.btnsign.TabIndex = 3;
-            this.btnsign.Text = "Register";
             // 
             // btnLogin
             // 
@@ -184,13 +164,17 @@ namespace Mee_Hotel
             this.btnLogin.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnLogin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(225, 458);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(302, 417);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(136, 43);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Enter);
+            this.btnLogin.Leave += new System.EventHandler(this.btnLogin_Leave);
+            this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_Leave);
+            this.btnLogin.MouseHover += new System.EventHandler(this.btnLogin_Enter);
             // 
             // lblLogin
             // 
@@ -221,15 +205,17 @@ namespace Mee_Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1347, 725);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "MEE HOTEL";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frmLogin_Load);
@@ -246,7 +232,6 @@ namespace Mee_Hotel
         private System.Windows.Forms.CheckBox ckbHienthimatkhau;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTai_khoan;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMat_khau;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnsign;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnLogin;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
