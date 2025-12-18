@@ -117,8 +117,10 @@ namespace Mee_Hotel.GUI
                 SDTlb.Text = row.Cells["SDT"].Value?.ToString();
                 NgayDatlb.Text = row.Cells["NgayDat"].Value?.ToString();
                 GiaLucDatlb.Text = row.Cells["GiaLucDat"].Value?.ToString();
+                ThongTinDonHang.TenKH = row.Cells["TenKhachHang"].Value?.ToString();
                 ThongTinDonHang.MaKH = row.Cells["MaKH"].Value?.ToString();
                 ThongTinDonHang.MaDP = row.Cells["MaDP"].Value?.ToString();
+                ThongTinDonHang.NgayTT = Convert.ToDateTime(row.Cells["NgayTra"].Value?.ToString());
                 ThongTinDonHang.TongTienDP = Convert.ToDecimal(row.Cells["GiaLucDat"].Value?.ToString());
             }
         }
@@ -155,6 +157,21 @@ namespace Mee_Hotel.GUI
         {
             frmTaoHoaDon frm = new frmTaoHoaDon();
             frm.ShowDialog();
+        }
+
+        private void txtPhong_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSCheckOut();
+        }
+
+        private void txtHoten_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSCheckOut();
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSCheckOut();
         }
     }
 }

@@ -45,6 +45,7 @@ namespace Mee_Hotel.GUI
             this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.siticoneButton4 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TTThanhToan_lb = new System.Windows.Forms.Label();
             this.MaHDlb = new System.Windows.Forms.Label();
             this.PhiDV_lb = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@ namespace Mee_Hotel.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneButton4 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_HD)).BeginInit();
             this.panel1.SuspendLayout();
@@ -88,6 +88,7 @@ namespace Mee_Hotel.GUI
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(310, 48);
             this.txtSDT.TabIndex = 42;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // txtHoten
             // 
@@ -112,6 +113,7 @@ namespace Mee_Hotel.GUI
             this.txtHoten.SelectedText = "";
             this.txtHoten.Size = new System.Drawing.Size(310, 48);
             this.txtHoten.TabIndex = 41;
+            this.txtHoten.TextChanged += new System.EventHandler(this.txtHoten_TextChanged);
             // 
             // label6
             // 
@@ -148,6 +150,7 @@ namespace Mee_Hotel.GUI
             this.Data_HD.Size = new System.Drawing.Size(1157, 757);
             this.Data_HD.TabIndex = 3;
             this.Data_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_HD_CellClick);
+            this.Data_HD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_HD_CellContentClick);
             // 
             // label12
             // 
@@ -266,6 +269,7 @@ namespace Mee_Hotel.GUI
             this.txtMaHD.SelectedText = "";
             this.txtMaHD.Size = new System.Drawing.Size(310, 48);
             this.txtMaHD.TabIndex = 2;
+            this.txtMaHD.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
             // 
             // label1
             // 
@@ -346,6 +350,23 @@ namespace Mee_Hotel.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1779, 959);
             this.panel1.TabIndex = 2;
+            // 
+            // siticoneButton4
+            // 
+            this.siticoneButton4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.siticoneButton4.BorderRadius = 20;
+            this.siticoneButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton4.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton4.Location = new System.Drawing.Point(1417, 86);
+            this.siticoneButton4.Name = "siticoneButton4";
+            this.siticoneButton4.Size = new System.Drawing.Size(147, 45);
+            this.siticoneButton4.TabIndex = 65;
+            this.siticoneButton4.Text = "Thanh toán";
+            this.siticoneButton4.Click += new System.EventHandler(this.siticoneButton4_Click);
             // 
             // TTThanhToan_lb
             // 
@@ -519,22 +540,6 @@ namespace Mee_Hotel.GUI
             this.siticoneButton3.TabIndex = 51;
             this.siticoneButton3.Text = "Thanh toán";
             this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
-            // 
-            // siticoneButton4
-            // 
-            this.siticoneButton4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.siticoneButton4.BorderRadius = 20;
-            this.siticoneButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneButton4.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton4.Location = new System.Drawing.Point(1417, 86);
-            this.siticoneButton4.Name = "siticoneButton4";
-            this.siticoneButton4.Size = new System.Drawing.Size(147, 45);
-            this.siticoneButton4.TabIndex = 65;
-            this.siticoneButton4.Text = "Thanh toán";
             // 
             // frmQuanLyHoaDon
             // 

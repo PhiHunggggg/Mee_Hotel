@@ -34,6 +34,8 @@ namespace Mee_Hotel.DAL
         public static string NgayDat;
         public static string MaDP;
         public static string TenNV;
+        public static string MaHD = null;
+        public static DateTime NgayTT;
         /*
         public static string TenKH;
         public static string TenKH;
@@ -41,6 +43,7 @@ namespace Mee_Hotel.DAL
         public static string TenKH;
         public static string TenKH;
         */
+        public static string GhiChu = "";
         public static DateTime NgayBD;
         public static DateTime NgayKT;
         public static Decimal TongTienDV;
@@ -48,7 +51,7 @@ namespace Mee_Hotel.DAL
         public static Decimal TongTienBT;
         public static Decimal TongTien;
         public static DataTable DSPhong;
-        public static string MaKTHH;
+        public static string MaKTHH = "";
         public static Decimal PhanTramThue;
     }
 }

@@ -20,15 +20,40 @@ namespace Mee_Hotel.GUI
 
         private void label3_Click(object sender, EventArgs e)
         {
-            if(ThongTinDonHang.MaKTHH == null || ThongTinDonHang.MaDP == null || ThongTinDonHang.MaKTHH == null)
+            
+        }
+
+        private void frmThanhToan_Load(object sender, EventArgs e)
+        {
+            ThongTinDonHang.TongTien = HoaDonDAL.Instance.LayTongTienHoaDon(ThongTinDonHang.MaHD);
+            txtTongTienHD.Text = ThongTinDonHang.TongTien.ToString() + " VND";
+            txtThoiGianTT.Text = DateTime.UtcNow.ToString();
+            if (ThongTinDonHang.NgayTT < DateTime.Now.AddHours(-4))
             {
-                MessageBox.Show("Bạn chưa check hết các thông tin!!");
+                MessageBox.Show("Bạn phải trả thêm 5% phụ phí do trả muộn");
+                txtTongTienTra.Text = (1.05m * ThongTinDonHang.TongTien).ToString() + " VND";
+            }
+            else txtTongTienTra.Text = ThongTinDonHang.TongTien.ToString() + " VND";
+            ThongTinDonHang.GhiChu += "Nộp muộn + ";
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(PTcb.Text))
+            {
+                MessageBox.Show("Chưa chọn phương thức");
                 return;
             }
-            int tst = HoaDonDAL.Instance.TaoHoaDon(ThongTinDonHang.MaKH, ThongTinDonHang.MaDP, DateTime.UtcNow, ThongTinDonHang.TongTien, ThongTinDonHang.PhanTramThue, ThongTinDonHang.TongTienDV, "Đã thanh toán", PTcb.SelectedValue?.ToString(), ThongTinDonHang.MaKTHH);
-            if (tst > 0) MessageBox.Show("Thêm hóa đơn thành công");
-            else MessageBox.Show("Thêm hóa đơn không thành công");
+            ThongTinDonHang.GhiChu += PTcb.Text;
+            int check = HoaDonDAL.Instance.ThanhToan(ThongTinDonHang.MaHD, ThongTinDonHang.GhiChu, "Đã thanh toán");
+            if (check > 0)
+            {
+                MessageBox.Show("Thanh Toán thành công!!");
+            }
+            else MessageBox.Show("Thanh Toán không thành công!!");
             this.Close();
+
         }
     }
 }

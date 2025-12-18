@@ -29,529 +29,90 @@ namespace Mee_Hotel.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.SlDVlb = new System.Windows.Forms.Label();
-            this.TSDVlb = new System.Windows.Forms.Label();
-            this.MaDP_DVlb = new System.Windows.Forms.Label();
-            this.TenKH_DVlb = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.GiaLucDatlb = new System.Windows.Forms.Label();
-            this.NgayDatlb = new System.Windows.Forms.Label();
-            this.SDTlb = new System.Windows.Forms.Label();
-            this.SoPhongDatlb = new System.Windows.Forms.Label();
-            this.LoaiPhonglb = new System.Windows.Forms.Label();
-            this.TenKHlb = new System.Windows.Forms.Label();
-            this.lblNgayDen = new System.Windows.Forms.Label();
-            this.lblNgayTra = new System.Windows.Forms.Label();
-            this.lblPhong = new System.Windows.Forms.Label();
-            this.lblTenKH = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnTao = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnHuy = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.TienDV_tb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TenNV_lb = new System.Windows.Forms.Label();
-            this.NgayTT_lb = new System.Windows.Forms.Label();
-            this.MaDP_lb = new System.Windows.Forms.Label();
-            this.TenKH_lb = new System.Windows.Forms.Label();
-            this.TongTT_tb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PhanTramThue_Num = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
-            this.TienBT_tb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.TienDP_tb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Thueud = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtTongTienHH = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtTongTienDV = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtTongTienPhong = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
-            this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lbTenNV_moi = new System.Windows.Forms.Label();
+            this.lbMaDP_new = new System.Windows.Forms.Label();
+            this.lb_NgayTT_new = new System.Windows.Forms.Label();
+            this.lbTenKH_new = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblHuHong = new System.Windows.Forms.Label();
+            this.dataGridHuHong = new System.Windows.Forms.DataGridView();
+            this.lblDichVu = new System.Windows.Forms.Label();
+            this.dataGridDichVu = new System.Windows.Forms.DataGridView();
+            this.dgvSoNgayO = new System.Windows.Forms.DataGridView();
+            this.btnCheckOutBatch = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.dgvPhongBatch = new System.Windows.Forms.DataGridView();
+            this.lblTimPhieu = new System.Windows.Forms.Label();
+            this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhanTramThue_Num)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thueud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // SlDVlb
-            // 
-            this.SlDVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SlDVlb.AutoSize = true;
-            this.SlDVlb.BackColor = System.Drawing.Color.White;
-            this.SlDVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlDVlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SlDVlb.Location = new System.Drawing.Point(807, 332);
-            this.SlDVlb.Name = "SlDVlb";
-            this.SlDVlb.Size = new System.Drawing.Size(0, 19);
-            this.SlDVlb.TabIndex = 76;
-            // 
-            // TSDVlb
-            // 
-            this.TSDVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TSDVlb.AutoSize = true;
-            this.TSDVlb.BackColor = System.Drawing.Color.White;
-            this.TSDVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TSDVlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TSDVlb.Location = new System.Drawing.Point(933, 278);
-            this.TSDVlb.Name = "TSDVlb";
-            this.TSDVlb.Size = new System.Drawing.Size(0, 19);
-            this.TSDVlb.TabIndex = 74;
-            // 
-            // MaDP_DVlb
-            // 
-            this.MaDP_DVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.MaDP_DVlb.AutoSize = true;
-            this.MaDP_DVlb.BackColor = System.Drawing.Color.White;
-            this.MaDP_DVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDP_DVlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.MaDP_DVlb.Location = new System.Drawing.Point(923, 151);
-            this.MaDP_DVlb.Name = "MaDP_DVlb";
-            this.MaDP_DVlb.Size = new System.Drawing.Size(0, 19);
-            this.MaDP_DVlb.TabIndex = 72;
-            // 
-            // TenKH_DVlb
-            // 
-            this.TenKH_DVlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TenKH_DVlb.AutoSize = true;
-            this.TenKH_DVlb.BackColor = System.Drawing.Color.White;
-            this.TenKH_DVlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKH_DVlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TenKH_DVlb.Location = new System.Drawing.Point(746, 143);
-            this.TenKH_DVlb.Name = "TenKH_DVlb";
-            this.TenKH_DVlb.Size = new System.Drawing.Size(0, 19);
-            this.TenKH_DVlb.TabIndex = 71;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 234);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 19);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Mã đặt phòng :";
-            // 
-            // GiaLucDatlb
-            // 
-            this.GiaLucDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.GiaLucDatlb.AutoSize = true;
-            this.GiaLucDatlb.BackColor = System.Drawing.Color.White;
-            this.GiaLucDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GiaLucDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GiaLucDatlb.Location = new System.Drawing.Point(738, 465);
-            this.GiaLucDatlb.Name = "GiaLucDatlb";
-            this.GiaLucDatlb.Size = new System.Drawing.Size(0, 19);
-            this.GiaLucDatlb.TabIndex = 67;
-            // 
-            // NgayDatlb
-            // 
-            this.NgayDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NgayDatlb.AutoSize = true;
-            this.NgayDatlb.BackColor = System.Drawing.Color.White;
-            this.NgayDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgayDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.NgayDatlb.Location = new System.Drawing.Point(856, 345);
-            this.NgayDatlb.Name = "NgayDatlb";
-            this.NgayDatlb.Size = new System.Drawing.Size(0, 19);
-            this.NgayDatlb.TabIndex = 66;
-            // 
-            // SDTlb
-            // 
-            this.SDTlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SDTlb.AutoSize = true;
-            this.SDTlb.BackColor = System.Drawing.Color.White;
-            this.SDTlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SDTlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SDTlb.Location = new System.Drawing.Point(889, 281);
-            this.SDTlb.Name = "SDTlb";
-            this.SDTlb.Size = new System.Drawing.Size(0, 19);
-            this.SDTlb.TabIndex = 65;
-            // 
-            // SoPhongDatlb
-            // 
-            this.SoPhongDatlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SoPhongDatlb.AutoSize = true;
-            this.SoPhongDatlb.BackColor = System.Drawing.Color.White;
-            this.SoPhongDatlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoPhongDatlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SoPhongDatlb.Location = new System.Drawing.Point(889, 218);
-            this.SoPhongDatlb.Name = "SoPhongDatlb";
-            this.SoPhongDatlb.Size = new System.Drawing.Size(0, 19);
-            this.SoPhongDatlb.TabIndex = 64;
-            // 
-            // LoaiPhonglb
-            // 
-            this.LoaiPhonglb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LoaiPhonglb.AutoSize = true;
-            this.LoaiPhonglb.BackColor = System.Drawing.Color.White;
-            this.LoaiPhonglb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiPhonglb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoaiPhonglb.Location = new System.Drawing.Point(872, 155);
-            this.LoaiPhonglb.Name = "LoaiPhonglb";
-            this.LoaiPhonglb.Size = new System.Drawing.Size(0, 19);
-            this.LoaiPhonglb.TabIndex = 63;
-            // 
-            // TenKHlb
-            // 
-            this.TenKHlb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TenKHlb.AutoSize = true;
-            this.TenKHlb.BackColor = System.Drawing.Color.White;
-            this.TenKHlb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKHlb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TenKHlb.Location = new System.Drawing.Point(917, 92);
-            this.TenKHlb.Name = "TenKHlb";
-            this.TenKHlb.Size = new System.Drawing.Size(0, 19);
-            this.TenKHlb.TabIndex = 62;
-            // 
-            // lblNgayDen
-            // 
-            this.lblNgayDen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNgayDen.AutoSize = true;
-            this.lblNgayDen.BackColor = System.Drawing.Color.White;
-            this.lblNgayDen.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayDen.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNgayDen.Location = new System.Drawing.Point(858, 215);
-            this.lblNgayDen.Name = "lblNgayDen";
-            this.lblNgayDen.Size = new System.Drawing.Size(0, 23);
-            this.lblNgayDen.TabIndex = 59;
-            // 
-            // lblNgayTra
-            // 
-            this.lblNgayTra.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNgayTra.AutoSize = true;
-            this.lblNgayTra.BackColor = System.Drawing.Color.White;
-            this.lblNgayTra.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTra.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNgayTra.Location = new System.Drawing.Point(858, 278);
-            this.lblNgayTra.Name = "lblNgayTra";
-            this.lblNgayTra.Size = new System.Drawing.Size(0, 23);
-            this.lblNgayTra.TabIndex = 58;
-            // 
-            // lblPhong
-            // 
-            this.lblPhong.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPhong.AutoSize = true;
-            this.lblPhong.BackColor = System.Drawing.Color.White;
-            this.lblPhong.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhong.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPhong.Location = new System.Drawing.Point(120, 234);
-            this.lblPhong.Name = "lblPhong";
-            this.lblPhong.Size = new System.Drawing.Size(0, 23);
-            this.lblPhong.TabIndex = 57;
-            // 
-            // lblTenKH
-            // 
-            this.lblTenKH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTenKH.AutoSize = true;
-            this.lblTenKH.BackColor = System.Drawing.Color.White;
-            this.lblTenKH.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKH.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTenKH.Location = new System.Drawing.Point(917, 89);
-            this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(0, 23);
-            this.lblTenKH.TabIndex = 56;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 176);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 19);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Tên khách hàng :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(120, 90);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(224, 23);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "THÔNG TIN HÓA ĐƠN";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // btnTao
-            // 
-            this.btnTao.BorderRadius = 19;
-            this.btnTao.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
-            this.btnTao.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnTao.ForeColor = System.Drawing.Color.White;
-            this.btnTao.Location = new System.Drawing.Point(181, 460);
-            this.btnTao.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTao.Name = "btnTao";
-            this.btnTao.Size = new System.Drawing.Size(150, 49);
-            this.btnTao.TabIndex = 20;
-            this.btnTao.Text = "Tạo";
-            this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BorderRadius = 19;
-            this.btnHuy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(351, 460);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(150, 49);
-            this.btnHuy.TabIndex = 21;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // TienDV_tb
-            // 
-            this.TienDV_tb.BorderRadius = 19;
-            this.TienDV_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TienDV_tb.DefaultText = "0 VND";
-            this.TienDV_tb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TienDV_tb.ForeColor = System.Drawing.Color.Red;
-            this.TienDV_tb.Location = new System.Drawing.Point(714, 226);
-            this.TienDV_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TienDV_tb.Name = "TienDV_tb";
-            this.TienDV_tb.PasswordChar = '\0';
-            this.TienDV_tb.PlaceholderText = "";
-            this.TienDV_tb.ReadOnly = true;
-            this.TienDV_tb.SelectedText = "";
-            this.TienDV_tb.Size = new System.Drawing.Size(251, 48);
-            this.TienDV_tb.TabIndex = 11;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblTitle.Location = new System.Drawing.Point(444, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(186, 29);
-            this.lblTitle.TabIndex = 12;
-            this.lblTitle.Text = "TẠO HÓA ĐƠN";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.siticoneButton1);
-            this.panel1.Controls.Add(this.TenNV_lb);
-            this.panel1.Controls.Add(this.NgayTT_lb);
-            this.panel1.Controls.Add(this.MaDP_lb);
-            this.panel1.Controls.Add(this.TenKH_lb);
-            this.panel1.Controls.Add(this.TongTT_tb);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.PhanTramThue_Num);
-            this.panel1.Controls.Add(this.TienBT_tb);
-            this.panel1.Controls.Add(this.TienDP_tb);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.Thueud);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.SlDVlb);
-            this.panel1.Controls.Add(this.TSDVlb);
-            this.panel1.Controls.Add(this.MaDP_DVlb);
-            this.panel1.Controls.Add(this.TenKH_DVlb);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.GiaLucDatlb);
-            this.panel1.Controls.Add(this.NgayDatlb);
-            this.panel1.Controls.Add(this.SDTlb);
-            this.panel1.Controls.Add(this.SoPhongDatlb);
-            this.panel1.Controls.Add(this.LoaiPhonglb);
-            this.panel1.Controls.Add(this.TenKHlb);
-            this.panel1.Controls.Add(this.lblNgayDen);
-            this.panel1.Controls.Add(this.lblNgayTra);
-            this.panel1.Controls.Add(this.lblPhong);
-            this.panel1.Controls.Add(this.lblTenKH);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtTongTienHH);
+            this.panel1.Controls.Add(this.txtTongTienDV);
+            this.panel1.Controls.Add(this.txtTongTienPhong);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.btnTao);
-            this.panel1.Controls.Add(this.btnHuy);
-            this.panel1.Controls.Add(this.TienDV_tb);
-            this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Controls.Add(this.siticoneShapes1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.siticoneButton2);
+            this.panel1.Controls.Add(this.siticoneButton1);
+            this.panel1.Controls.Add(this.lbTenNV_moi);
+            this.panel1.Controls.Add(this.lbMaDP_new);
+            this.panel1.Controls.Add(this.lb_NgayTT_new);
+            this.panel1.Controls.Add(this.lbTenKH_new);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelControl1);
+            this.panel1.Controls.Add(this.lblHuHong);
+            this.panel1.Controls.Add(this.dataGridHuHong);
+            this.panel1.Controls.Add(this.lblDichVu);
+            this.panel1.Controls.Add(this.dataGridDichVu);
+            this.panel1.Controls.Add(this.dgvSoNgayO);
+            this.panel1.Controls.Add(this.btnCheckOutBatch);
+            this.panel1.Controls.Add(this.dgvPhongBatch);
+            this.panel1.Controls.Add(this.lblTimPhieu);
             this.panel1.Controls.Add(this.siticoneShapes2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1085, 540);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(1283, 686);
+            this.panel1.TabIndex = 1;
             // 
-            // TenNV_lb
+            // Thueud
             // 
-            this.TenNV_lb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TenNV_lb.AutoSize = true;
-            this.TenNV_lb.BackColor = System.Drawing.Color.White;
-            this.TenNV_lb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenNV_lb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TenNV_lb.Location = new System.Drawing.Point(207, 345);
-            this.TenNV_lb.Name = "TenNV_lb";
-            this.TenNV_lb.Size = new System.Drawing.Size(0, 19);
-            this.TenNV_lb.TabIndex = 93;
-            // 
-            // NgayTT_lb
-            // 
-            this.NgayTT_lb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NgayTT_lb.AutoSize = true;
-            this.NgayTT_lb.BackColor = System.Drawing.Color.White;
-            this.NgayTT_lb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgayTT_lb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.NgayTT_lb.Location = new System.Drawing.Point(226, 292);
-            this.NgayTT_lb.Name = "NgayTT_lb";
-            this.NgayTT_lb.Size = new System.Drawing.Size(0, 19);
-            this.NgayTT_lb.TabIndex = 92;
-            // 
-            // MaDP_lb
-            // 
-            this.MaDP_lb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.MaDP_lb.AutoSize = true;
-            this.MaDP_lb.BackColor = System.Drawing.Color.White;
-            this.MaDP_lb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDP_lb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.MaDP_lb.Location = new System.Drawing.Point(207, 234);
-            this.MaDP_lb.Name = "MaDP_lb";
-            this.MaDP_lb.Size = new System.Drawing.Size(0, 19);
-            this.MaDP_lb.TabIndex = 91;
-            // 
-            // TenKH_lb
-            // 
-            this.TenKH_lb.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TenKH_lb.AutoSize = true;
-            this.TenKH_lb.BackColor = System.Drawing.Color.White;
-            this.TenKH_lb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKH_lb.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TenKH_lb.Location = new System.Drawing.Point(223, 176);
-            this.TenKH_lb.Name = "TenKH_lb";
-            this.TenKH_lb.Size = new System.Drawing.Size(0, 19);
-            this.TenKH_lb.TabIndex = 90;
-            // 
-            // TongTT_tb
-            // 
-            this.TongTT_tb.BorderRadius = 19;
-            this.TongTT_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TongTT_tb.DefaultText = "0 VND";
-            this.TongTT_tb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TongTT_tb.ForeColor = System.Drawing.Color.Red;
-            this.TongTT_tb.Location = new System.Drawing.Point(714, 389);
-            this.TongTT_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TongTT_tb.Name = "TongTT_tb";
-            this.TongTT_tb.PasswordChar = '\0';
-            this.TongTT_tb.PlaceholderText = "";
-            this.TongTT_tb.ReadOnly = true;
-            this.TongTT_tb.SelectedText = "";
-            this.TongTT_tb.Size = new System.Drawing.Size(251, 48);
-            this.TongTT_tb.TabIndex = 89;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(557, 405);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 19);
-            this.label3.TabIndex = 88;
-            this.label3.Text = "Tổng thanh toán:";
-            // 
-            // PhanTramThue_Num
-            // 
-            this.PhanTramThue_Num.BackColor = System.Drawing.Color.Transparent;
-            this.PhanTramThue_Num.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PhanTramThue_Num.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.PhanTramThue_Num.Location = new System.Drawing.Point(714, 337);
-            this.PhanTramThue_Num.Name = "PhanTramThue_Num";
-            this.PhanTramThue_Num.Size = new System.Drawing.Size(100, 36);
-            this.PhanTramThue_Num.TabIndex = 87;
-            // 
-            // TienBT_tb
-            // 
-            this.TienBT_tb.BorderRadius = 19;
-            this.TienBT_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TienBT_tb.DefaultText = "0 VND";
-            this.TienBT_tb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TienBT_tb.ForeColor = System.Drawing.Color.Red;
-            this.TienBT_tb.Location = new System.Drawing.Point(714, 282);
-            this.TienBT_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TienBT_tb.Name = "TienBT_tb";
-            this.TienBT_tb.PasswordChar = '\0';
-            this.TienBT_tb.PlaceholderText = "";
-            this.TienBT_tb.ReadOnly = true;
-            this.TienBT_tb.SelectedText = "";
-            this.TienBT_tb.Size = new System.Drawing.Size(251, 48);
-            this.TienBT_tb.TabIndex = 86;
-            // 
-            // TienDP_tb
-            // 
-            this.TienDP_tb.BorderRadius = 19;
-            this.TienDP_tb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TienDP_tb.DefaultText = "0 VND";
-            this.TienDP_tb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TienDP_tb.ForeColor = System.Drawing.Color.Red;
-            this.TienDP_tb.Location = new System.Drawing.Point(714, 163);
-            this.TienDP_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TienDP_tb.Name = "TienDP_tb";
-            this.TienDP_tb.PasswordChar = '\0';
-            this.TienDP_tb.PlaceholderText = "";
-            this.TienDP_tb.ReadOnly = true;
-            this.TienDP_tb.SelectedText = "";
-            this.TienDP_tb.Size = new System.Drawing.Size(251, 48);
-            this.TienDP_tb.TabIndex = 85;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(557, 345);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 19);
-            this.label12.TabIndex = 84;
-            this.label12.Text = "Thuế:";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(557, 292);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(144, 19);
-            this.label11.TabIndex = 83;
-            this.label11.Text = "Tiền bồi thường:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(557, 234);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 19);
-            this.label10.TabIndex = 82;
-            this.label10.Text = "Tiền dịch vụ:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(557, 176);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 19);
-            this.label9.TabIndex = 81;
-            this.label9.Text = "Tiền đặt phòng:";
+            this.Thueud.BackColor = System.Drawing.Color.Transparent;
+            this.Thueud.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Thueud.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Thueud.Location = new System.Drawing.Point(169, 359);
+            this.Thueud.Name = "Thueud";
+            this.Thueud.Size = new System.Drawing.Size(100, 36);
+            this.Thueud.TabIndex = 33;
             // 
             // label8
             // 
@@ -559,11 +120,86 @@ namespace Mee_Hotel.GUI
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(73, 345);
+            this.label8.Location = new System.Drawing.Point(83, 367);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 19);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "Tên nhân viên:";
+            this.label8.Size = new System.Drawing.Size(80, 19);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "% Thuế:";
+            // 
+            // txtTongTienHH
+            // 
+            this.txtTongTienHH.BorderRadius = 19;
+            this.txtTongTienHH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongTienHH.DefaultText = "0 VND";
+            this.txtTongTienHH.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTongTienHH.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTienHH.Location = new System.Drawing.Point(966, 504);
+            this.txtTongTienHH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongTienHH.Name = "txtTongTienHH";
+            this.txtTongTienHH.PasswordChar = '\0';
+            this.txtTongTienHH.PlaceholderText = "";
+            this.txtTongTienHH.ReadOnly = true;
+            this.txtTongTienHH.SelectedText = "";
+            this.txtTongTienHH.Size = new System.Drawing.Size(251, 48);
+            this.txtTongTienHH.TabIndex = 31;
+            // 
+            // txtTongTienDV
+            // 
+            this.txtTongTienDV.BorderRadius = 19;
+            this.txtTongTienDV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongTienDV.DefaultText = "0 VND";
+            this.txtTongTienDV.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTongTienDV.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTienDV.Location = new System.Drawing.Point(964, 267);
+            this.txtTongTienDV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongTienDV.Name = "txtTongTienDV";
+            this.txtTongTienDV.PasswordChar = '\0';
+            this.txtTongTienDV.PlaceholderText = "";
+            this.txtTongTienDV.ReadOnly = true;
+            this.txtTongTienDV.SelectedText = "";
+            this.txtTongTienDV.Size = new System.Drawing.Size(251, 48);
+            this.txtTongTienDV.TabIndex = 30;
+            // 
+            // txtTongTienPhong
+            // 
+            this.txtTongTienPhong.BorderRadius = 19;
+            this.txtTongTienPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongTienPhong.DefaultText = "0 VND";
+            this.txtTongTienPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTongTienPhong.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTienPhong.Location = new System.Drawing.Point(964, 86);
+            this.txtTongTienPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongTienPhong.Name = "txtTongTienPhong";
+            this.txtTongTienPhong.PasswordChar = '\0';
+            this.txtTongTienPhong.PlaceholderText = "";
+            this.txtTongTienPhong.ReadOnly = true;
+            this.txtTongTienPhong.SelectedText = "";
+            this.txtTongTienPhong.Size = new System.Drawing.Size(251, 48);
+            this.txtTongTienPhong.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(975, 470);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 19);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Tiền hư hỏng:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(975, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 19);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Tiền dịch vụ:";
             // 
             // label5
             // 
@@ -571,114 +207,324 @@ namespace Mee_Hotel.GUI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(73, 292);
+            this.label5.Location = new System.Drawing.Point(975, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 19);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "Ngày thanh toán:";
+            this.label5.Size = new System.Drawing.Size(106, 19);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Tiền phòng:";
             // 
-            // siticoneShapes1
+            // siticoneButton2
             // 
-            this.siticoneShapes1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.siticoneShapes1.BorderColor = System.Drawing.Color.White;
-            this.siticoneShapes1.FillColor = System.Drawing.Color.White;
-            this.siticoneShapes1.Location = new System.Drawing.Point(3, 89);
-            this.siticoneShapes1.Name = "siticoneShapes1";
-            this.siticoneShapes1.PolygonSkip = 1;
-            this.siticoneShapes1.Rotate = 0F;
-            this.siticoneShapes1.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
-            this.siticoneShapes1.Size = new System.Drawing.Size(498, 366);
-            this.siticoneShapes1.TabIndex = 77;
-            this.siticoneShapes1.Text = "siticoneShapes1";
-            this.siticoneShapes1.Zoom = 80;
-            this.siticoneShapes1.Click += new System.EventHandler(this.siticoneShapes1_Click);
+            this.siticoneButton2.BorderRadius = 19;
+            this.siticoneButton2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.siticoneButton2.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton2.Location = new System.Drawing.Point(323, 564);
+            this.siticoneButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneButton2.Name = "siticoneButton2";
+            this.siticoneButton2.Size = new System.Drawing.Size(141, 39);
+            this.siticoneButton2.TabIndex = 25;
+            this.siticoneButton2.Text = "Hủy";
+            this.siticoneButton2.Click += new System.EventHandler(this.siticoneButton2_Click);
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.BorderRadius = 19;
+            this.siticoneButton1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Location = new System.Drawing.Point(11, 564);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(141, 39);
+            this.siticoneButton1.TabIndex = 24;
+            this.siticoneButton1.Text = "Thanh toán";
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click_1);
+            // 
+            // lbTenNV_moi
+            // 
+            this.lbTenNV_moi.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbTenNV_moi.AutoSize = true;
+            this.lbTenNV_moi.BackColor = System.Drawing.Color.White;
+            this.lbTenNV_moi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNV_moi.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbTenNV_moi.Location = new System.Drawing.Point(200, 267);
+            this.lbTenNV_moi.Name = "lbTenNV_moi";
+            this.lbTenNV_moi.Size = new System.Drawing.Size(0, 19);
+            this.lbTenNV_moi.TabIndex = 23;
+            // 
+            // lbMaDP_new
+            // 
+            this.lbMaDP_new.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMaDP_new.AutoSize = true;
+            this.lbMaDP_new.BackColor = System.Drawing.Color.White;
+            this.lbMaDP_new.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaDP_new.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbMaDP_new.Location = new System.Drawing.Point(196, 214);
+            this.lbMaDP_new.Name = "lbMaDP_new";
+            this.lbMaDP_new.Size = new System.Drawing.Size(0, 19);
+            this.lbMaDP_new.TabIndex = 22;
+            // 
+            // lb_NgayTT_new
+            // 
+            this.lb_NgayTT_new.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lb_NgayTT_new.AutoSize = true;
+            this.lb_NgayTT_new.BackColor = System.Drawing.Color.White;
+            this.lb_NgayTT_new.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NgayTT_new.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lb_NgayTT_new.Location = new System.Drawing.Point(220, 164);
+            this.lb_NgayTT_new.Name = "lb_NgayTT_new";
+            this.lb_NgayTT_new.Size = new System.Drawing.Size(0, 19);
+            this.lb_NgayTT_new.TabIndex = 21;
+            // 
+            // lbTenKH_new
+            // 
+            this.lbTenKH_new.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbTenKH_new.AutoSize = true;
+            this.lbTenKH_new.BackColor = System.Drawing.Color.White;
+            this.lbTenKH_new.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenKH_new.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbTenKH_new.Location = new System.Drawing.Point(214, 115);
+            this.lbTenKH_new.Name = "lbTenKH_new";
+            this.lbTenKH_new.Size = new System.Drawing.Size(0, 19);
+            this.lbTenKH_new.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(64, 267);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 19);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Tên nhân viên:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(64, 214);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 19);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Mã đặt phòng:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Ngày thanh toán:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 19);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tên khách hàng:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(495, 18);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(190, 23);
+            this.labelControl1.TabIndex = 14;
+            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
+            // 
+            // lblHuHong
+            // 
+            this.lblHuHong.AutoSize = true;
+            this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.lblHuHong.Location = new System.Drawing.Point(491, 413);
+            this.lblHuHong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHuHong.Name = "lblHuHong";
+            this.lblHuHong.Size = new System.Drawing.Size(261, 23);
+            this.lblHuHong.TabIndex = 12;
+            this.lblHuHong.Text = "Hư hỏng thiết bị (nếu có):";
+            // 
+            // dataGridHuHong
+            // 
+            this.dataGridHuHong.AllowUserToAddRows = false;
+            this.dataGridHuHong.AllowUserToDeleteRows = false;
+            this.dataGridHuHong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridHuHong.ColumnHeadersHeight = 50;
+            this.dataGridHuHong.Location = new System.Drawing.Point(495, 448);
+            this.dataGridHuHong.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridHuHong.Name = "dataGridHuHong";
+            this.dataGridHuHong.ReadOnly = true;
+            this.dataGridHuHong.RowHeadersWidth = 51;
+            this.dataGridHuHong.RowTemplate.Height = 40;
+            this.dataGridHuHong.Size = new System.Drawing.Size(466, 155);
+            this.dataGridHuHong.TabIndex = 13;
+            // 
+            // lblDichVu
+            // 
+            this.lblDichVu.AutoSize = true;
+            this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.lblDichVu.Location = new System.Drawing.Point(491, 185);
+            this.lblDichVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDichVu.Name = "lblDichVu";
+            this.lblDichVu.Size = new System.Drawing.Size(200, 23);
+            this.lblDichVu.TabIndex = 10;
+            this.lblDichVu.Text = "Dịch vụ đã sử dụng:";
+            // 
+            // dataGridDichVu
+            // 
+            this.dataGridDichVu.AllowUserToAddRows = false;
+            this.dataGridDichVu.AllowUserToDeleteRows = false;
+            this.dataGridDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridDichVu.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridDichVu.ColumnHeadersHeight = 50;
+            this.dataGridDichVu.Location = new System.Drawing.Point(495, 210);
+            this.dataGridDichVu.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridDichVu.Name = "dataGridDichVu";
+            this.dataGridDichVu.ReadOnly = true;
+            this.dataGridDichVu.RowHeadersWidth = 51;
+            this.dataGridDichVu.RowTemplate.Height = 40;
+            this.dataGridDichVu.Size = new System.Drawing.Size(457, 191);
+            this.dataGridDichVu.TabIndex = 11;
+            // 
+            // dgvSoNgayO
+            // 
+            this.dgvSoNgayO.AllowUserToAddRows = false;
+            this.dgvSoNgayO.AllowUserToDeleteRows = false;
+            this.dgvSoNgayO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSoNgayO.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSoNgayO.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSoNgayO.ColumnHeadersHeight = 50;
+            this.dgvSoNgayO.Location = new System.Drawing.Point(495, 48);
+            this.dgvSoNgayO.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSoNgayO.Name = "dgvSoNgayO";
+            this.dgvSoNgayO.ReadOnly = true;
+            this.dgvSoNgayO.RowHeadersWidth = 51;
+            this.dgvSoNgayO.RowTemplate.Height = 40;
+            this.dgvSoNgayO.Size = new System.Drawing.Size(454, 124);
+            this.dgvSoNgayO.TabIndex = 9;
+            this.dgvSoNgayO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoNgayO_CellContentClick);
+            // 
+            // btnCheckOutBatch
+            // 
+            this.btnCheckOutBatch.BorderRadius = 19;
+            this.btnCheckOutBatch.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnCheckOutBatch.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOutBatch.Location = new System.Drawing.Point(169, 564);
+            this.btnCheckOutBatch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheckOutBatch.Name = "btnCheckOutBatch";
+            this.btnCheckOutBatch.Size = new System.Drawing.Size(141, 39);
+            this.btnCheckOutBatch.TabIndex = 7;
+            this.btnCheckOutBatch.Text = "Tạo";
+            this.btnCheckOutBatch.Click += new System.EventHandler(this.btnCheckOutBatch_Click_1);
+            // 
+            // dgvPhongBatch
+            // 
+            this.dgvPhongBatch.AllowUserToAddRows = false;
+            this.dgvPhongBatch.AllowUserToDeleteRows = false;
+            this.dgvPhongBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPhongBatch.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPhongBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPhongBatch.ColumnHeadersHeight = 50;
+            this.dgvPhongBatch.Location = new System.Drawing.Point(11, 400);
+            this.dgvPhongBatch.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPhongBatch.Name = "dgvPhongBatch";
+            this.dgvPhongBatch.RowHeadersWidth = 51;
+            this.dgvPhongBatch.RowTemplate.Height = 40;
+            this.dgvPhongBatch.Size = new System.Drawing.Size(443, 143);
+            this.dgvPhongBatch.TabIndex = 5;
+            // 
+            // lblTimPhieu
+            // 
+            this.lblTimPhieu.AutoSize = true;
+            this.lblTimPhieu.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTimPhieu.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblTimPhieu.Location = new System.Drawing.Point(91, 18);
+            this.lblTimPhieu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimPhieu.Name = "lblTimPhieu";
+            this.lblTimPhieu.Size = new System.Drawing.Size(171, 27);
+            this.lblTimPhieu.TabIndex = 0;
+            this.lblTimPhieu.Text = "TẠO HÓA ĐƠN";
             // 
             // siticoneShapes2
             // 
             this.siticoneShapes2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.siticoneShapes2.BorderColor = System.Drawing.Color.White;
             this.siticoneShapes2.FillColor = System.Drawing.Color.White;
-            this.siticoneShapes2.Location = new System.Drawing.Point(467, 89);
+            this.siticoneShapes2.Location = new System.Drawing.Point(6, 48);
             this.siticoneShapes2.Name = "siticoneShapes2";
             this.siticoneShapes2.PolygonSkip = 1;
             this.siticoneShapes2.Rotate = 0F;
             this.siticoneShapes2.Shape = Siticone.Desktop.UI.WinForms.Enums.ShapeType.Rounded;
-            this.siticoneShapes2.Size = new System.Drawing.Size(630, 439);
-            this.siticoneShapes2.TabIndex = 80;
+            this.siticoneShapes2.Size = new System.Drawing.Size(484, 316);
+            this.siticoneShapes2.TabIndex = 15;
             this.siticoneShapes2.Text = "siticoneShapes2";
             this.siticoneShapes2.Zoom = 80;
-            // 
-            // siticoneButton1
-            // 
-            this.siticoneButton1.BorderRadius = 19;
-            this.siticoneButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
-            this.siticoneButton1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(17, 460);
-            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(150, 49);
-            this.siticoneButton1.TabIndex = 94;
-            this.siticoneButton1.Text = "Thanh toán";
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 540);
+            this.ClientSize = new System.Drawing.Size(1283, 686);
             this.Controls.Add(this.panel1);
             this.Name = "frmTaoHoaDon";
             this.Text = "frmTaoHoaDon";
             this.Load += new System.EventHandler(this.frmTaoHoaDon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhanTramThue_Num)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thueud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label SlDVlb;
-        private System.Windows.Forms.Label TSDVlb;
-        private System.Windows.Forms.Label MaDP_DVlb;
-        private System.Windows.Forms.Label TenKH_DVlb;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label GiaLucDatlb;
-        private System.Windows.Forms.Label NgayDatlb;
-        private System.Windows.Forms.Label SDTlb;
-        private System.Windows.Forms.Label SoPhongDatlb;
-        private System.Windows.Forms.Label LoaiPhonglb;
-        private System.Windows.Forms.Label TenKHlb;
-        private System.Windows.Forms.Label lblNgayDen;
-        private System.Windows.Forms.Label lblNgayTra;
-        private System.Windows.Forms.Label lblPhong;
-        private System.Windows.Forms.Label lblTenKH;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnTao;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnHuy;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox TienDV_tb;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.Label lblHuHong;
+        private System.Windows.Forms.DataGridView dataGridHuHong;
+        private System.Windows.Forms.Label lblDichVu;
+        private System.Windows.Forms.DataGridView dataGridDichVu;
+        private System.Windows.Forms.DataGridView dgvSoNgayO;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOutBatch;
+        private System.Windows.Forms.DataGridView dgvPhongBatch;
+        private System.Windows.Forms.Label lblTimPhieu;
         private Siticone.Desktop.UI.WinForms.SiticoneShapes siticoneShapes2;
-        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown PhanTramThue_Num;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox TienBT_tb;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox TienDP_tb;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox TongTT_tb;
+        private System.Windows.Forms.Label lbTenNV_moi;
+        private System.Windows.Forms.Label lbMaDP_new;
+        private System.Windows.Forms.Label lb_NgayTT_new;
+        private System.Windows.Forms.Label lbTenKH_new;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label TenNV_lb;
-        private System.Windows.Forms.Label NgayTT_lb;
-        private System.Windows.Forms.Label MaDP_lb;
-        private System.Windows.Forms.Label TenKH_lb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton2;
         private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTongTienHH;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTongTienDV;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTongTienPhong;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown Thueud;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -34,7 +34,6 @@ namespace Mee_Hotel.GUI
                     dataGridView1.Columns["GhiChu"].Visible = false;
                     dataGridView1.Columns["MaPhong"].Visible = false;
                     dataGridView1.Columns["MaDV"].Visible = false;
-
                     dataGridView1.Columns["Tên phòng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     dataGridView1.Columns["Ngày sử dụng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     dataGridView1.Columns["Số lượng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;

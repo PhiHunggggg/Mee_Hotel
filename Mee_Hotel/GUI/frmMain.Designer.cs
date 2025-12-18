@@ -40,11 +40,12 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +55,10 @@ namespace Mee_Hotel.GUI
             this.panelMain.Appearance.BorderColor = System.Drawing.Color.Black;
             this.panelMain.Appearance.Options.UseBorderColor = true;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(279, 31);
+            this.panelMain.Location = new System.Drawing.Point(418, 46);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1197, 763);
+            this.panelMain.Size = new System.Drawing.Size(1796, 1114);
             this.panelMain.TabIndex = 0;
             this.panelMain.Click += new System.EventHandler(this.panelMain_Click);
             // 
@@ -71,10 +73,11 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10,
             this.accordionControlElement3,
             this.accordionControlElement5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 46);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(279, 763);
+            this.accordionControl1.Size = new System.Drawing.Size(418, 1114);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -288,6 +291,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement5.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement13,
             this.accordionControlElement6,
             this.accordionControlElement8,
             this.accordionControlElement12});
@@ -298,12 +302,34 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Hóa đơn";
             // 
+            // accordionControlElement6
+            // 
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement6.Text = "Tạo hóa đơn";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_2);
+            // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement8.Text = "Quản lí hóa đơn";
+            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click_1);
+            // 
+            // accordionControlElement12
+            // 
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement12.Text = "Element12";
+            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click_1);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1476, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(2214, 46);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -314,30 +340,18 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement11.Name = "accordionControlElement11";
             this.accordionControlElement11.Text = "Kiểm Tra Hư Hỏng ";
             // 
-            // accordionControlElement6
+            // accordionControlElement13
             // 
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Element6";
-            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_2);
-            // 
-            // accordionControlElement8
-            // 
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Element8";
-            // 
-            // accordionControlElement12
-            // 
-            this.accordionControlElement12.Name = "accordionControlElement12";
-            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement12.Text = "Element12";
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement13.Text = "Check Out";
+            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click_1);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 794);
+            this.ClientSize = new System.Drawing.Size(2214, 1160);
             this.ControlContainer = this.panelMain;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.accordionControl1);
@@ -345,7 +359,7 @@ namespace Mee_Hotel.GUI
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.IconOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_hotel_64;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.NavigationControl = this.accordionControl1;
@@ -377,5 +391,6 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
     }
 }

@@ -144,7 +144,48 @@ namespace Mee_Hotel.GUI
 
         private void siticoneButton2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(MaHD_lb.Text))
+            {
+                MessageBox.Show("Chưa chọn hóa đơn");
+            }
+            int check = HoaDonDAL.Instance.XoaHD(MaHD_lb.Text);
+            if (check > 0) MessageBox.Show("Xóa hóa đơn thành công!!");
+            else MessageBox.Show("Xóa hóa đơn không thành công!!");
+            LoadHet();
+        }
 
+        private void siticoneButton4_Click(object sender, EventArgs e)
+        {
+            ThongTinDonHang.MaHD = MaHD_lb.Text;
+            if (TTThanhToan_lb.Text == "Đã thanh toán")
+            {
+                MessageBox.Show("Đã thanh toán hóa đơn!!");
+                return;
+            }
+            frmThanhToan frm = new frmThanhToan();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void Data_HD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtMaHD_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSHD_TK();
+        }
+
+        private void txtHoten_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSHD_TK();
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            LoadDSHD_TK();
         }
     }
 }
