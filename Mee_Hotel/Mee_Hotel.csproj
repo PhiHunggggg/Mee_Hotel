@@ -152,6 +152,12 @@
     <Compile Include="GUI\frmPhieuDP.Designer.cs">
       <DependentUpon>frmPhieuDP.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmTongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTongQuan.Designer.cs">
+      <DependentUpon>frmTongQuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SuaPhieuDP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuDP.resx">
       <DependentUpon>frmPhieuDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTongQuan.resx">
+      <DependentUpon>frmTongQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SuaPhieuDP.resx">
       <DependentUpon>SuaPhieuDP.cs</DependentUpon>
@@ -381,6 +390,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\Phong\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_b8ua7ub8ua7ub8ua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

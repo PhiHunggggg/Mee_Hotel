@@ -113,6 +113,16 @@ namespace Mee_Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_b8ua7ub8ua7ub8ua {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_b8ua7ub8ua7ub8ua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bill-50", resourceCulture);
@@ -206,6 +216,16 @@ namespace Mee_Hotel.Properties {
         internal static System.Drawing.Bitmap visualsofdana_T5pL6ciEn_I_unsplash {
             get {
                 object obj = ResourceManager.GetObject("visualsofdana-T5pL6ciEn-I-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vojtech_bruzek_Yrxr3bsPdS0_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("vojtech-bruzek-Yrxr3bsPdS0-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

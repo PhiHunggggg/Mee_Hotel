@@ -35,17 +35,18 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnThemDV = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -54,11 +55,11 @@ namespace Mee_Hotel.GUI
             // 
             this.panelMain.Appearance.BorderColor = System.Drawing.Color.Black;
             this.panelMain.Appearance.Options.UseBorderColor = true;
+            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(418, 46);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Location = new System.Drawing.Point(279, 31);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1796, 1114);
+            this.panelMain.Size = new System.Drawing.Size(1197, 763);
             this.panelMain.TabIndex = 0;
             this.panelMain.Click += new System.EventHandler(this.panelMain_Click);
             // 
@@ -73,11 +74,10 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10,
             this.accordionControlElement3,
             this.accordionControlElement5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 46);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(418, 1114);
+            this.accordionControl1.Size = new System.Drawing.Size(279, 763);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -106,6 +106,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement1.Text = "Tổng quan";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // accordionControlElement9
             // 
@@ -125,8 +126,9 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement9.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement9.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement2,
-            this.accordionControlElement7});
-            this.accordionControlElement9.Expanded = true;
+            this.accordionControlElement7,
+            this.accordionControlElement14,
+            this.accordionControlElement15});
             this.accordionControlElement9.Height = 70;
             this.accordionControlElement9.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement9.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_door_50;
@@ -138,21 +140,21 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement2.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.accordionControlElement2.Appearance.Hovered.BackColor2 = System.Drawing.Color.White;
             this.accordionControlElement2.Appearance.Hovered.BorderColor = System.Drawing.Color.Black;
-            this.accordionControlElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControlElement2.Appearance.Hovered.Options.UseBackColor = true;
             this.accordionControlElement2.Appearance.Hovered.Options.UseBorderColor = true;
             this.accordionControlElement2.Appearance.Hovered.Options.UseFont = true;
             this.accordionControlElement2.Appearance.Normal.BackColor = System.Drawing.Color.RoyalBlue;
-            this.accordionControlElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControlElement2.Appearance.Normal.Options.UseBackColor = true;
             this.accordionControlElement2.Appearance.Normal.Options.UseFont = true;
             this.accordionControlElement2.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
-            this.accordionControlElement2.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControlElement2.Appearance.Pressed.ForeColor = System.Drawing.Color.DimGray;
             this.accordionControlElement2.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement2.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement2.Appearance.Pressed.Options.UseForeColor = true;
-            this.accordionControlElement2.Height = 60;
+            this.accordionControlElement2.Height = 50;
             this.accordionControlElement2.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -161,10 +163,57 @@ namespace Mee_Hotel.GUI
             // 
             // accordionControlElement7
             // 
+            this.accordionControlElement7.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement7.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement7.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement7.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement7.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement7.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement7.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement7.Height = 50;
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Quản lý phiếu đặt phòng";
+            this.accordionControlElement7.Text = "Quản lý đặt phòng ";
             this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
+            // 
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement14.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement14.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement14.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement14.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement14.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement14.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement14.Height = 50;
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement14.Text = "CheckIn";
+            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click_1);
+            // 
+            // accordionControlElement15
+            // 
+            this.accordionControlElement15.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement15.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement15.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement15.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement15.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement15.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement15.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement15.Height = 50;
+            this.accordionControlElement15.Name = "accordionControlElement15";
+            this.accordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement15.Text = "CheckOut";
+            this.accordionControlElement15.Click += new System.EventHandler(this.accordionControlElement15_Click);
             // 
             // accordionControlElement10
             // 
@@ -184,43 +233,12 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement10.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement10.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement10.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnThemDV,
             this.accordionControlElement4});
-            this.accordionControlElement10.Expanded = true;
             this.accordionControlElement10.Height = 70;
             this.accordionControlElement10.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement10.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_t_shirt_50;
             this.accordionControlElement10.Name = "accordionControlElement10";
             this.accordionControlElement10.Text = "Dịch vụ";
-            // 
-            // btnThemDV
-            // 
-            this.btnThemDV.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnThemDV.Appearance.Hovered.BackColor2 = System.Drawing.Color.White;
-            this.btnThemDV.Appearance.Hovered.BorderColor = System.Drawing.Color.Black;
-            this.btnThemDV.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemDV.Appearance.Hovered.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btnThemDV.Appearance.Hovered.Options.UseBackColor = true;
-            this.btnThemDV.Appearance.Hovered.Options.UseBorderColor = true;
-            this.btnThemDV.Appearance.Hovered.Options.UseFont = true;
-            this.btnThemDV.Appearance.Normal.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThemDV.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemDV.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btnThemDV.Appearance.Normal.Options.UseBackColor = true;
-            this.btnThemDV.Appearance.Normal.Options.UseFont = true;
-            this.btnThemDV.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
-            this.btnThemDV.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemDV.Appearance.Pressed.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btnThemDV.Appearance.Pressed.ForeColor = System.Drawing.Color.DimGray;
-            this.btnThemDV.Appearance.Pressed.Options.UseBackColor = true;
-            this.btnThemDV.Appearance.Pressed.Options.UseFont = true;
-            this.btnThemDV.Appearance.Pressed.Options.UseForeColor = true;
-            this.btnThemDV.Height = 70;
-            this.btnThemDV.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.btnThemDV.Name = "btnThemDV";
-            this.btnThemDV.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThemDV.Text = "Thêm dịch vụ";
-            this.btnThemDV.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
             // accordionControlElement4
             // 
@@ -244,7 +262,7 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement4.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement4.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement4.Appearance.Pressed.Options.UseForeColor = true;
-            this.accordionControlElement4.Height = 60;
+            this.accordionControlElement4.Height = 50;
             this.accordionControlElement4.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -267,12 +285,50 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement3.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement3.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement3.Appearance.Pressed.Options.UseForeColor = true;
-            this.accordionControlElement3.Expanded = true;
+            this.accordionControlElement3.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement16,
+            this.accordionControlElement17});
             this.accordionControlElement3.Height = 70;
             this.accordionControlElement3.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement3.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_lamp_50;
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Text = "Trang thiết bị";
+            // 
+            // accordionControlElement16
+            // 
+            this.accordionControlElement16.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement16.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement16.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement16.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement16.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement16.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement16.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement16.Height = 50;
+            this.accordionControlElement16.Name = "accordionControlElement16";
+            this.accordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement16.Text = "Kiểm tra hư hỏng";
+            this.accordionControlElement16.Click += new System.EventHandler(this.accordionControlElement16_Click);
+            // 
+            // accordionControlElement17
+            // 
+            this.accordionControlElement17.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement17.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement17.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement17.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement17.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement17.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement17.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement17.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement17.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement17.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement17.Height = 50;
+            this.accordionControlElement17.Name = "accordionControlElement17";
+            this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement17.Text = "Quản lý thiết bị";
+            this.accordionControlElement17.Click += new System.EventHandler(this.accordionControlElement17_Click);
             // 
             // accordionControlElement5
             // 
@@ -291,11 +347,8 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement5.Appearance.Pressed.Options.UseForeColor = true;
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement13,
             this.accordionControlElement6,
-            this.accordionControlElement8,
-            this.accordionControlElement12});
-            this.accordionControlElement5.Expanded = true;
+            this.accordionControlElement8});
             this.accordionControlElement5.Height = 70;
             this.accordionControlElement5.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControlElement5.ImageOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_bill_50;
@@ -304,6 +357,17 @@ namespace Mee_Hotel.GUI
             // 
             // accordionControlElement6
             // 
+            this.accordionControlElement6.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement6.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement6.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement6.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement6.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement6.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement6.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement6.Height = 50;
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement6.Text = "Tạo hóa đơn";
@@ -311,25 +375,28 @@ namespace Mee_Hotel.GUI
             // 
             // accordionControlElement8
             // 
+            this.accordionControlElement8.Appearance.Hovered.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.accordionControlElement8.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement8.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement8.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement8.Appearance.Pressed.BackColor = System.Drawing.Color.LightCyan;
+            this.accordionControlElement8.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement8.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement8.Height = 50;
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement8.Text = "Quản lí hóa đơn";
             this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click_1);
             // 
-            // accordionControlElement12
-            // 
-            this.accordionControlElement12.Name = "accordionControlElement12";
-            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement12.Text = "Element12";
-            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click_1);
-            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(2214, 46);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1476, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -340,18 +407,11 @@ namespace Mee_Hotel.GUI
             this.accordionControlElement11.Name = "accordionControlElement11";
             this.accordionControlElement11.Text = "Kiểm Tra Hư Hỏng ";
             // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement13.Text = "Check Out";
-            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click_1);
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2214, 1160);
+            this.ClientSize = new System.Drawing.Size(1476, 794);
             this.ControlContainer = this.panelMain;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.accordionControl1);
@@ -359,7 +419,7 @@ namespace Mee_Hotel.GUI
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.IconOptions.Image = global::Mee_Hotel.Properties.Resources.icons8_hotel_64;
-            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.NavigationControl = this.accordionControl1;
@@ -379,7 +439,6 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemDV;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
@@ -390,7 +449,9 @@ namespace Mee_Hotel.GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement15;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement16;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement17;
     }
 }
