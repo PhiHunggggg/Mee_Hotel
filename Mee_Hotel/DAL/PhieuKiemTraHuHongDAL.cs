@@ -30,11 +30,7 @@ namespace Mee_Hotel.DAL
         {
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");
         }
-        // Lấy danh sách các phòng 
-        public DataTable GetDanhSachPhong()
-        {
-            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhong");
-        }
+
         // 3. Tạo mã phiếu mới tự động
         public string TaoMaPhieuMoi()
         {

@@ -1,20 +1,33 @@
 ﻿namespace Mee_Hotel.GUI
 {
     partial class frmCheckOut
-{
-    private System.ComponentModel.IContainer components = null;
-
-    protected override void Dispose(bool disposing)
     {
-        if (disposing && (components != null))
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
-        base.Dispose(disposing);
-    }
 
-    private void InitializeComponent()
-    {
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblHuHong = new System.Windows.Forms.Label();
@@ -30,29 +43,37 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblTimPhieu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.labelControl1);
-            this.panel1.Controls.Add(this.lblHuHong);
-            this.panel1.Controls.Add(this.dataGridHuHong);
+            this.panel1.Controls.Add(this.separatorControl1);
+            this.panel1.Controls.Add(this.lblTieuDe);
+            this.panel1.Controls.Add(this.lblChonPhong);
+            this.panel1.Controls.Add(this.cmbPhong);
+            this.panel1.Controls.Add(this.lblMaPhongLabel);
+            this.panel1.Controls.Add(this.lblMaPhong);
+            this.panel1.Controls.Add(this.lblTenPhongLabel);
+            this.panel1.Controls.Add(this.lblTenPhong);
+            this.panel1.Controls.Add(this.lblMaDPLabel);
+            this.panel1.Controls.Add(this.lblMaDP);
+            this.panel1.Controls.Add(this.lblTenKHLabel);
+            this.panel1.Controls.Add(this.lblTenKH);
+            this.panel1.Controls.Add(this.lblNgayDenLabel);
+            this.panel1.Controls.Add(this.lblNgayDen);
+            this.panel1.Controls.Add(this.lblNgayTraDuKienLabel);
+            this.panel1.Controls.Add(this.lblNgayTraDuKien);
+            this.panel1.Controls.Add(this.lblSoNgayOLabel);
+            this.panel1.Controls.Add(this.lblSoNgayO);
             this.panel1.Controls.Add(this.lblDichVu);
             this.panel1.Controls.Add(this.dataGridDichVu);
-            this.panel1.Controls.Add(this.dgvSoNgayO);
-            this.panel1.Controls.Add(this.btnCheckOutBatch);
-            this.panel1.Controls.Add(this.dgvPhongBatch);
-            this.panel1.Controls.Add(this.dgvPhieuDP);
-            this.panel1.Controls.Add(this.btnTimPhieu);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.lblSearch);
-            this.panel1.Controls.Add(this.lblTimPhieu);
+            this.panel1.Controls.Add(this.lblHuHong);
+            this.panel1.Controls.Add(this.dataGridHuHong);
+            this.panel1.Controls.Add(this.btnCheckOut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -80,7 +101,14 @@
             this.lblHuHong.TabIndex = 12;
             this.lblHuHong.Text = "Hư hỏng thiết bị (nếu có):";
             // 
-            // dataGridHuHong
+            this.lblSoNgayOLabel.AutoSize = true;
+            this.lblSoNgayOLabel.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblSoNgayOLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSoNgayOLabel.Location = new System.Drawing.Point(100, 540);
+            this.lblSoNgayOLabel.Name = "lblSoNgayOLabel";
+            this.lblSoNgayOLabel.Size = new System.Drawing.Size(139, 29);
+            this.lblSoNgayOLabel.TabIndex = 15;
+            this.lblSoNgayOLabel.Text = "Số ngày ở:";
             // 
             this.dataGridHuHong.AllowUserToAddRows = false;
             this.dataGridHuHong.AllowUserToDeleteRows = false;
@@ -96,15 +124,24 @@
             this.dataGridHuHong.Size = new System.Drawing.Size(699, 225);
             this.dataGridHuHong.TabIndex = 13;
             // 
+            this.lblSoNgayO.AutoSize = true;
+            this.lblSoNgayO.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblSoNgayO.ForeColor = System.Drawing.Color.Red;
+            this.lblSoNgayO.Location = new System.Drawing.Point(320, 540);
+            this.lblSoNgayO.Name = "lblSoNgayO";
+            this.lblSoNgayO.Size = new System.Drawing.Size(93, 29);
+            this.lblSoNgayO.TabIndex = 16;
+            this.lblSoNgayO.Text = "0 ngày";
+            // 
             // lblDichVu
             // 
             this.lblDichVu.AutoSize = true;
             this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.lblDichVu.Location = new System.Drawing.Point(951, 290);
             this.lblDichVu.Name = "lblDichVu";
-            this.lblDichVu.Size = new System.Drawing.Size(250, 29);
-            this.lblDichVu.TabIndex = 10;
-            this.lblDichVu.Text = "Dịch vụ đã sử dụng:";
+            this.lblDichVu.Size = new System.Drawing.Size(268, 33);
+            this.lblDichVu.TabIndex = 17;
+            this.lblDichVu.Text = "DỊCH VỤ SỬ DỤNG";
             // 
             // dataGridDichVu
             // 
@@ -117,12 +154,13 @@
             this.dataGridDichVu.Location = new System.Drawing.Point(756, 331);
             this.dataGridDichVu.Name = "dataGridDichVu";
             this.dataGridDichVu.ReadOnly = true;
+            this.dataGridDichVu.RowHeadersVisible = false;
             this.dataGridDichVu.RowHeadersWidth = 51;
             this.dataGridDichVu.RowTemplate.Height = 40;
-            this.dataGridDichVu.Size = new System.Drawing.Size(685, 294);
-            this.dataGridDichVu.TabIndex = 11;
+            this.dataGridDichVu.Size = new System.Drawing.Size(919, 401);
+            this.dataGridDichVu.TabIndex = 18;
             // 
-            // dgvSoNgayO
+            // lblHuHong
             // 
             this.dgvSoNgayO.AllowUserToAddRows = false;
             this.dgvSoNgayO.AllowUserToDeleteRows = false;
@@ -138,19 +176,24 @@
             this.dgvSoNgayO.Size = new System.Drawing.Size(681, 211);
             this.dgvSoNgayO.TabIndex = 9;
             // 
-            // btnCheckOutBatch
+            // dataGridHuHong
             // 
-            this.btnCheckOutBatch.BorderRadius = 19;
-            this.btnCheckOutBatch.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnCheckOutBatch.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOutBatch.Location = new System.Drawing.Point(201, 674);
-            this.btnCheckOutBatch.Name = "btnCheckOutBatch";
-            this.btnCheckOutBatch.Size = new System.Drawing.Size(211, 60);
-            this.btnCheckOutBatch.TabIndex = 7;
-            this.btnCheckOutBatch.Text = "Check Out";
-            this.btnCheckOutBatch.Click += new System.EventHandler(this.btnCheckOutBatch_Click);
+            this.dataGridHuHong.AllowUserToAddRows = false;
+            this.dataGridHuHong.AllowUserToDeleteRows = false;
+            this.dataGridHuHong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridHuHong.ColumnHeadersHeight = 50;
+            this.dataGridHuHong.Location = new System.Drawing.Point(748, 526);
+            this.dataGridHuHong.Name = "dataGridHuHong";
+            this.dataGridHuHong.ReadOnly = true;
+            this.dataGridHuHong.RowHeadersVisible = false;
+            this.dataGridHuHong.RowHeadersWidth = 51;
+            this.dataGridHuHong.RowTemplate.Height = 40;
+            this.dataGridHuHong.Size = new System.Drawing.Size(913, 359);
+            this.dataGridHuHong.TabIndex = 20;
             // 
-            // dgvPhongBatch
+            // btnCheckOut
             // 
             this.dgvPhongBatch.AllowUserToAddRows = false;
             this.dgvPhongBatch.AllowUserToDeleteRows = false;
@@ -237,6 +280,8 @@
             // 
             // frmCheckOut
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -247,28 +292,38 @@
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSoNgayO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBatch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).EndInit();
             this.ResumeLayout(false);
 
-    }
+        }
 
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Label lblTimPhieu;
-    private System.Windows.Forms.Label lblSearch;
-    private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtSearch;
-    private Siticone.Desktop.UI.WinForms.SiticoneButton btnTimPhieu;
-    private System.Windows.Forms.DataGridView dgvPhieuDP;
-    private System.Windows.Forms.DataGridView dgvPhongBatch;
-    private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOutBatch;
-    private System.Windows.Forms.DataGridView dgvSoNgayO;
-    private System.Windows.Forms.Label lblDichVu;
-    private System.Windows.Forms.DataGridView dataGridDichVu;
-    private System.Windows.Forms.Label lblHuHong;
-    private System.Windows.Forms.DataGridView dataGridHuHong;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTieuDe;
+        private System.Windows.Forms.Label lblChonPhong;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cmbPhong;
+        private System.Windows.Forms.Label lblMaPhongLabel;
+        private System.Windows.Forms.Label lblMaPhong;
+        private System.Windows.Forms.Label lblTenPhongLabel;
+        private System.Windows.Forms.Label lblTenPhong;
+        private System.Windows.Forms.Label lblMaDPLabel;
+        private System.Windows.Forms.Label lblMaDP;
+        private System.Windows.Forms.Label lblTenKHLabel;
+        private System.Windows.Forms.Label lblTenKH;
+        private System.Windows.Forms.Label lblNgayDenLabel;
+        private System.Windows.Forms.Label lblNgayDen;
+        private System.Windows.Forms.Label lblNgayTraDuKienLabel;
+        private System.Windows.Forms.Label lblNgayTraDuKien;
+        private System.Windows.Forms.Label lblSoNgayOLabel;
+        private System.Windows.Forms.Label lblSoNgayO;
+        private System.Windows.Forms.Label lblDichVu;
+        private System.Windows.Forms.DataGridView dataGridDichVu;
+        private System.Windows.Forms.Label lblHuHong;
+        private System.Windows.Forms.DataGridView dataGridHuHong;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnCheckOut;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
     }
 }

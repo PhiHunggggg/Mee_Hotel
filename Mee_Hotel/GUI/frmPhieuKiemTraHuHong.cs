@@ -76,9 +76,11 @@ namespace Mee_Hotel.GUI
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridView1.ColumnHeadersHeight = 75;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            // Khởi tạo checkbox tìm theo ngày
-            chkTimTheoNgay.Checked = false;
-            dtpNgayTim.Enabled = false;
+
+
+
+
+
             LoadDanhSachPhieu();
         }
 

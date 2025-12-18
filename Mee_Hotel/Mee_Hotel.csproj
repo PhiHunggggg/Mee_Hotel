@@ -223,15 +223,6 @@
     <EmbeddedResource Include="GUI\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmChiTietKiemTraHuHong.resx">
-      <DependentUpon>frmChiTietKiemTraHuHong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmHoaDon.resx">
-      <DependentUpon>frmHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmKiemTraDV.resx">
-      <DependentUpon>frmKiemTraDV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
