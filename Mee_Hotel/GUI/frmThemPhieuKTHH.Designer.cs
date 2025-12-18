@@ -96,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label4.Location = new System.Drawing.Point(880, 292);
+            this.label4.Location = new System.Drawing.Point(1029, 317);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 27);
             this.label4.TabIndex = 39;
@@ -106,7 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label3.Location = new System.Drawing.Point(875, 160);
+            this.label3.Location = new System.Drawing.Point(1029, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 27);
             this.label3.TabIndex = 38;
@@ -116,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label2.Location = new System.Drawing.Point(875, 219);
+            this.label2.Location = new System.Drawing.Point(1029, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 27);
             this.label2.TabIndex = 37;
@@ -126,7 +126,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label1.Location = new System.Drawing.Point(875, 97);
+            this.label1.Location = new System.Drawing.Point(1029, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 27);
             this.label1.TabIndex = 36;
@@ -168,7 +168,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(950, 380);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
@@ -206,7 +206,7 @@
             this.txtNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhanVien.DefaultText = "";
             this.txtNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtNhanVien.Location = new System.Drawing.Point(998, 219);
+            this.txtNhanVien.Location = new System.Drawing.Point(1169, 238);
             this.txtNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNhanVien.Name = "txtNhanVien";
             this.txtNhanVien.PasswordChar = '\0';
@@ -222,7 +222,7 @@
             this.dtpNgayKiemTra.FillColor = System.Drawing.Color.White;
             this.dtpNgayKiemTra.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpNgayKiemTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayKiemTra.Location = new System.Drawing.Point(922, 322);
+            this.dtpNgayKiemTra.Location = new System.Drawing.Point(1169, 358);
             this.dtpNgayKiemTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayKiemTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayKiemTra.Name = "dtpNgayKiemTra";
@@ -240,7 +240,7 @@
             this.cmbPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbPhong.ItemHeight = 36;
-            this.cmbPhong.Location = new System.Drawing.Point(981, 160);
+            this.cmbPhong.Location = new System.Drawing.Point(1169, 160);
             this.cmbPhong.Name = "cmbPhong";
             this.cmbPhong.Size = new System.Drawing.Size(157, 42);
             this.cmbPhong.TabIndex = 33;
@@ -252,7 +252,7 @@
             this.txtMaPhieu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhieu.DefaultText = "";
             this.txtMaPhieu.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMaPhieu.Location = new System.Drawing.Point(981, 78);
+            this.txtMaPhieu.Location = new System.Drawing.Point(1169, 78);
             this.txtMaPhieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaPhieu.Name = "txtMaPhieu";
             this.txtMaPhieu.PasswordChar = '\0';

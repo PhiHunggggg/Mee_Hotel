@@ -74,7 +74,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(696, 150);
+            this.label7.Location = new System.Drawing.Point(703, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(463, 29);
             this.label7.TabIndex = 42;
@@ -84,7 +84,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(626, 755);
+            this.label6.Location = new System.Drawing.Point(625, 661);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(273, 29);
             this.label6.TabIndex = 41;
@@ -137,7 +137,7 @@
             this.btnHuy.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(720, 833);
+            this.btnHuy.Location = new System.Drawing.Point(698, 761);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(200, 60);
             this.btnHuy.TabIndex = 33;
@@ -149,7 +149,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeight = 75;
-            this.dataGridView1.Location = new System.Drawing.Point(419, 182);
+            this.dataGridView1.Location = new System.Drawing.Point(422, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -164,7 +164,7 @@
             this.txtTongTien.DefaultText = "";
             this.txtTongTien.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTongTien.ForeColor = System.Drawing.Color.Red;
-            this.txtTongTien.Location = new System.Drawing.Point(933, 745);
+            this.txtTongTien.Location = new System.Drawing.Point(916, 661);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';

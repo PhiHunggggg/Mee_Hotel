@@ -16,6 +16,7 @@
     private void InitializeComponent()
     {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblHuHong = new System.Windows.Forms.Label();
             this.dataGridHuHong = new System.Windows.Forms.DataGridView();
             this.lblDichVu = new System.Windows.Forms.Label();
@@ -28,7 +29,6 @@
             this.txtSearch = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblTimPhieu = new System.Windows.Forms.Label();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHuHong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDichVu)).BeginInit();
@@ -59,11 +59,22 @@
             this.panel1.Size = new System.Drawing.Size(1924, 1055);
             this.panel1.TabIndex = 0;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(938, 31);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(238, 29);
+            this.labelControl1.TabIndex = 14;
+            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
+            // 
             // lblHuHong
             // 
             this.lblHuHong.AutoSize = true;
             this.lblHuHong.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.lblHuHong.Location = new System.Drawing.Point(748, 581);
+            this.lblHuHong.Location = new System.Drawing.Point(904, 641);
             this.lblHuHong.Name = "lblHuHong";
             this.lblHuHong.Size = new System.Drawing.Size(324, 29);
             this.lblHuHong.TabIndex = 12;
@@ -77,19 +88,19 @@
             this.dataGridHuHong.BackgroundColor = System.Drawing.Color.White;
             this.dataGridHuHong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridHuHong.ColumnHeadersHeight = 50;
-            this.dataGridHuHong.Location = new System.Drawing.Point(753, 640);
+            this.dataGridHuHong.Location = new System.Drawing.Point(742, 674);
             this.dataGridHuHong.Name = "dataGridHuHong";
             this.dataGridHuHong.ReadOnly = true;
             this.dataGridHuHong.RowHeadersWidth = 51;
             this.dataGridHuHong.RowTemplate.Height = 40;
-            this.dataGridHuHong.Size = new System.Drawing.Size(699, 239);
+            this.dataGridHuHong.Size = new System.Drawing.Size(699, 225);
             this.dataGridHuHong.TabIndex = 13;
             // 
             // lblDichVu
             // 
             this.lblDichVu.AutoSize = true;
             this.lblDichVu.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.lblDichVu.Location = new System.Drawing.Point(748, 252);
+            this.lblDichVu.Location = new System.Drawing.Point(951, 290);
             this.lblDichVu.Name = "lblDichVu";
             this.lblDichVu.Size = new System.Drawing.Size(250, 29);
             this.lblDichVu.TabIndex = 10;
@@ -103,7 +114,7 @@
             this.dataGridDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dataGridDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDichVu.ColumnHeadersHeight = 50;
-            this.dataGridDichVu.Location = new System.Drawing.Point(742, 284);
+            this.dataGridDichVu.Location = new System.Drawing.Point(756, 331);
             this.dataGridDichVu.Name = "dataGridDichVu";
             this.dataGridDichVu.ReadOnly = true;
             this.dataGridDichVu.RowHeadersWidth = 51;
@@ -119,12 +130,12 @@
             this.dgvSoNgayO.BackgroundColor = System.Drawing.Color.White;
             this.dgvSoNgayO.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSoNgayO.ColumnHeadersHeight = 50;
-            this.dgvSoNgayO.Location = new System.Drawing.Point(742, 58);
+            this.dgvSoNgayO.Location = new System.Drawing.Point(742, 67);
             this.dgvSoNgayO.Name = "dgvSoNgayO";
             this.dgvSoNgayO.ReadOnly = true;
             this.dgvSoNgayO.RowHeadersWidth = 51;
             this.dgvSoNgayO.RowTemplate.Height = 40;
-            this.dgvSoNgayO.Size = new System.Drawing.Size(681, 191);
+            this.dgvSoNgayO.Size = new System.Drawing.Size(681, 211);
             this.dgvSoNgayO.TabIndex = 9;
             // 
             // btnCheckOutBatch
@@ -223,17 +234,6 @@
             this.lblTimPhieu.Size = new System.Drawing.Size(528, 33);
             this.lblTimPhieu.TabIndex = 0;
             this.lblTimPhieu.Text = "CHECK OUT THEO PHIẾU ĐẶT PHÒNG";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(742, 27);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(238, 29);
-            this.labelControl1.TabIndex = 14;
-            this.labelControl1.Text = "Số Ngày Ở Thực Tế:";
             // 
             // frmCheckOut
             // 

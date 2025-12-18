@@ -241,6 +241,5 @@ namespace Mee_Hotel.GUI
             LoadPhieuDaCheckIn(txtSearch.Text.Trim());
         }
 
-       
     }
 }
