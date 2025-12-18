@@ -230,13 +230,12 @@ namespace Mee_Hotel.GUI
 
         private void btnCheckOutBatch_Click_1(object sender, EventArgs e)
         {
-            
-            
-            
-            if (ThongTinDonHang.MaHD == null)  ThongTinDonHang.MaHD = HoaDonDAL.Instance.TaoHoaDon(ThongTinDonHang.MaKH, ThongTinDonHang.MaDP, ThongTinDonHang.NgayTT, ThongTinDonHang.TongTienDP, ThongTinDonHang.TongTienBT,Convert.ToDecimal(Thueud.Value.ToString()), ThongTinDonHang.TongTienDV, "Chưa thanh toán", "", ThongTinDonHang.MaKTHH);
+            if (string.IsNullOrEmpty(ThongTinDonHang.MaHD))  ThongTinDonHang.MaHD = HoaDonDAL.Instance.TaoHoaDon(ThongTinDonHang.MaKH, ThongTinDonHang.MaDP, ThongTinDonHang.NgayTT, ThongTinDonHang.TongTienDP, ThongTinDonHang.TongTienBT,Convert.ToDecimal(Thueud.Value.ToString()), ThongTinDonHang.TongTienDV, "Chưa thanh toán", "", ThongTinDonHang.MaKTHH);
             else
             {
                 MessageBox.Show("Đơn hàng đã có!!");
+                ThongTinDonHang.MaHD = null;
+                this.Close();
                 return;
             }
             foreach (DataGridViewRow row in dgvSoNgayO.Rows)
@@ -286,6 +285,7 @@ namespace Mee_Hotel.GUI
             {
                 MessageBox.Show("Đơn hàng đã có!!");
                 xl = false;
+                this.Close();
             }
             if (ThongTinDonHang.MaHD != null && xl)
             {
