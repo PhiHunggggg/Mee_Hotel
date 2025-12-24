@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Xml.Linq;
 using System.Windows.Forms;
+using Mee_Hotel.Entity;
 namespace Mee_Hotel.DAL
 {
     class PhongDAL : DataProvider
@@ -59,20 +60,20 @@ namespace Mee_Hotel.DAL
             return dt;
         }
         public (bool KetQua, string Loi, string MaPhieu, string MaKhach) DatPhongTuXMLSan2(
-    DateTime ngayNhan,
-    DateTime ngayTra,
-    string hoTen,
-    string cccd = null,
-    string sdt = null,
-    DateTime? ngaySinh = null,
-    string gioiTinh = null,
-    string quocTich = "Việt Nam",
-    string diaChi = null,
-    string email = null,
-    int soNguoi = 2,
-    string xmlDaTaoSan = "<root></root>",
-    string ghiChu = null,
-    string maNV = "NV001")
+             DateTime ngayNhan,
+             DateTime ngayTra,
+             string hoTen,
+            string cccd = null,
+            string sdt = null,
+            DateTime? ngaySinh = null,
+            string gioiTinh = null,
+            string quocTich = "Việt Nam",
+            string diaChi = null,
+            string email = null,
+            int soNguoi = 2,
+            string xmlDaTaoSan = "<root></root>",
+            string ghiChu = null,
+            string maNV = "NV001")
         {
             if (string.IsNullOrWhiteSpace(xmlDaTaoSan) || xmlDaTaoSan == "<root></root>" || !xmlDaTaoSan.Contains("<lp>"))
                 return (false, "Danh sách phòng đặt trống hoặc không hợp lệ!", null, null);
@@ -136,6 +137,32 @@ namespace Mee_Hotel.DAL
             if (dt.Rows.Count == 0)
                 return null;
             return dt;
+        }
+        public ThongKePhongcs getThongKeTinhTrangPhong()
+        {
+            try
+            {
+                DataTable dt = DataProvider.Instance.CallProcQuery("sp_ThongKeTrangThaiPhong", null);
+
+                if (dt.Rows.Count == 0)
+                    return new ThongKePhongcs(); // trả về 0 hết
+
+                DataRow row = dt.Rows[0];
+
+                return new ThongKePhongcs
+                {
+                    TongPhong = Convert.ToInt32(row["TongSoPhong"]),
+                    PhongTrong = Convert.ToInt32(row["PhongTrong"]),
+                    PhongDangO = Convert.ToInt32(row["PhongDangO"]),
+                    PhongDangDon = Convert.ToInt32(row["PhongDangDon"])
+                };
+            }
+            catch (Exception ex)
+            {
+                // Log lỗi nếu cần
+                MessageBox.Show("Lỗi thống kê phòng: " + ex.Message);
+                return new ThongKePhongcs();
+            }
         }
         public DataTable getDanhSachPhongTrong_CheckIn(string maLoaiPhong)
         {

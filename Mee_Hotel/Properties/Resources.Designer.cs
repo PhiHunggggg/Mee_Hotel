@@ -233,6 +233,16 @@ namespace Mee_Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap vojtech_bruzek_Yrxr3bsPdS0_unsplash1 {
+            get {
+                object obj = ResourceManager.GetObject("vojtech-bruzek-Yrxr3bsPdS0-unsplash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap warning {
             get {
                 object obj = ResourceManager.GetObject("warning", resourceCulture);

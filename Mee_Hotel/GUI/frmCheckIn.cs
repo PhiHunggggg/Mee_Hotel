@@ -189,6 +189,7 @@ namespace Mee_Hotel.GUI.FolderPhong
                         card.BackColor = Color.FromArgb(255, 230, 230);
                         card.Icon = Properties.Resources.warning ?? Properties.Resources.user;
                         card.RoomType = thongBao.Contains(":") ? thongBao.Split(new[] { ':' }, 2)[1].Trim() : "";
+
                     }
                     else if (thongBao.Contains("HÔM NAY TRẢ") || thongBao.Contains("🔴"))
                     {

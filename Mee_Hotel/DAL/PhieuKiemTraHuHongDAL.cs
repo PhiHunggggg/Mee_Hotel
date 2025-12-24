@@ -37,11 +37,7 @@ namespace Mee_Hotel.DAL
         {
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhongDangO");
         }
-        // Lấy danh sách các phòng 
-        public DataTable GetDanhSachPhong()
-        {
-            return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhong");
-        }
+
         // 3. Tạo mã phiếu mới tự động
         public string TaoMaPhieuMoi()
         {
@@ -49,20 +45,17 @@ namespace Mee_Hotel.DAL
             return result?.ToString() ?? "KTHH001";
         }
 
-        // 4. Lấy danh sách tất cả phiếu kiểm tra 
-        public DataTable GetDanhSachPhieu(string maPhieu = "", string maPhong = "", string tenNV = "", DateTime? ngayTim = null)
+        // 4. Lấy danh sách tất cả phiếu kiểm tra (tìm kiếm chung theo từ khóa + lọc ngày)
+        public DataTable GetDanhSachPhieu(string tuKhoa = "", DateTime? ngayTim = null)
         {
             SqlParameter[] parameters =
             {
-        new SqlParameter("@MaPhieu", string.IsNullOrEmpty(maPhieu) ? (object)DBNull.Value : maPhieu),
-        new SqlParameter("@MaPhong", string.IsNullOrEmpty(maPhong) ? (object)DBNull.Value : maPhong),
-        new SqlParameter("@TenNV", string.IsNullOrEmpty(tenNV) ? (object)DBNull.Value : tenNV),
+        new SqlParameter("@TuKhoa", string.IsNullOrEmpty(tuKhoa) ? (object)DBNull.Value : tuKhoa.Trim()),
         new SqlParameter("@NgayKiemTra", ngayTim.HasValue ? (object)ngayTim.Value : DBNull.Value)
     };
 
             return DataProvider.Instance.CallProcQuery("proc_GetDanhSachPhieuKiemTra", parameters);
         }
-
 
         // 5. Lấy thông tin 1 phiếu kiểm tra theo mã 
         public DataRow GetPhieuByMa(string maPhieu)
@@ -155,7 +148,7 @@ namespace Mee_Hotel.DAL
             }
             catch (Exception ex)
             {
-               
+
                 MessageBox.Show("LỖI KHI LƯU PHIẾU:\n" + ex.Message + "\n\nStackTrace:\n" + ex.StackTrace,
                                 "LỖI HỆ THỐNG", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 System.Diagnostics.Debug.WriteLine("Lỗi lưu phiếu KTHH: " + ex.Message);
@@ -163,13 +156,13 @@ namespace Mee_Hotel.DAL
             }
         }
         public bool XoaPhieu(string maPhieu)
-             {
-             SqlParameter[] parameters =
-            {
+        {
+            SqlParameter[] parameters =
+           {
                 new SqlParameter("@MaPhieu_KTHH", maPhieu)
             };
 
-           
+
             int result = DataProvider.Instance.CallProcNonQuery("proc_XoaPhieuKiemTraHuHong", parameters);
             return result > 0;
         }
